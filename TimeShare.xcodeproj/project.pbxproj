@@ -12,7 +12,7 @@
 		93A4ED9A823802156DC7451C /* Pods_TimeShareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A5802B1E6D45248A1CF442 /* Pods_TimeShareTests.framework */; };
 		96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */; };
 		96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */; };
-		96D96BA425A6D54200CA39B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA325A6D54200CA39B1 /* ViewController.swift */; };
+		96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA325A6D54200CA39B1 /* MainViewController.swift */; };
 		96D96BA725A6D54200CA39B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D96BA525A6D54200CA39B1 /* Main.storyboard */; };
 		96D96BA925A6D54400CA39B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D96BA825A6D54400CA39B1 /* Assets.xcassets */; };
 		96D96BAC25A6D54400CA39B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96D96BAA25A6D54400CA39B1 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,14 @@
 		96D96C0825A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
 		96D96C0925A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
 		96D96C0A25A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
+		C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */; };
+		C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166D925ACD0EB002FF445 /* Chat.storyboard */; };
+		C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166DE25ACD0F3002FF445 /* Ranking.storyboard */; };
+		C70166E425ACD0FB002FF445 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166E325ACD0FB002FF445 /* Settings.storyboard */; };
+		C70166F925ACD27D002FF445 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70166F825ACD27D002FF445 /* ChatViewController.swift */; };
+		C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70166FD25ACD285002FF445 /* RankingViewController.swift */; };
+		C701670325ACD28E002FF445 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701670225ACD28E002FF445 /* SettingsViewController.swift */; };
+		C701670A25ACD371002FF445 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701670925ACD371002FF445 /* K.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +55,7 @@
 		96D96B9C25A6D54200CA39B1 /* TimeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		96D96BA325A6D54200CA39B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96D96BA325A6D54200CA39B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
 		96D96BA625A6D54200CA39B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96D96BA825A6D54400CA39B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96D96BAB25A6D54400CA39B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +70,14 @@
 		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		C70166D925ACD0EB002FF445 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		C70166DE25ACD0F3002FF445 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
+		C70166E325ACD0FB002FF445 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		C70166F825ACD27D002FF445 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C70166FD25ACD285002FF445 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		C701670225ACD28E002FF445 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C701670925ACD371002FF445 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		C7AB6DDB8BBBE4103F68B26D /* Pods-TimeShare-TimeShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare-TimeShareUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EDD44ABDA7B4981F8B45BA1F /* Pods-TimeShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.debug.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0565E2125380CDDC0F28A6D /* Pods_TimeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,14 +146,17 @@
 		96D96B9E25A6D54200CA39B1 /* TimeShare */ = {
 			isa = PBXGroup;
 			children = (
+				C701670825ACD351002FF445 /* Model */,
+				C70166E825ACD181002FF445 /* Views */,
+				C701670725ACD344002FF445 /* View Model */,
 				96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */,
 				96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */,
 				96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */,
-				96D96BA325A6D54200CA39B1 /* ViewController.swift */,
-				96D96BA525A6D54200CA39B1 /* Main.storyboard */,
 				96D96BA825A6D54400CA39B1 /* Assets.xcassets */,
 				96D96BAA25A6D54400CA39B1 /* LaunchScreen.storyboard */,
 				96D96BAD25A6D54400CA39B1 /* Info.plist */,
+				C70166F125ACD270002FF445 /* View Controllers */,
+				C701671125ACD379002FF445 /* Constants */,
 			);
 			path = TimeShare;
 			sourceTree = "<group>";
@@ -158,6 +177,51 @@
 				96D96BC325A6D54500CA39B1 /* Info.plist */,
 			);
 			path = TimeShareUITests;
+			sourceTree = "<group>";
+		};
+		C70166E825ACD181002FF445 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96D96BA525A6D54200CA39B1 /* Main.storyboard */,
+				C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */,
+				C70166D925ACD0EB002FF445 /* Chat.storyboard */,
+				C70166DE25ACD0F3002FF445 /* Ranking.storyboard */,
+				C70166E325ACD0FB002FF445 /* Settings.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C70166F125ACD270002FF445 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96D96BA325A6D54200CA39B1 /* MainViewController.swift */,
+				C70166F825ACD27D002FF445 /* ChatViewController.swift */,
+				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
+				C701670225ACD28E002FF445 /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C701670725ACD344002FF445 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C701670825ACD351002FF445 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C701671125ACD379002FF445 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C701670925ACD371002FF445 /* K.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		D4F62C000027FB2F860D6D90 /* Pods */ = {
@@ -282,8 +346,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */,
+				C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */,
 				96D96BAC25A6D54400CA39B1 /* LaunchScreen.storyboard in Resources */,
+				C70166E425ACD0FB002FF445 /* Settings.storyboard in Resources */,
 				96D96C0825A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */,
+				C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */,
 				96D96BA925A6D54400CA39B1 /* Assets.xcassets in Resources */,
 				96D96BA725A6D54200CA39B1 /* Main.storyboard in Resources */,
 			);
@@ -415,9 +483,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96D96BA425A6D54200CA39B1 /* ViewController.swift in Sources */,
+				96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */,
 				96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */,
+				C701670325ACD28E002FF445 /* SettingsViewController.swift in Sources */,
 				96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */,
+				C70166F925ACD27D002FF445 /* ChatViewController.swift in Sources */,
+				C701670A25ACD371002FF445 /* K.swift in Sources */,
+				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
