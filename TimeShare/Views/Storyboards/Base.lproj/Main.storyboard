@@ -43,7 +43,7 @@
         <!--Settings-->
         <scene sceneID="hH0-uc-Eqa">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Settings" storyboardName="Settings" id="z21-rj-HU4" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="SettingsVC" storyboardName="Settings" id="z21-rj-HU4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="Hbn-S6-Rnr"/>
                     <navigationItem key="navigationItem" id="D26-RG-01m"/>
                 </viewControllerPlaceholder>

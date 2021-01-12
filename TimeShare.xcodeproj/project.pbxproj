@@ -27,8 +27,16 @@
 		C70166E425ACD0FB002FF445 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166E325ACD0FB002FF445 /* Settings.storyboard */; };
 		C70166F925ACD27D002FF445 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70166F825ACD27D002FF445 /* ChatViewController.swift */; };
 		C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70166FD25ACD285002FF445 /* RankingViewController.swift */; };
-		C701670325ACD28E002FF445 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701670225ACD28E002FF445 /* SettingsViewController.swift */; };
+		C701670325ACD28E002FF445 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701670225ACD28E002FF445 /* SettingsVC.swift */; };
 		C701670A25ACD371002FF445 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701670925ACD371002FF445 /* K.swift */; };
+		C7146F6625ADEA9900E48762 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F6525ADEA9900E48762 /* SettingsItem.swift */; };
+		C7146F7825AE1ADE00E48762 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F7725AE1ADE00E48762 /* ProfileVC.swift */; };
+		C7146F7D25AE1AEE00E48762 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F7C25AE1AEE00E48762 /* FriendsVC.swift */; };
+		C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8125AE1B0700E48762 /* TimezoneVC.swift */; };
+		C7146F8725AE1B1100E48762 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8625AE1B1100E48762 /* AboutVC.swift */; };
+		C7146F8C25AE1F3E00E48762 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */; };
+		C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */; };
+		C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +84,17 @@
 		C70166E325ACD0FB002FF445 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		C70166F825ACD27D002FF445 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C70166FD25ACD285002FF445 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
-		C701670225ACD28E002FF445 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C701670225ACD28E002FF445 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C701670925ACD371002FF445 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		C7146F6525ADEA9900E48762 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		C7146F7725AE1ADE00E48762 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C7146F7C25AE1AEE00E48762 /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		C7146F8125AE1B0700E48762 /* TimezoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneVC.swift; sourceTree = "<group>"; };
+		C7146F8625AE1B1100E48762 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		C7AB6DDB8BBBE4103F68B26D /* Pods-TimeShare-TimeShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare-TimeShareUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		EDD44ABDA7B4981F8B45BA1F /* Pods-TimeShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.debug.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0565E2125380CDDC0F28A6D /* Pods_TimeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,13 +165,12 @@
 				C701670825ACD351002FF445 /* Model */,
 				C70166E825ACD181002FF445 /* Views */,
 				C701670725ACD344002FF445 /* View Model */,
-				96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */,
+				C70166F125ACD270002FF445 /* View Controllers */,
 				96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */,
 				96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */,
 				96D96BA825A6D54400CA39B1 /* Assets.xcassets */,
 				96D96BAA25A6D54400CA39B1 /* LaunchScreen.storyboard */,
 				96D96BAD25A6D54400CA39B1 /* Info.plist */,
-				C70166F125ACD270002FF445 /* View Controllers */,
 				C701671125ACD379002FF445 /* Constants */,
 			);
 			path = TimeShare;
@@ -182,11 +197,8 @@
 		C70166E825ACD181002FF445 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				96D96BA525A6D54200CA39B1 /* Main.storyboard */,
-				C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */,
-				C70166D925ACD0EB002FF445 /* Chat.storyboard */,
-				C70166DE25ACD0F3002FF445 /* Ranking.storyboard */,
-				C70166E325ACD0FB002FF445 /* Settings.storyboard */,
+				C7F5315825AD5C24006FB302 /* Cells */,
+				C7F5315925AD5C33006FB302 /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,10 +206,11 @@
 		C70166F125ACD270002FF445 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */,
 				96D96BA325A6D54200CA39B1 /* MainViewController.swift */,
 				C70166F825ACD27D002FF445 /* ChatViewController.swift */,
 				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
-				C701670225ACD28E002FF445 /* SettingsViewController.swift */,
+				C7146F6D25AE16E700E48762 /* Settings */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +218,7 @@
 		C701670725ACD344002FF445 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -212,6 +226,7 @@
 		C701670825ACD351002FF445 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7146F6525ADEA9900E48762 /* SettingsItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +237,39 @@
 				C701670925ACD371002FF445 /* K.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		C7146F6D25AE16E700E48762 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C701670225ACD28E002FF445 /* SettingsVC.swift */,
+				C7146F7725AE1ADE00E48762 /* ProfileVC.swift */,
+				C7146F7C25AE1AEE00E48762 /* FriendsVC.swift */,
+				C7146F8125AE1B0700E48762 /* TimezoneVC.swift */,
+				C7146F8625AE1B1100E48762 /* AboutVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C7F5315825AD5C24006FB302 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */,
+				C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C7F5315925AD5C33006FB302 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				96D96BA525A6D54200CA39B1 /* Main.storyboard */,
+				C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */,
+				C70166D925ACD0EB002FF445 /* Chat.storyboard */,
+				C70166DE25ACD0F3002FF445 /* Ranking.storyboard */,
+				C70166E325ACD0FB002FF445 /* Settings.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		D4F62C000027FB2F860D6D90 /* Pods */ = {
@@ -483,13 +531,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7146F8725AE1B1100E48762 /* AboutVC.swift in Sources */,
+				C7146F8C25AE1F3E00E48762 /* FriendsCell.swift in Sources */,
 				96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */,
 				96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */,
-				C701670325ACD28E002FF445 /* SettingsViewController.swift in Sources */,
+				C7146F7D25AE1AEE00E48762 /* FriendsVC.swift in Sources */,
+				C701670325ACD28E002FF445 /* SettingsVC.swift in Sources */,
 				96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */,
 				C70166F925ACD27D002FF445 /* ChatViewController.swift in Sources */,
+				C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */,
 				C701670A25ACD371002FF445 /* K.swift in Sources */,
+				C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */,
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
+				C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */,
+				C7146F7825AE1ADE00E48762 /* ProfileVC.swift in Sources */,
+				C7146F6625ADEA9900E48762 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
