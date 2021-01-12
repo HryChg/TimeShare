@@ -11,7 +11,7 @@
         <scene sceneID="buU-AR-riR">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="HomeScreen" storyboardName="HomeScreen" id="K50-GY-fIO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="k" catalog="system" id="Y0H-I8-UPW"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="Y0H-I8-UPW"/>
                     <navigationItem key="navigationItem" id="tzN-y3-ZYb"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJH-dk-pzX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -49,7 +49,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSS-Ff-qbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="479"/>
+            <point key="canvasLocation" x="1020" y="479"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IaM-hg-ug5">
@@ -72,7 +72,4 @@
             <point key="canvasLocation" x="142" y="-68"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="k" catalog="system" width="114" height="128"/>
-    </resources>
 </document>

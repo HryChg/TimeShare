@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat View Controller-->
+        <!--Chat-->
         <scene sceneID="jkR-IA-gfl">
             <objects>
                 <viewController storyboardIdentifier="Chat" id="RMq-o7-4qk" customClass="ChatViewController" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +19,8 @@
                         <viewLayoutGuide key="safeArea" id="zCa-Yn-ybQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="circle" catalog="system" id="O32-pw-NWx"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vy-Nc-IDY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,6 +28,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

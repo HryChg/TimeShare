@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main-->
         <scene sceneID="z5z-Xu-2Zc">
             <objects>
                 <viewController storyboardIdentifier="HomeScreen" id="M6j-Th-mzU" customClass="MainViewController" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +19,8 @@
                         <viewLayoutGuide key="safeArea" id="Czk-WW-L5o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Main" image="square" catalog="system" id="vzk-F6-s7U"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSv-Jl-Ys0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,6 +73,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
