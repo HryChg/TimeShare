@@ -14,7 +14,10 @@ class RankingCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBOutlet weak var profileRankingPic: UIImageView!
+    @IBOutlet weak var trophyRankingPic: UIImageView!
+    @IBOutlet weak var rankingStatsLabel: UILabel!
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

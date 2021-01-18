@@ -10,31 +10,71 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="RankingCell" customModule="TimeShare" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="423" height="133"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="KGk-i7-Jjw" customClass="RankingCell" customModule="TimeShare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="153"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="423" height="133"/>
+                <rect key="frame" x="0.0" y="0.0" width="443" height="153"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b79-IH-dqe">
-                        <rect key="frame" x="190" y="0.0" width="59" height="59"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZd-7a-5j1">
-                        <rect key="frame" x="20" y="72" width="391" height="34"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-E6-tCf">
-                        <rect key="frame" x="94" y="0.0" width="59" height="59"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="6hb-lY-ZcC">
+                        <rect key="frame" x="10" y="10" width="420" height="130"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="veI-Pm-sg7">
+                                <rect key="frame" x="141.5" y="0.0" width="137" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-E6-tCf">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="v10-QZ-rc2"/>
+                                            <constraint firstAttribute="width" constant="50" id="xLs-FT-ONC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot" translatesAutoresizingMaskIntoConstraints="NO" id="b79-IH-dqe">
+                                        <rect key="frame" x="87" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="9Pj-Wh-wW1"/>
+                                            <constraint firstAttribute="height" constant="50" id="rRi-OJ-H1J"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking Stats go here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W3-oQ-8L2">
+                                <rect key="frame" x="10" y="60" width="400" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="f9c-he-wRs"/>
+                                    <constraint firstAttribute="height" constant="60" id="fkX-Wc-gxj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6W3-oQ-8L2" secondAttribute="trailing" constant="10" id="98B-i1-Eic"/>
+                            <constraint firstItem="6W3-oQ-8L2" firstAttribute="top" secondItem="veI-Pm-sg7" secondAttribute="bottom" constant="10" id="pud-Qe-yxx"/>
+                            <constraint firstItem="6W3-oQ-8L2" firstAttribute="leading" secondItem="6hb-lY-ZcC" secondAttribute="leading" constant="10" id="yFj-3c-72P"/>
+                            <constraint firstAttribute="bottom" secondItem="6W3-oQ-8L2" secondAttribute="bottom" constant="10" id="zfT-HC-3AF"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6hb-lY-ZcC" secondAttribute="trailing" constant="10" id="Dph-x0-Kkw"/>
+                    <constraint firstAttribute="bottom" secondItem="6hb-lY-ZcC" secondAttribute="bottom" constant="10" id="HcL-h2-aOG"/>
+                    <constraint firstItem="6hb-lY-ZcC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="JKe-ZB-vq0"/>
+                    <constraint firstItem="6hb-lY-ZcC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="msv-rF-kbL"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="196.37681159420291" y="90.066964285714278"/>
+            <connections>
+                <outlet property="profileRankingPic" destination="b79-IH-dqe" id="E3G-Oh-zef"/>
+                <outlet property="rankingStatsLabel" destination="6W3-oQ-8L2" id="MtG-89-c1e"/>
+                <outlet property="trophyRankingPic" destination="rm6-E6-tCf" id="STu-aq-08w"/>
+            </connections>
+            <point key="canvasLocation" x="210.86956521739131" y="96.763392857142847"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Headshot" width="112.5" height="112.5"/>
+    </resources>
 </document>
