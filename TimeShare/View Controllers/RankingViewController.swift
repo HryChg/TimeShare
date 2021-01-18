@@ -8,15 +8,23 @@
 
 import UIKit
 
-class RankingViewController: UIViewController {
+class RankingViewController: UITableViewController, UITableView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .yellow
 
 
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    
     
 
     /*

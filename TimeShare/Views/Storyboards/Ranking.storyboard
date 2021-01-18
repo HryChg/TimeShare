@@ -16,15 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="ZbQ-Po-UlQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MFK-GT-Kd5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingOrderedCell" id="dfJ-2j-ROt">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dfJ-2j-ROt" id="aWz-Et-v2g">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Z0s-Pg-cKI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MFK-GT-Kd5" firstAttribute="bottom" secondItem="Z0s-Pg-cKI" secondAttribute="bottom" id="1J0-dd-b3r"/>
+                            <constraint firstItem="MFK-GT-Kd5" firstAttribute="trailing" secondItem="Z0s-Pg-cKI" secondAttribute="trailing" id="KLN-Au-DGZ"/>
+                            <constraint firstItem="MFK-GT-Kd5" firstAttribute="leading" secondItem="Z0s-Pg-cKI" secondAttribute="leading" id="XRc-kf-zcb"/>
+                            <constraint firstItem="MFK-GT-Kd5" firstAttribute="top" secondItem="Z0s-Pg-cKI" secondAttribute="top" id="gH9-Cf-CmM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ranking" image="xmark" catalog="system" id="uZF-9i-TYh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBe-lU-iOm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="89"/>
+            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
