@@ -11,10 +11,22 @@ import Foundation
 struct RoomModel {
     let uuid = UUID()
     let title: String
-    let timer: Int
+    let workTimer: Int
+    let breakTimer: Int
+    let onBreak = false
     let timeLeft: Double
     let members = [MemberModel]()
     var progress: Double {
-        return Double(timer) / timeLeft
+        return Double(onBreak ? self.breakTimer : self.workTimer) / timeLeft
     }
+
+    // TODO
+    // updateTitle
+    // updateMembers
+
+    // TODO Possibly Extrate some logic out for the TimerModel
+    // updateWorkTimer
+    // updateBreakTimer
+    // updateOnBreak
+    // updateTimeLeft
 }

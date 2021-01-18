@@ -12,14 +12,20 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     
+    let roomCellNibName = String(describing: RoomCell.self)
+    
     var rooms = (1...30).map{
-        return RoomModel(title: "Room \($0)", timer: $0, timeLeft: Double($0))
+        return RoomModel(title: "Room \($0)", workTimer: $0, breakTimer: 10, timeLeft: Double($0))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(UINib(nibName: roomCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.roomIdentifier)
+        tableView.rowHeight = 118 // TODO Move this to K
+        tableView.separatorStyle = .none
     }
 }
 
@@ -30,8 +36,9 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.roomIdentifier, for: indexPath)
-        cell.textLabel?.text = rooms[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.roomIdentifier, for: indexPath) as! RoomCell
+        cell.roomTitleLabel.text = rooms[indexPath.row].title
+        // TODO Add more attributes
         return cell
     }
 }

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Medium</string>
+            <string>SFPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="123" id="KGk-i7-Jjw" customClass="RoomCell" customModule="TimeShare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="118"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="118"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="427-Hm-jvi">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="118"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOM TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUe-Rj-lHl">
+                                <rect key="frame" x="8" y="12" width="166" height="33"/>
+                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="28"/>
+                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 50/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-nV-VK0">
+                                <rect key="frame" x="8" y="50" width="96" height="20"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="17"/>
+                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer Left: 49:55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-qi-Q7F">
+                                <rect key="frame" x="8" y="71" width="129" height="20"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="17"/>
+                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-qy-fiX">
+                                <rect key="frame" x="0.0" y="99" width="430" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="6PZ-6q-xZX"/>
+                                </constraints>
+                                <color key="progressTintColor" name="Brand Color 3 Capser"/>
+                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-sS-VCw">
+                                <rect key="frame" x="222" y="12" width="200" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot" translatesAutoresizingMaskIntoConstraints="NO" id="rk2-gc-oJV">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="tintColor" name="Brand Color 6 Blue Zodiac"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="X7Y-hw-EX2"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="upx-IU-uLF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot" translatesAutoresizingMaskIntoConstraints="NO" id="Le4-mT-Rxi">
+                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                        <color key="tintColor" name="Brand Color 6 Blue Zodiac"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="6GY-gq-l1p"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="pqP-2d-Wgr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot" translatesAutoresizingMaskIntoConstraints="NO" id="WKo-Hh-tU5">
+                                        <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                        <color key="tintColor" name="Brand Color 6 Blue Zodiac"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="OLp-6R-jSd"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="x3p-WQ-DpI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot" translatesAutoresizingMaskIntoConstraints="NO" id="8UU-zS-5IL">
+                                        <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                        <color key="tintColor" name="Brand Color 6 Blue Zodiac"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="Bc8-a9-3Qs"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="nS6-GW-bwY"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rk2-gc-oJV" firstAttribute="top" secondItem="6gA-sS-VCw" secondAttribute="top" id="g3Y-5J-C2g"/>
+                                    <constraint firstAttribute="bottom" secondItem="rk2-gc-oJV" secondAttribute="bottom" id="p3Z-kJ-OIy"/>
+                                    <constraint firstItem="rk2-gc-oJV" firstAttribute="leading" secondItem="6gA-sS-VCw" secondAttribute="leading" id="zbi-aO-Q7T"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Member(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib0-1M-qhS">
+                                <rect key="frame" x="343.5" y="70" width="78.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="14"/>
+                                <color key="textColor" name="Brand Color 4 Gull Gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Brand Color 2 Mystic"/>
+                        <constraints>
+                            <constraint firstItem="cVi-qy-fiX" firstAttribute="leading" secondItem="427-Hm-jvi" secondAttribute="leading" id="36I-RP-32d"/>
+                            <constraint firstItem="Ib0-1M-qhS" firstAttribute="top" secondItem="6gA-sS-VCw" secondAttribute="bottom" constant="8" symbolic="YES" id="5hK-E7-0bw"/>
+                            <constraint firstItem="Ogt-nV-VK0" firstAttribute="top" secondItem="eUe-Rj-lHl" secondAttribute="bottom" constant="5" id="B3S-dO-PYM"/>
+                            <constraint firstItem="iy3-qi-Q7F" firstAttribute="leading" secondItem="eUe-Rj-lHl" secondAttribute="leading" id="Bj6-RX-E2a"/>
+                            <constraint firstItem="Ib0-1M-qhS" firstAttribute="trailing" secondItem="6gA-sS-VCw" secondAttribute="trailing" id="Bqg-tD-F9t"/>
+                            <constraint firstItem="eUe-Rj-lHl" firstAttribute="top" secondItem="427-Hm-jvi" secondAttribute="top" constant="12" id="CvC-rr-PxU"/>
+                            <constraint firstItem="Ogt-nV-VK0" firstAttribute="leading" secondItem="eUe-Rj-lHl" secondAttribute="leading" id="D6g-On-c8H"/>
+                            <constraint firstAttribute="trailing" secondItem="cVi-qy-fiX" secondAttribute="trailing" id="Ek8-1O-mo6"/>
+                            <constraint firstItem="iy3-qi-Q7F" firstAttribute="top" secondItem="Ogt-nV-VK0" secondAttribute="bottom" constant="1" id="WD5-xj-wf5"/>
+                            <constraint firstAttribute="trailing" secondItem="6gA-sS-VCw" secondAttribute="trailing" constant="8" id="ZfT-YI-YL0"/>
+                            <constraint firstItem="cVi-qy-fiX" firstAttribute="top" secondItem="iy3-qi-Q7F" secondAttribute="bottom" constant="8" symbolic="YES" id="gPl-6b-z49"/>
+                            <constraint firstItem="eUe-Rj-lHl" firstAttribute="leading" secondItem="427-Hm-jvi" secondAttribute="leading" constant="8" id="kd1-ju-oBF"/>
+                            <constraint firstItem="6gA-sS-VCw" firstAttribute="top" secondItem="eUe-Rj-lHl" secondAttribute="top" id="rqX-tj-VNA"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="427-Hm-jvi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KEw-xD-iJ6"/>
+                    <constraint firstAttribute="bottom" secondItem="427-Hm-jvi" secondAttribute="bottom" id="XhK-Ad-jNY"/>
+                    <constraint firstAttribute="trailing" secondItem="427-Hm-jvi" secondAttribute="trailing" id="aeP-KI-nu4"/>
+                    <constraint firstItem="427-Hm-jvi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eS7-z6-imV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageStackView" destination="6gA-sS-VCw" id="1br-2f-i1B"/>
+                <outlet property="memberCountLabel" destination="Ib0-1M-qhS" id="Mex-9b-KuA"/>
+                <outlet property="progressBar" destination="cVi-qy-fiX" id="vbi-GX-cZd"/>
+                <outlet property="remainingTimeLabel" destination="iy3-qi-Q7F" id="G8P-ot-LBR"/>
+                <outlet property="roomTitleLabel" destination="eUe-Rj-lHl" id="MBu-5Z-5pq"/>
+                <outlet property="timerLabel" destination="Ogt-nV-VK0" id="OTZ-Ag-eSy"/>
+            </connections>
+            <point key="canvasLocation" x="72.463768115942031" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Headshot" width="112.5" height="112.5"/>
+        <namedColor name="Brand Color 2 Mystic">
+            <color red="0.90200001001358032" green="0.92500001192092896" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Color 3 Capser">
+            <color red="0.72500002384185791" green="0.76899999380111694" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Color 4 Gull Gray">
+            <color red="0.60799998044967651" green="0.64300000667572021" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Color 6 Blue Zodiac">
+            <color red="0.078000001609325409" green="0.15299999713897705" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -29,6 +29,8 @@
 		96EFE4ED25B55DCB0062D63B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4EA25B55DCA0062D63B /* README.md */; };
 		96EFE51F25B5716C0062D63B /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE51E25B5716C0062D63B /* RoomModel.swift */; };
 		96EFE52425B5729E0062D63B /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE52325B5729E0062D63B /* MemberModel.swift */; };
+		96EFE52D25B5810C0062D63B /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE52B25B5810C0062D63B /* RoomCell.swift */; };
+		96EFE52E25B5810C0062D63B /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE52C25B5810C0062D63B /* RoomCell.xib */; };
 		C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */; };
 		C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166D925ACD0EB002FF445 /* Chat.storyboard */; };
 		C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166DE25ACD0F3002FF445 /* Ranking.storyboard */; };
@@ -87,6 +89,8 @@
 		96EFE4EA25B55DCA0062D63B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		96EFE51E25B5716C0062D63B /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		96EFE52325B5729E0062D63B /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
+		96EFE52B25B5810C0062D63B /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		96EFE52C25B5810C0062D63B /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
 		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 			children = (
 				C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */,
 				C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */,
+				96EFE52B25B5810C0062D63B /* RoomCell.swift */,
+				96EFE52C25B5810C0062D63B /* RoomCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -424,6 +430,7 @@
 				96D96BAC25A6D54400CA39B1 /* LaunchScreen.storyboard in Resources */,
 				C70166E425ACD0FB002FF445 /* Settings.storyboard in Resources */,
 				96D96C0825A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */,
+				96EFE52E25B5810C0062D63B /* RoomCell.xib in Resources */,
 				C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */,
 				96D96BA925A6D54400CA39B1 /* Assets.xcassets in Resources */,
 				96D96BA725A6D54200CA39B1 /* Main.storyboard in Resources */,
@@ -577,6 +584,7 @@
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
 				C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */,
 				C7146F7825AE1ADE00E48762 /* ProfileVC.swift in Sources */,
+				96EFE52D25B5810C0062D63B /* RoomCell.swift in Sources */,
 				C7146F6625ADEA9900E48762 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
