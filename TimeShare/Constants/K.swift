@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+
+
+struct K {
+    struct Cell {
+        static let roomIdentifier = "RoomCell"
+        static let memberIdentifier = "MemberCell"
+    }
+    
+    struct Images {
+        static let addButton = "Add Button"
+    }
+    
+    struct Segue {
+        static let goToCreateRoom = "CreateRoomSegue"
+        static let goToTimer = "TimerSegue"
+    }
+}
