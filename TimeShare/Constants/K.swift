@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+
+
+struct K {
+    struct Cell {
+        static let roomIdentifier = "RoomCell"
+    }
+    
+    struct Images {
+        static let addButton = "Add Button"
+    }
+}
