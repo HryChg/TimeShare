@@ -27,6 +27,10 @@ class MainViewController: UIViewController {
         tableView.rowHeight = 118 // TODO Move this to K
         tableView.separatorStyle = .none
     }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: K.Segue.goToCreateRoom, sender: self)
+    }
 }
 
 // MARK: - UITableViewDataSource

@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="SF-Pro.ttf">
+            <string>SFPro-Bold</string>
             <string>SFPro-Heavy</string>
         </array>
     </customFonts>
@@ -68,6 +69,12 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="cFq-vL-egQ"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="Add Button"/>
+                                                <connections>
+                                                    <action selector="addButtonPressed:" destination="M6j-Th-mzU" eventType="touchUpInside" id="6nX-jv-UZa"/>
+                                                    <segue destination="kYM-R4-Iea" kind="popoverPresentation" identifier="CreateRoomSegue" popoverAnchorView="nXb-po-z07" id="jeW-8e-qeI">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="Brand Color 2 Mystic"/>
@@ -109,6 +116,197 @@
             </objects>
             <point key="canvasLocation" x="-1260.8695652173915" y="-969.64285714285711"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LTl-6Q-KXG">
+            <objects>
+                <viewController id="kYM-R4-Iea" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUB-8Q-iEq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JfX-Xs-VHI">
+                                <rect key="frame" x="0.0" y="20" width="414" height="802"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enF-ba-s4L" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW ROOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1m-pO-5pZ" userLabel="Title">
+                                                <rect key="frame" x="127.5" y="25" width="159" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Heavy" family="SF Pro" pointSize="28"/>
+                                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc6-yI-kVD">
+                                                <rect key="frame" x="8" y="26.5" width="48" height="30"/>
+                                                <state key="normal" title="Cancel"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvF-jz-gH2">
+                                                <rect key="frame" x="346" y="26.5" width="60" height="30"/>
+                                                <color key="backgroundColor" name="Brand Color 5 Fiord"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="zKf-0b-nal"/>
+                                                </constraints>
+                                                <state key="normal" title="Create">
+                                                    <color key="titleColor" name="Brand Color 1 CatskillWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UvF-jz-gH2" secondAttribute="trailing" constant="8" id="Ifd-V6-7ou"/>
+                                            <constraint firstItem="q1m-pO-5pZ" firstAttribute="centerX" secondItem="enF-ba-s4L" secondAttribute="centerX" id="L1m-5G-WgE"/>
+                                            <constraint firstItem="yc6-yI-kVD" firstAttribute="leading" secondItem="enF-ba-s4L" secondAttribute="leading" constant="8" id="S7D-BY-y3V"/>
+                                            <constraint firstItem="yc6-yI-kVD" firstAttribute="centerY" secondItem="q1m-pO-5pZ" secondAttribute="centerY" id="SlY-XV-GSX"/>
+                                            <constraint firstItem="UvF-jz-gH2" firstAttribute="centerY" secondItem="q1m-pO-5pZ" secondAttribute="centerY" id="bW2-cU-ZAJ"/>
+                                            <constraint firstItem="q1m-pO-5pZ" firstAttribute="centerY" secondItem="enF-ba-s4L" secondAttribute="centerY" id="eM3-eT-JSV"/>
+                                        </constraints>
+                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-hR-Wbc">
+                                        <rect key="frame" x="0.0" y="83" width="414" height="719"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARU-tl-puv" userLabel="Content View">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="719"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZE-Xh-UhI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="699"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter room name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVm-9Y-Ghl">
+                                                                <rect key="frame" x="20" y="46" width="380" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="50 min" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q79-7O-8aF">
+                                                                <rect key="frame" x="119" y="88" width="281" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10 min" borderStyle="roundedRect" placeholder="Enter room name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ew-wz-Tof">
+                                                                <rect key="frame" x="119" y="130" width="281" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 ppl" borderStyle="roundedRect" placeholder="Enter room name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXf-hd-vRR">
+                                                                <rect key="frame" x="119" y="172" width="281" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREAK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifk-qM-iCK">
+                                                                <rect key="frame" x="20" y="138" width="91" height="18"/>
+                                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
+                                                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNT-9L-vpG">
+                                                                <rect key="frame" x="20" y="180" width="91" height="18"/>
+                                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
+                                                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loA-zp-BZ6">
+                                                                <rect key="frame" x="20" y="96" width="91" height="18"/>
+                                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
+                                                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOM NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUg-kI-dhY">
+                                                                <rect key="frame" x="20" y="20" width="95" height="18"/>
+                                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
+                                                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZG-Pa-gLx">
+                                                                <rect key="frame" x="20" y="237" width="69.5" height="18"/>
+                                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
+                                                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s04-rk-xRr">
+                                                                <rect key="frame" x="20" y="263" width="380" height="416"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="ZXf-hd-vRR" firstAttribute="leading" secondItem="q79-7O-8aF" secondAttribute="leading" id="0yi-jZ-lPI"/>
+                                                            <constraint firstItem="q79-7O-8aF" firstAttribute="trailing" secondItem="LVm-9Y-Ghl" secondAttribute="trailing" id="2nN-P5-1Qj"/>
+                                                            <constraint firstItem="jUg-kI-dhY" firstAttribute="leading" secondItem="hZE-Xh-UhI" secondAttribute="leading" constant="20" symbolic="YES" id="2u3-Qk-bDV"/>
+                                                            <constraint firstItem="4Ew-wz-Tof" firstAttribute="top" secondItem="q79-7O-8aF" secondAttribute="bottom" constant="8" symbolic="YES" id="4C2-xE-vKj"/>
+                                                            <constraint firstItem="ZXf-hd-vRR" firstAttribute="top" secondItem="4Ew-wz-Tof" secondAttribute="bottom" constant="8" symbolic="YES" id="5Bf-79-jiH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="s04-rk-xRr" secondAttribute="bottom" constant="20" symbolic="YES" id="7Lo-vG-qAk"/>
+                                                            <constraint firstAttribute="trailing" secondItem="LVm-9Y-Ghl" secondAttribute="trailing" constant="14" id="BCm-Vy-Zaz"/>
+                                                            <constraint firstItem="loA-zp-BZ6" firstAttribute="leading" secondItem="jUg-kI-dhY" secondAttribute="leading" id="CRB-y5-kAH"/>
+                                                            <constraint firstItem="s04-rk-xRr" firstAttribute="top" secondItem="vZG-Pa-gLx" secondAttribute="bottom" constant="8" symbolic="YES" id="DDR-0h-K6a"/>
+                                                            <constraint firstItem="4Ew-wz-Tof" firstAttribute="trailing" secondItem="LVm-9Y-Ghl" secondAttribute="trailing" id="Euq-ev-u6F"/>
+                                                            <constraint firstItem="q79-7O-8aF" firstAttribute="leading" secondItem="loA-zp-BZ6" secondAttribute="trailing" constant="8" symbolic="YES" id="FPF-NH-CVt"/>
+                                                            <constraint firstItem="loA-zp-BZ6" firstAttribute="centerY" secondItem="q79-7O-8aF" secondAttribute="centerY" id="Hje-6T-YpV"/>
+                                                            <constraint firstItem="eNT-9L-vpG" firstAttribute="leading" secondItem="jUg-kI-dhY" secondAttribute="leading" id="Hv6-7R-tKQ"/>
+                                                            <constraint firstItem="4Ew-wz-Tof" firstAttribute="leading" secondItem="q79-7O-8aF" secondAttribute="leading" id="PbG-qv-ni4"/>
+                                                            <constraint firstItem="jUg-kI-dhY" firstAttribute="top" secondItem="hZE-Xh-UhI" secondAttribute="top" constant="20" symbolic="YES" id="TJA-91-6ra"/>
+                                                            <constraint firstItem="eNT-9L-vpG" firstAttribute="centerY" secondItem="ZXf-hd-vRR" secondAttribute="centerY" id="UWo-Wy-YPZ"/>
+                                                            <constraint firstItem="ifk-qM-iCK" firstAttribute="leading" secondItem="jUg-kI-dhY" secondAttribute="leading" id="UtI-ao-FQY"/>
+                                                            <constraint firstItem="ZXf-hd-vRR" firstAttribute="trailing" secondItem="LVm-9Y-Ghl" secondAttribute="trailing" id="X9t-vb-cyL"/>
+                                                            <constraint firstItem="s04-rk-xRr" firstAttribute="leading" secondItem="jUg-kI-dhY" secondAttribute="leading" id="bgN-YK-FQG"/>
+                                                            <constraint firstItem="vZG-Pa-gLx" firstAttribute="top" secondItem="eNT-9L-vpG" secondAttribute="bottom" constant="39" id="dEf-hH-4QO"/>
+                                                            <constraint firstItem="vZG-Pa-gLx" firstAttribute="leading" secondItem="jUg-kI-dhY" secondAttribute="leading" id="ic7-TD-TC0"/>
+                                                            <constraint firstItem="LVm-9Y-Ghl" firstAttribute="leading" secondItem="jUg-kI-dhY" secondAttribute="leading" id="m4B-Wu-yld"/>
+                                                            <constraint firstItem="ZXf-hd-vRR" firstAttribute="leading" secondItem="eNT-9L-vpG" secondAttribute="trailing" constant="8" symbolic="YES" id="mi0-bc-18j"/>
+                                                            <constraint firstItem="ifk-qM-iCK" firstAttribute="centerY" secondItem="4Ew-wz-Tof" secondAttribute="centerY" id="ru2-Sd-bAR"/>
+                                                            <constraint firstItem="4Ew-wz-Tof" firstAttribute="leading" secondItem="ifk-qM-iCK" secondAttribute="trailing" constant="8" symbolic="YES" id="uvJ-fs-EbJ"/>
+                                                            <constraint firstItem="q79-7O-8aF" firstAttribute="top" secondItem="LVm-9Y-Ghl" secondAttribute="bottom" constant="8" symbolic="YES" id="vl9-f0-aw7"/>
+                                                            <constraint firstItem="LVm-9Y-Ghl" firstAttribute="top" secondItem="jUg-kI-dhY" secondAttribute="bottom" constant="8" symbolic="YES" id="w1F-U2-O3i"/>
+                                                            <constraint firstItem="s04-rk-xRr" firstAttribute="trailing" secondItem="LVm-9Y-Ghl" secondAttribute="trailing" id="wNw-t0-caZ"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hZE-Xh-UhI" firstAttribute="top" secondItem="ARU-tl-puv" secondAttribute="top" id="85s-78-BJ6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hZE-Xh-UhI" secondAttribute="trailing" id="B7w-E7-et2"/>
+                                                    <constraint firstItem="hZE-Xh-UhI" firstAttribute="leading" secondItem="ARU-tl-puv" secondAttribute="leading" id="EdH-re-LXO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hZE-Xh-UhI" secondAttribute="bottom" constant="20" symbolic="YES" id="vZk-5E-hBk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Brand Color 2 Mystic"/>
+                                        <constraints>
+                                            <constraint firstItem="ARU-tl-puv" firstAttribute="trailing" secondItem="YvP-zk-ZfS" secondAttribute="trailing" id="4yo-xK-c7d"/>
+                                            <constraint firstAttribute="trailing" secondItem="ARU-tl-puv" secondAttribute="trailing" id="Djl-Gu-bLx"/>
+                                            <constraint firstItem="ARU-tl-puv" firstAttribute="centerX" secondItem="vrQ-hR-Wbc" secondAttribute="centerX" id="EfK-x1-Ti1"/>
+                                            <constraint firstItem="ARU-tl-puv" firstAttribute="bottom" secondItem="YvP-zk-ZfS" secondAttribute="bottom" priority="250" id="eYR-CJ-hK2"/>
+                                            <constraint firstItem="ARU-tl-puv" firstAttribute="top" secondItem="YvP-zk-ZfS" secondAttribute="top" id="lhp-Hv-Hld"/>
+                                            <constraint firstItem="ARU-tl-puv" firstAttribute="centerY" secondItem="vrQ-hR-Wbc" secondAttribute="centerY" priority="250" id="tgX-Ra-QhJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ARU-tl-puv" secondAttribute="bottom" id="xFm-sp-7TF"/>
+                                            <constraint firstItem="ARU-tl-puv" firstAttribute="leading" secondItem="YvP-zk-ZfS" secondAttribute="leading" id="ztk-Fj-0Mz"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="5vG-ca-gcn"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="YvP-zk-ZfS"/>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="enF-ba-s4L" firstAttribute="leading" secondItem="JfX-Xs-VHI" secondAttribute="leading" id="ASh-o0-dzZ"/>
+                                    <constraint firstItem="enF-ba-s4L" firstAttribute="top" secondItem="JfX-Xs-VHI" secondAttribute="top" id="ETc-WJ-qIt"/>
+                                    <constraint firstItem="vrQ-hR-Wbc" firstAttribute="top" secondItem="JfX-Xs-VHI" secondAttribute="top" constant="83" id="N0b-qn-N3O"/>
+                                    <constraint firstAttribute="trailing" secondItem="enF-ba-s4L" secondAttribute="trailing" id="fc9-ys-DAz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bVr-6S-0Rg"/>
+                        <color key="backgroundColor" name="Brand Color 1 CatskillWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="JfX-Xs-VHI" secondAttribute="bottom" constant="20" symbolic="YES" id="JE6-TM-G9i"/>
+                            <constraint firstItem="JfX-Xs-VHI" firstAttribute="trailing" secondItem="bVr-6S-0Rg" secondAttribute="trailing" id="MSk-E9-wsI"/>
+                            <constraint firstItem="JfX-Xs-VHI" firstAttribute="top" secondItem="bVr-6S-0Rg" secondAttribute="top" constant="20" id="TQN-gk-a8n"/>
+                            <constraint firstItem="JfX-Xs-VHI" firstAttribute="leading" secondItem="bVr-6S-0Rg" secondAttribute="leading" id="UBZ-BN-3nf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moL-hs-4if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.14492753623193" y="-649.55357142857144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Add Button" width="75" height="75"/>
@@ -119,9 +317,15 @@
         <namedColor name="Brand Color 2 Mystic">
             <color red="0.90200001001358032" green="0.92500001192092896" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Brand Color 5 Fiord">
+            <color red="0.22400000691413879" green="0.28200000524520874" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Brand Color 6 Blue Zodiac">
             <color red="0.078000001609325409" green="0.15299999713897705" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

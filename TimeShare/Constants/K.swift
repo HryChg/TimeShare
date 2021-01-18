@@ -18,4 +18,8 @@ struct K {
     struct Images {
         static let addButton = "Add Button"
     }
+    
+    struct Segue {
+        static let goToCreateRoom = "CreateRoomSegue"
+    }
 }
