@@ -13,6 +13,7 @@ import Foundation
 struct K {
     struct Cell {
         static let roomIdentifier = "RoomCell"
+        static let memberIdentifier = "MemberCell"
     }
     
     struct Images {

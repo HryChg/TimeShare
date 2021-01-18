@@ -32,6 +32,7 @@
 		96EFE52D25B5810C0062D63B /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE52B25B5810C0062D63B /* RoomCell.swift */; };
 		96EFE52E25B5810C0062D63B /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE52C25B5810C0062D63B /* RoomCell.xib */; };
 		96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */; };
+		96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55E25B5B3600062D63B /* TimerVC.swift */; };
 		C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */; };
 		C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166D925ACD0EB002FF445 /* Chat.storyboard */; };
 		C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166DE25ACD0F3002FF445 /* Ranking.storyboard */; };
@@ -93,6 +94,7 @@
 		96EFE52B25B5810C0062D63B /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		96EFE52C25B5810C0062D63B /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
 		96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomVC.swift; sourceTree = "<group>"; };
+		96EFE55E25B5B3600062D63B /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				96D96BA325A6D54200CA39B1 /* MainViewController.swift */,
 				96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */,
+				96EFE55E25B5B3600062D63B /* TimerVC.swift */,
 			);
 			path = HomeScreens;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */,
 				C7146F7D25AE1AEE00E48762 /* FriendsVC.swift in Sources */,
 				C701670325ACD28E002FF445 /* SettingsVC.swift in Sources */,
+				96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */,
 				96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */,
 				96EFE52425B5729E0062D63B /* MemberModel.swift in Sources */,
 				96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */,

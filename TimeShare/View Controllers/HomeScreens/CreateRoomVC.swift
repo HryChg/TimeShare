@@ -12,11 +12,8 @@ class CreateRoomVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
     @IBAction func createButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: K.Segue.goToTimer, sender: self)
     }

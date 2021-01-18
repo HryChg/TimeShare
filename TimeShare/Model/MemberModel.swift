@@ -15,4 +15,5 @@ struct MemberModel {
     var avatar: UIImage? {
         return UIImage(named: avatarURL)
     }
+    let goal: String // TODO Extract Goal to its own struct
 }
