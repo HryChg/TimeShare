@@ -169,7 +169,6 @@
 				96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */,
 				96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */,
 				96D96BA825A6D54400CA39B1 /* Assets.xcassets */,
-				96D96BAA25A6D54400CA39B1 /* LaunchScreen.storyboard */,
 				96D96BAD25A6D54400CA39B1 /* Info.plist */,
 				C701671125ACD379002FF445 /* Constants */,
 			);
@@ -263,6 +262,7 @@
 		C7F5315925AD5C33006FB302 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				96D96BAA25A6D54400CA39B1 /* LaunchScreen.storyboard */,
 				96D96BA525A6D54200CA39B1 /* Main.storyboard */,
 				C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */,
 				C70166D925ACD0EB002FF445 /* Chat.storyboard */,
