@@ -21,6 +21,12 @@
 		96D96C0825A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
 		96D96C0925A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
 		96D96C0A25A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
+		96EFE4D725B55BD00062D63B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4D325B55BD00062D63B /* SF-Pro.ttf */; };
+		96EFE4D825B55BD00062D63B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4D325B55BD00062D63B /* SF-Pro.ttf */; };
+		96EFE4D925B55BD00062D63B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4D325B55BD00062D63B /* SF-Pro.ttf */; };
+		96EFE4EB25B55DCB0062D63B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4EA25B55DCA0062D63B /* README.md */; };
+		96EFE4EC25B55DCB0062D63B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4EA25B55DCA0062D63B /* README.md */; };
+		96EFE4ED25B55DCB0062D63B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4EA25B55DCA0062D63B /* README.md */; };
 		C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */; };
 		C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166D925ACD0EB002FF445 /* Chat.storyboard */; };
 		C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166DE25ACD0F3002FF445 /* Ranking.storyboard */; };
@@ -75,6 +81,8 @@
 		96D96BC125A6D54500CA39B1 /* TimeShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeShareUITests.swift; sourceTree = "<group>"; };
 		96D96BC325A6D54500CA39B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		96EFE4D325B55BD00062D63B /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		96EFE4EA25B55DCA0062D63B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		96D96B9325A6D54200CA39B1 = {
 			isa = PBXGroup;
 			children = (
+				96EFE4EA25B55DCA0062D63B /* README.md */,
 				96D96B9E25A6D54200CA39B1 /* TimeShare */,
 				96D96BB525A6D54500CA39B1 /* TimeShareTests */,
 				96D96BC025A6D54500CA39B1 /* TimeShareUITests */,
@@ -162,6 +171,7 @@
 		96D96B9E25A6D54200CA39B1 /* TimeShare */ = {
 			isa = PBXGroup;
 			children = (
+				96EFE4E325B55C2D0062D63B /* Fonts */,
 				C701670825ACD351002FF445 /* Model */,
 				C70166E825ACD181002FF445 /* Views */,
 				C701670725ACD344002FF445 /* View Model */,
@@ -191,6 +201,14 @@
 				96D96BC325A6D54500CA39B1 /* Info.plist */,
 			);
 			path = TimeShareUITests;
+			sourceTree = "<group>";
+		};
+		96EFE4E325B55C2D0062D63B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				96EFE4D325B55BD00062D63B /* SF-Pro.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C70166E825ACD181002FF445 /* Views */ = {
@@ -396,12 +414,14 @@
 			files = (
 				C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */,
 				C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */,
+				96EFE4EB25B55DCB0062D63B /* README.md in Resources */,
 				96D96BAC25A6D54400CA39B1 /* LaunchScreen.storyboard in Resources */,
 				C70166E425ACD0FB002FF445 /* Settings.storyboard in Resources */,
 				96D96C0825A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */,
 				C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */,
 				96D96BA925A6D54400CA39B1 /* Assets.xcassets in Resources */,
 				96D96BA725A6D54200CA39B1 /* Main.storyboard in Resources */,
+				96EFE4D725B55BD00062D63B /* SF-Pro.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +429,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EFE4EC25B55DCB0062D63B /* README.md in Resources */,
 				96D96C0925A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */,
+				96EFE4D825B55BD00062D63B /* SF-Pro.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +439,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EFE4ED25B55DCB0062D63B /* README.md in Resources */,
 				96D96C0A25A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */,
+				96EFE4D925B55BD00062D63B /* SF-Pro.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
