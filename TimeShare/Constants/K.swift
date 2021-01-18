@@ -21,5 +21,6 @@ struct K {
     
     struct Segue {
         static let goToCreateRoom = "CreateRoomSegue"
+        static let goToTimer = "TimerSegue"
     }
 }

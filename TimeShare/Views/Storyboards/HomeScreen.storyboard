@@ -71,9 +71,6 @@
                                                 <state key="normal" backgroundImage="Add Button"/>
                                                 <connections>
                                                     <action selector="addButtonPressed:" destination="M6j-Th-mzU" eventType="touchUpInside" id="6nX-jv-UZa"/>
-                                                    <segue destination="kYM-R4-Iea" kind="popoverPresentation" identifier="CreateRoomSegue" popoverAnchorView="nXb-po-z07" id="jeW-8e-qeI">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -110,16 +107,17 @@
                     <connections>
                         <outlet property="addButton" destination="nXb-po-z07" id="FTb-bA-7r3"/>
                         <outlet property="tableView" destination="aRL-dF-Wzt" id="tKk-Ym-Dc2"/>
+                        <segue destination="kYM-R4-Iea" kind="show" identifier="CreateRoomSegue" id="S2D-QW-ngS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSv-Jl-Ys0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1260.8695652173915" y="-969.64285714285711"/>
+            <point key="canvasLocation" x="-1290" y="-900"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RoomVC-->
         <scene sceneID="LTl-6Q-KXG">
             <objects>
-                <viewController id="kYM-R4-Iea" sceneMemberID="viewController">
+                <viewController id="kYM-R4-Iea" customClass="CreateRoomVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUB-8Q-iEq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +147,9 @@
                                                 <state key="normal" title="Create">
                                                     <color key="titleColor" name="Brand Color 1 CatskillWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="createButtonPressed:" destination="kYM-R4-Iea" eventType="touchUpInside" id="Qjm-88-pxB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -302,10 +303,30 @@
                             <constraint firstItem="JfX-Xs-VHI" firstAttribute="leading" secondItem="bVr-6S-0Rg" secondAttribute="leading" id="UBZ-BN-3nf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vUL-QD-4aL"/>
+                    <connections>
+                        <segue destination="HDF-yh-yZd" kind="show" identifier="TimerSegue" id="n9t-ra-IgO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moL-hs-4if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-310.14492753623193" y="-649.55357142857144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IYt-PI-3Bm">
+            <objects>
+                <viewController id="HDF-yh-yZd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YhT-XI-sjR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mZt-5M-wav"/>
+                        <color key="backgroundColor" name="Brand Color 1 CatskillWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nbp-9m-Neq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IgQ-rx-7ZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="-650"/>
         </scene>
     </scenes>
     <resources>
