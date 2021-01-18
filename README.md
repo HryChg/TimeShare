@@ -18,7 +18,14 @@ TimeShare is an app where friends can share a pomodoro timer to work and take br
 4. Open `TimeShare.xcworkspace` in the folder
 5. Build / Run the app
 
+# Branch Color
 
+- F1F6F9   Brand Color 1 Catskill White
+- E6ECF0   Brand Color 2 Mystic
+- B9C4D8   Brand Color 3 Casper
+- 9BA4B4   Brand Color 4 Gull Gray
+- 394867   Brand Color 5 Fiord
+- 14274E   Brand Color 6 Blue Zodiac
 
 # Other info
 
