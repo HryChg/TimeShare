@@ -65,7 +65,12 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="144.20289855072465" y="61.607142857142854"/>
+            <connections>
+                <outlet property="StatsLabel" destination="M2i-S9-V2a" id="cgk-zv-ZJN"/>
+                <outlet property="hoursLabel" destination="VrR-VR-tqW" id="i01-QG-rV0"/>
+                <outlet property="statsLabel" destination="M2i-S9-V2a" id="rDB-sH-dl0"/>
+            </connections>
+            <point key="canvasLocation" x="307" y="68"/>
         </tableViewCell>
     </objects>
     <resources>

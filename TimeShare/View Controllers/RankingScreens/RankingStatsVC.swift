@@ -20,7 +20,7 @@ class RankingStatsVC: UIViewController {
     
     
     override func viewDidLoad() {
-        <#code#>
+        
     }
     
 }

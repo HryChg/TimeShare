@@ -10,6 +10,7 @@ target 'TimeShare' do
   # https://firebase.google.com/docs/ios/setup#available-pods
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Charts'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
