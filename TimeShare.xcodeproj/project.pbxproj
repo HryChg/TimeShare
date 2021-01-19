@@ -21,8 +21,6 @@
 		96D96C0825A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
 		96D96C0925A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
 		96D96C0A25A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */; };
-		C4C2AB1425B5FD8800D51513 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2AB1225B5FD8800D51513 /* RankingCell.swift */; };
-		C4C2AB1525B5FD8800D51513 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C2AB1325B5FD8800D51513 /* RankingCell.xib */; };
 		96EFE4D725B55BD00062D63B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4D325B55BD00062D63B /* SF-Pro.ttf */; };
 		96EFE4D825B55BD00062D63B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4D325B55BD00062D63B /* SF-Pro.ttf */; };
 		96EFE4D925B55BD00062D63B /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE4D325B55BD00062D63B /* SF-Pro.ttf */; };
@@ -35,6 +33,11 @@
 		96EFE52E25B5810C0062D63B /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE52C25B5810C0062D63B /* RoomCell.xib */; };
 		96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */; };
 		96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55E25B5B3600062D63B /* TimerVC.swift */; };
+		C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7825B6778800373760 /* RankingStatsVC.swift */; };
+		C4AC9A7F25B679BF00373760 /* RankingSpecificsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */; };
+		C4AC9A8025B679BF00373760 /* RankingSpecificsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */; };
+		C4C2AB1425B5FD8800D51513 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2AB1225B5FD8800D51513 /* RankingCell.swift */; };
+		C4C2AB1525B5FD8800D51513 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C2AB1325B5FD8800D51513 /* RankingCell.xib */; };
 		C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */; };
 		C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166D925ACD0EB002FF445 /* Chat.storyboard */; };
 		C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166DE25ACD0F3002FF445 /* Ranking.storyboard */; };
@@ -100,6 +103,9 @@
 		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		C4AC9A7825B6778800373760 /* RankingStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsVC.swift; sourceTree = "<group>"; };
+		C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingSpecificsCell.swift; sourceTree = "<group>"; };
+		C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingSpecificsCell.xib; sourceTree = "<group>"; };
 		C4C2AB1225B5FD8800D51513 /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankingCell.swift; path = "TimeShare/View Controllers/RankingCell.swift"; sourceTree = SOURCE_ROOT; };
 		C4C2AB1325B5FD8800D51513 /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RankingCell.xib; path = "TimeShare/View Controllers/RankingCell.xib"; sourceTree = SOURCE_ROOT; };
 		C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
@@ -238,6 +244,15 @@
 			path = HomeScreens;
 			sourceTree = "<group>";
 		};
+		C4AC9A7425B6776100373760 /* RankingScreens */ = {
+			isa = PBXGroup;
+			children = (
+				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
+				C4AC9A7825B6778800373760 /* RankingStatsVC.swift */,
+			);
+			path = RankingScreens;
+			sourceTree = "<group>";
+		};
 		C70166E825ACD181002FF445 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +267,7 @@
 			children = (
 				96EFE54C25B5A79C0062D63B /* HomeScreens */,
 				C70166F825ACD27D002FF445 /* ChatViewController.swift */,
-				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
+				C4AC9A7425B6776100373760 /* RankingScreens */,
 				C7146F6D25AE16E700E48762 /* Settings */,
 			);
 			path = "View Controllers";
@@ -305,6 +320,8 @@
 				C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */,
 				96EFE52B25B5810C0062D63B /* RoomCell.swift */,
 				96EFE52C25B5810C0062D63B /* RoomCell.xib */,
+				C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */,
+				C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -445,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */,
+				C4AC9A8025B679BF00373760 /* RankingSpecificsCell.xib in Resources */,
 				C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */,
 				96EFE4EB25B55DCB0062D63B /* README.md in Resources */,
 				96D96BAC25A6D54400CA39B1 /* LaunchScreen.storyboard in Resources */,
@@ -590,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7146F8725AE1B1100E48762 /* AboutVC.swift in Sources */,
+				C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */,
 				C7146F8C25AE1F3E00E48762 /* FriendsCell.swift in Sources */,
 				96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */,
 				96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */,
@@ -597,6 +616,7 @@
 				C701670325ACD28E002FF445 /* SettingsVC.swift in Sources */,
 				C4C2AB1425B5FD8800D51513 /* RankingCell.swift in Sources */,
 				96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */,
+				C4AC9A7F25B679BF00373760 /* RankingSpecificsCell.swift in Sources */,
 				96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */,
 				96EFE52425B5729E0062D63B /* MemberModel.swift in Sources */,
 				96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */,

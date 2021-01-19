@@ -51,7 +51,7 @@
         <!--RankingStats-->
         <scene sceneID="yK7-nq-4bK">
             <objects>
-                <viewController id="ch3-H7-ohg" userLabel="RankingStats" sceneMemberID="viewController">
+                <viewController id="ch3-H7-ohg" userLabel="RankingStats" customClass="RankingStatsVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z7c-uJ-rtO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +215,7 @@
                                         <rect key="frame" x="0.0" y="390" width="414" height="428"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SRo-D9-4kA">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingStatsCell" id="SRo-D9-4kA">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SRo-D9-4kA" id="d1g-vM-1gI">
@@ -237,6 +237,14 @@
                             <constraint firstItem="Dq1-y7-fCI" firstAttribute="top" secondItem="8eb-MW-sM8" secondAttribute="top" id="eEO-WN-egl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="averageHoursLabel" destination="42T-G5-nam" id="gAs-sF-PVB"/>
+                        <outlet property="currentRankLabel" destination="l7R-QC-nQP" id="M7S-kX-2aT"/>
+                        <outlet property="nextRankLabel" destination="4VK-ss-7c6" id="bnn-Yu-7sx"/>
+                        <outlet property="profileImage" destination="Kf3-bh-fc3" id="MBD-re-QRY"/>
+                        <outlet property="rankLevelLabel" destination="kfN-rj-wOq" id="xhB-ao-eeL"/>
+                        <outlet property="rankPromotionInLabel" destination="Gee-ks-1gn" id="l7S-y7-BmI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyL-Wg-Rcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
