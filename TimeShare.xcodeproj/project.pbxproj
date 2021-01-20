@@ -47,6 +47,7 @@
 		C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8125AE1B0700E48762 /* TimezoneVC.swift */; };
 		C7146F8725AE1B1100E48762 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8625AE1B1100E48762 /* AboutVC.swift */; };
 		C7146F8C25AE1F3E00E48762 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */; };
+		C749D43A25B6086900AAD5DD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749D43925B6086900AAD5DD /* MockData.swift */; };
 		C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */; };
 		C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		C7146F8125AE1B0700E48762 /* TimezoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneVC.swift; sourceTree = "<group>"; };
 		C7146F8625AE1B1100E48762 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		C749D43925B6086900AAD5DD /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		C7AB6DDB8BBBE4103F68B26D /* Pods-TimeShare-TimeShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare-TimeShareUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -184,8 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				96D96C0725A6DC3100CA39B1 /* GoogleService-Info.plist */,
+				C701671125ACD379002FF445 /* Constants */,
 				96EFE4E325B55C2D0062D63B /* Fonts */,
-				C701670825ACD351002FF445 /* Model */,
+				C701670825ACD351002FF445 /* Models */,
 				C70166E825ACD181002FF445 /* Views */,
 				C701670725ACD344002FF445 /* View Model */,
 				C70166F125ACD270002FF445 /* View Controllers */,
@@ -193,7 +196,6 @@
 				96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */,
 				96D96BA825A6D54400CA39B1 /* Assets.xcassets */,
 				96D96BAD25A6D54400CA39B1 /* Info.plist */,
-				C701671125ACD379002FF445 /* Constants */,
 			);
 			path = TimeShare;
 			sourceTree = "<group>";
@@ -247,8 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				96EFE54C25B5A79C0062D63B /* HomeScreens */,
-				C70166F825ACD27D002FF445 /* ChatViewController.swift */,
-				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
+				C749D44225B60FC900AAD5DD /* Chat */,
+				C749D43E25B60FBF00AAD5DD /* Ranking */,
 				C7146F6D25AE16E700E48762 /* Settings */,
 			);
 			path = "View Controllers";
@@ -262,14 +264,15 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		C701670825ACD351002FF445 /* Model */ = {
+		C701670825ACD351002FF445 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C7146F6525ADEA9900E48762 /* SettingsItem.swift */,
 				96EFE51E25B5716C0062D63B /* RoomModel.swift */,
 				96EFE52325B5729E0062D63B /* MemberModel.swift */,
+				C749D43925B6086900AAD5DD /* MockData.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C701671125ACD379002FF445 /* Constants */ = {
@@ -290,6 +293,22 @@
 				C7146F8625AE1B1100E48762 /* AboutVC.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		C749D43E25B60FBF00AAD5DD /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
+		C749D44225B60FC900AAD5DD /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C70166F825ACD27D002FF445 /* ChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		C7F5315825AD5C24006FB302 /* Cells */ = {
@@ -601,6 +620,7 @@
 				C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */,
 				C7146F7825AE1ADE00E48762 /* ProfileVC.swift in Sources */,
 				96EFE52D25B5810C0062D63B /* RoomCell.swift in Sources */,
+				C749D43A25B6086900AAD5DD /* MockData.swift in Sources */,
 				C7146F6625ADEA9900E48762 /* SettingsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

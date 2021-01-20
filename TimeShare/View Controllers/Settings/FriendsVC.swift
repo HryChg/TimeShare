@@ -42,16 +42,18 @@ class FriendsVC: UIViewController {
 
 extension FriendsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FriendsCell.identifier, for: indexPath) as? FriendsCell else { return UICollectionViewCell() }
+        
         cell.imageView.image = UIImage(named: "Headshot")
         cell.nameLabel.text = "Name"
         
         cell.imageView.makeRound()
-        
+
         return cell
         
     }
@@ -64,10 +66,11 @@ extension FriendsVC: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let screenWidth = UIScreen.main.bounds.width
+        let width = view.frame.width
         
-        return CGSize(width: (screenWidth / 3) - 4, height: (screenWidth / 3) - 4)
+        return CGSize(width: (width / 3) - 4, height: (width / 3) - 4)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

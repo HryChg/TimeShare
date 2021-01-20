@@ -44,7 +44,15 @@ class SettingsVC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        let screenWidth = UIScreen.main.bounds.width
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 50
+        layout.itemSize = CGSize(width: screenWidth / 3, height: screenWidth / 4)
+        layout.sectionInset = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+    
+        collectionView.collectionViewLayout = layout
                 
     }
 
@@ -97,26 +105,6 @@ extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource {
             break
         }
         
-    }
-    
-}
-
-extension SettingsVC: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let screenWidth = UIScreen.main.bounds.width
-        
-        return CGSize(width: screenWidth / 3, height: screenWidth / 4)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 50
     }
     
 }
