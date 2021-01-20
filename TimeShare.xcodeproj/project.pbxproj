@@ -36,6 +36,7 @@
 		C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7825B6778800373760 /* RankingStatsVC.swift */; };
 		C4AC9A7F25B679BF00373760 /* RankingSpecificsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */; };
 		C4AC9A8025B679BF00373760 /* RankingSpecificsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */; };
+		C4AC9A9C25B7B5FA00373760 /* RankingGraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */; };
 		C4C2AB1425B5FD8800D51513 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2AB1225B5FD8800D51513 /* RankingCell.swift */; };
 		C4C2AB1525B5FD8800D51513 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C2AB1325B5FD8800D51513 /* RankingCell.xib */; };
 		C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */; };
@@ -106,6 +107,7 @@
 		C4AC9A7825B6778800373760 /* RankingStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsVC.swift; sourceTree = "<group>"; };
 		C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingSpecificsCell.swift; sourceTree = "<group>"; };
 		C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingSpecificsCell.xib; sourceTree = "<group>"; };
+		C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingGraphVC.swift; sourceTree = "<group>"; };
 		C4C2AB1225B5FD8800D51513 /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankingCell.swift; path = "TimeShare/View Controllers/RankingCell.swift"; sourceTree = SOURCE_ROOT; };
 		C4C2AB1325B5FD8800D51513 /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RankingCell.xib; path = "TimeShare/View Controllers/RankingCell.xib"; sourceTree = SOURCE_ROOT; };
 		C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
+				C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */,
 				C4AC9A7825B6778800373760 /* RankingStatsVC.swift */,
 			);
 			path = RankingScreens;
@@ -624,6 +627,7 @@
 				96EFE51F25B5716C0062D63B /* RoomModel.swift in Sources */,
 				C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */,
 				C701670A25ACD371002FF445 /* K.swift in Sources */,
+				C4AC9A9C25B7B5FA00373760 /* RankingGraphVC.swift in Sources */,
 				C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */,
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
 				C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */,

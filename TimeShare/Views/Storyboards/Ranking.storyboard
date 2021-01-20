@@ -250,23 +250,92 @@
             </objects>
             <point key="canvasLocation" x="911.59420289855075" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Ranking GraphVC-->
         <scene sceneID="l4H-TH-Szm">
             <objects>
-                <viewController id="6s5-IP-ABS" sceneMemberID="viewController">
+                <viewController id="6s5-IP-ABS" customClass="RankingGraphVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Viy-6k-i1U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhA-nh-eLw">
+                                <rect key="frame" x="20" y="157" width="98" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JdC-gD-7pe"/>
+                                    <constraint firstAttribute="width" constant="50" id="kTY-cc-hGd"/>
+                                </constraints>
+                                <state key="normal" title="LineGraph" image="waveform.path.ecg" catalog="system"/>
+                                <connections>
+                                    <action selector="lineGraphPressed:" destination="6s5-IP-ABS" eventType="touchUpInside" id="Vmo-VP-yc1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkH-4W-VSE" userLabel="Prev Button">
+                                <rect key="frame" x="159" y="186" width="25" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="P7R-jV-Ud5"/>
+                                    <constraint firstAttribute="width" constant="25" id="p0C-Sx-rfT"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="previousStatPressed:" destination="6s5-IP-ABS" eventType="touchUpInside" id="v4c-5Q-hJ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5Z-bM-ry5" userLabel="Next Button">
+                                <rect key="frame" x="220" y="186" width="25" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="7rs-Hv-NRL"/>
+                                    <constraint firstAttribute="height" constant="35" id="ib4-oD-w6h"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="chevron.right" catalog="system"/>
+                                <connections>
+                                    <action selector="nextStatPressed:" destination="6s5-IP-ABS" eventType="touchUpInside" id="sCb-HS-h4R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uE-tZ-gIM">
+                                <rect key="frame" x="182" y="86.5" width="50" height="46.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BEu-YG-IKf"/>
+                                    <constraint firstAttribute="height" constant="50" id="Jxq-BH-Mtq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chart.bar.xaxis" catalog="system"/>
+                                <connections>
+                                    <action selector="barGraphPressed:" destination="6s5-IP-ABS" eventType="touchUpInside" id="Fn6-Vb-IWl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-7O-W8M">
+                                <rect key="frame" x="44" y="84.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dka-Jk-I9D"/>
+                                    <constraint firstAttribute="width" constant="50" id="kpn-YN-aeU"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chart.pie.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="pieChartPressed:" destination="6s5-IP-ABS" eventType="touchUpInside" id="nRp-F4-0o5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XQD-vs-QbA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="barGraphButton" destination="0uE-tZ-gIM" id="8wI-b9-Sag"/>
+                        <outlet property="lineGraphButton" destination="ZhA-nh-eLw" id="wRD-EQ-pbd"/>
+                        <outlet property="pieChartButton" destination="ZCD-7O-W8M" id="t27-qd-3Qd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nx6-cH-7X9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1806" y="88"/>
+            <point key="canvasLocation" x="1805.7971014492755" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+        <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="waveform.path.ecg" catalog="system" width="128" height="124"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
