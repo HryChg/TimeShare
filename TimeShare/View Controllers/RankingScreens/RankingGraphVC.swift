@@ -21,6 +21,10 @@ class RankingGraphVC: UIViewController, ChartViewDelegate {
     @IBOutlet weak var barGraphButton: UIButton!
     @IBOutlet weak var lineGraphButton: UIButton!
     
+    func pieChartConfiguration() {
+        
+    }
+    
     
     
     @IBAction func pieChartPressed(_ sender: UIButton) {

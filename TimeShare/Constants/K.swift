@@ -14,6 +14,9 @@ struct K {
     struct Cell {
         static let roomIdentifier = "RoomCell"
         static let memberIdentifier = "MemberCell"
+        static let rankingCellNibName = "RankingNib"
+        static let rankingSpecificsNibName = "RankingSpecifics"
+        static let rankingCellIdntifier = "RankingOrderedCell"
     }
     
     struct Images {
@@ -23,5 +26,6 @@ struct K {
     struct Segue {
         static let goToCreateRoom = "CreateRoomSegue"
         static let goToTimer = "TimerSegue"
+        static let goToPersonalStats = "goToPersonalStats"
     }
 }
