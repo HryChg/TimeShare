@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FCE9DA4CDF6C44936A84384 /* Pods_TimeShare_TimeShareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */; };
-		31D69EBC46CC75FF6C4352D4 /* Pods_TimeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0565E2125380CDDC0F28A6D /* Pods_TimeShare.framework */; };
-		93A4ED9A823802156DC7451C /* Pods_TimeShareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A5802B1E6D45248A1CF442 /* Pods_TimeShareTests.framework */; };
+		108CBA00774D2B19D7F2699C /* Pods_TimeShareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB64937AAF2B95B6C45CD4B /* Pods_TimeShareTests.framework */; };
+		694140513DC69217F1172D87 /* Pods_TimeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360AFB65259D5192B1718524 /* Pods_TimeShare.framework */; };
 		96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */; };
 		96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */; };
 		96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA325A6D54200CA39B1 /* MainViewController.swift */; };
@@ -37,7 +36,7 @@
 		C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166D925ACD0EB002FF445 /* Chat.storyboard */; };
 		C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166DE25ACD0F3002FF445 /* Ranking.storyboard */; };
 		C70166E425ACD0FB002FF445 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166E325ACD0FB002FF445 /* Settings.storyboard */; };
-		C70166F925ACD27D002FF445 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70166F825ACD27D002FF445 /* ChatViewController.swift */; };
+		C70166F925ACD27D002FF445 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70166F825ACD27D002FF445 /* ChatVC.swift */; };
 		C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70166FD25ACD285002FF445 /* RankingViewController.swift */; };
 		C701670325ACD28E002FF445 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701670225ACD28E002FF445 /* SettingsVC.swift */; };
 		C701670A25ACD371002FF445 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701670925ACD371002FF445 /* K.swift */; };
@@ -48,8 +47,14 @@
 		C7146F8725AE1B1100E48762 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8625AE1B1100E48762 /* AboutVC.swift */; };
 		C7146F8C25AE1F3E00E48762 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */; };
 		C749D43A25B6086900AAD5DD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749D43925B6086900AAD5DD /* MockData.swift */; };
+		C76C2B3525B9EDC000335D24 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C2B3425B9EDC000335D24 /* Message.swift */; };
+		C76C2B3B25B9EE2800335D24 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C2B3925B9EE2800335D24 /* MessageCell.swift */; };
+		C76C2B3C25B9EE2800335D24 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76C2B3A25B9EE2800335D24 /* MessageCell.xib */; };
+		C76C2B4125B9F53B00335D24 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C2B4025B9F53B00335D24 /* ChatViewModel.swift */; };
+		C7D000AF25BA61E80079C82F /* StudyingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D000AE25BA61E80079C82F /* StudyingCell.swift */; };
 		C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */; };
 		C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */; };
+		D82E77F06B1E80FD5E16DAAB /* Pods_TimeShare_TimeShareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574665276B3013000DC068DC /* Pods_TimeShare_TimeShareUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +75,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02A5802B1E6D45248A1CF442 /* Pods_TimeShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2131837054F002C0793BC08A /* Pods-TimeShare-TimeShareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare-TimeShareUITests.debug.xcconfig"; path = "Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		580817EEA75452CE38E8FDC8 /* Pods-TimeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.debug.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.debug.xcconfig"; sourceTree = "<group>"; };
+		097A5A4E9C71B86682FED4B6 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		298DC8B145442EA5800C2A3E /* Pods-TimeShare-TimeShareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare-TimeShareUITests.debug.xcconfig"; path = "Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		360AFB65259D5192B1718524 /* Pods_TimeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		481924DE9254BE04119E6BE9 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
+		4EB64937AAF2B95B6C45CD4B /* Pods_TimeShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FD6F5DCF54B56C1F5E91A0 /* Pods-TimeShare-TimeShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare-TimeShareUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		574665276B3013000DC068DC /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7820F660275D899262E8AD48 /* Pods-TimeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.debug.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.debug.xcconfig"; sourceTree = "<group>"; };
 		96D96B9C25A6D54200CA39B1 /* TimeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,14 +106,11 @@
 		96EFE52C25B5810C0062D63B /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
 		96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomVC.swift; sourceTree = "<group>"; };
 		96EFE55E25B5B3600062D63B /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
-		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
-		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
 		C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		C70166D925ACD0EB002FF445 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		C70166DE25ACD0F3002FF445 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
 		C70166E325ACD0FB002FF445 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		C70166F825ACD27D002FF445 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C70166F825ACD27D002FF445 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C70166FD25ACD285002FF445 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		C701670225ACD28E002FF445 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C701670925ACD371002FF445 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -114,11 +121,14 @@
 		C7146F8625AE1B1100E48762 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		C749D43925B6086900AAD5DD /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		C7AB6DDB8BBBE4103F68B26D /* Pods-TimeShare-TimeShareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare-TimeShareUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C76C2B3425B9EDC000335D24 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C76C2B3925B9EE2800335D24 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		C76C2B3A25B9EE2800335D24 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		C76C2B4025B9F53B00335D24 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		C7D000AE25BA61E80079C82F /* StudyingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingCell.swift; sourceTree = "<group>"; };
 		C7F5315A25AD5C5F006FB302 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		EDD44ABDA7B4981F8B45BA1F /* Pods-TimeShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.debug.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F0565E2125380CDDC0F28A6D /* Pods_TimeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C999CF66967E541CE9E98F5C /* Pods-TimeShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.debug.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31D69EBC46CC75FF6C4352D4 /* Pods_TimeShare.framework in Frameworks */,
+				694140513DC69217F1172D87 /* Pods_TimeShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A4ED9A823802156DC7451C /* Pods_TimeShareTests.framework in Frameworks */,
+				108CBA00774D2B19D7F2699C /* Pods_TimeShareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,19 +152,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCE9DA4CDF6C44936A84384 /* Pods_TimeShare_TimeShareUITests.framework in Frameworks */,
+				D82E77F06B1E80FD5E16DAAB /* Pods_TimeShare_TimeShareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8EB21F3C9CD72678E2208710 /* Frameworks */ = {
+		2031611513F3EDD941FB4121 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F0565E2125380CDDC0F28A6D /* Pods_TimeShare.framework */,
-				980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */,
-				02A5802B1E6D45248A1CF442 /* Pods_TimeShareTests.framework */,
+				360AFB65259D5192B1718524 /* Pods_TimeShare.framework */,
+				574665276B3013000DC068DC /* Pods_TimeShare_TimeShareUITests.framework */,
+				4EB64937AAF2B95B6C45CD4B /* Pods_TimeShareTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,7 +178,7 @@
 				96D96BC025A6D54500CA39B1 /* TimeShareUITests */,
 				96D96B9D25A6D54200CA39B1 /* Products */,
 				D4F62C000027FB2F860D6D90 /* Pods */,
-				8EB21F3C9CD72678E2208710 /* Frameworks */,
+				2031611513F3EDD941FB4121 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				C7F5315F25ADE690006FB302 /* SettingsViewModel.swift */,
+				C76C2B4025B9F53B00335D24 /* ChatViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -271,6 +282,7 @@
 				96EFE51E25B5716C0062D63B /* RoomModel.swift */,
 				96EFE52325B5729E0062D63B /* MemberModel.swift */,
 				C749D43925B6086900AAD5DD /* MockData.swift */,
+				C76C2B3425B9EDC000335D24 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,7 +318,7 @@
 		C749D44225B60FC900AAD5DD /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				C70166F825ACD27D002FF445 /* ChatViewController.swift */,
+				C70166F825ACD27D002FF445 /* ChatVC.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -318,6 +330,9 @@
 				C7146F8B25AE1F3E00E48762 /* FriendsCell.swift */,
 				96EFE52B25B5810C0062D63B /* RoomCell.swift */,
 				96EFE52C25B5810C0062D63B /* RoomCell.xib */,
+				C76C2B3925B9EE2800335D24 /* MessageCell.swift */,
+				C76C2B3A25B9EE2800335D24 /* MessageCell.xib */,
+				C7D000AE25BA61E80079C82F /* StudyingCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -338,12 +353,12 @@
 		D4F62C000027FB2F860D6D90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				580817EEA75452CE38E8FDC8 /* Pods-TimeShare.debug.xcconfig */,
-				C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */,
-				2131837054F002C0793BC08A /* Pods-TimeShare-TimeShareUITests.debug.xcconfig */,
-				C7AB6DDB8BBBE4103F68B26D /* Pods-TimeShare-TimeShareUITests.release.xcconfig */,
-				EDD44ABDA7B4981F8B45BA1F /* Pods-TimeShareTests.debug.xcconfig */,
-				C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */,
+				7820F660275D899262E8AD48 /* Pods-TimeShare.debug.xcconfig */,
+				481924DE9254BE04119E6BE9 /* Pods-TimeShare.release.xcconfig */,
+				298DC8B145442EA5800C2A3E /* Pods-TimeShare-TimeShareUITests.debug.xcconfig */,
+				56FD6F5DCF54B56C1F5E91A0 /* Pods-TimeShare-TimeShareUITests.release.xcconfig */,
+				C999CF66967E541CE9E98F5C /* Pods-TimeShareTests.debug.xcconfig */,
+				097A5A4E9C71B86682FED4B6 /* Pods-TimeShareTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -355,11 +370,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96D96BC625A6D54500CA39B1 /* Build configuration list for PBXNativeTarget "TimeShare" */;
 			buildPhases = (
-				45D5A53E3718940C59805E07 /* [CP] Check Pods Manifest.lock */,
+				41A3D10D9F005A2C79AED014 /* [CP] Check Pods Manifest.lock */,
 				96D96B9825A6D54200CA39B1 /* Sources */,
 				96D96B9925A6D54200CA39B1 /* Frameworks */,
 				96D96B9A25A6D54200CA39B1 /* Resources */,
-				B79428EE33DD6790DA66FE86 /* [CP] Embed Pods Frameworks */,
+				23D37E6EE766C72F6BABB8A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,7 +389,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96D96BC925A6D54500CA39B1 /* Build configuration list for PBXNativeTarget "TimeShareTests" */;
 			buildPhases = (
-				C170BC51800ECC8D55BE62DF /* [CP] Check Pods Manifest.lock */,
+				EFDA00F77FA2D2FDDADA79B9 /* [CP] Check Pods Manifest.lock */,
 				96D96BAE25A6D54500CA39B1 /* Sources */,
 				96D96BAF25A6D54500CA39B1 /* Frameworks */,
 				96D96BB025A6D54500CA39B1 /* Resources */,
@@ -393,11 +408,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96D96BCC25A6D54500CA39B1 /* Build configuration list for PBXNativeTarget "TimeShareUITests" */;
 			buildPhases = (
-				C137216744E90F77A0654C56 /* [CP] Check Pods Manifest.lock */,
+				04177A6AF410048DADF246EB /* [CP] Check Pods Manifest.lock */,
 				96D96BB925A6D54500CA39B1 /* Sources */,
 				96D96BBA25A6D54500CA39B1 /* Frameworks */,
 				96D96BBB25A6D54500CA39B1 /* Resources */,
-				86B4A20644A9D09FC021EFAD /* [CP] Embed Pods Frameworks */,
+				8EC2AA78AB363185D1FE3AEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -458,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */,
+				C76C2B3C25B9EE2800335D24 /* MessageCell.xib in Resources */,
 				C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */,
 				96EFE4EB25B55DCB0062D63B /* README.md in Resources */,
 				96D96BAC25A6D54400CA39B1 /* LaunchScreen.storyboard in Resources */,
@@ -494,63 +510,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		45D5A53E3718940C59805E07 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TimeShare-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86B4A20644A9D09FC021EFAD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B79428EE33DD6790DA66FE86 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeShare/Pods-TimeShare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeShare/Pods-TimeShare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeShare/Pods-TimeShare-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C137216744E90F77A0654C56 /* [CP] Check Pods Manifest.lock */ = {
+		04177A6AF410048DADF246EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -572,7 +532,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C170BC51800ECC8D55BE62DF /* [CP] Check Pods Manifest.lock */ = {
+		23D37E6EE766C72F6BABB8A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeShare/Pods-TimeShare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeShare/Pods-TimeShare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeShare/Pods-TimeShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41A3D10D9F005A2C79AED014 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeShare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC2AA78AB363185D1FE3AEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeShare-TimeShareUITests/Pods-TimeShare-TimeShareUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFDA00F77FA2D2FDDADA79B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -607,21 +623,25 @@
 				96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */,
 				C7146F7D25AE1AEE00E48762 /* FriendsVC.swift in Sources */,
 				C701670325ACD28E002FF445 /* SettingsVC.swift in Sources */,
+				C76C2B3B25B9EE2800335D24 /* MessageCell.swift in Sources */,
 				96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */,
 				96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */,
 				96EFE52425B5729E0062D63B /* MemberModel.swift in Sources */,
+				C76C2B4125B9F53B00335D24 /* ChatViewModel.swift in Sources */,
 				96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */,
-				C70166F925ACD27D002FF445 /* ChatViewController.swift in Sources */,
+				C70166F925ACD27D002FF445 /* ChatVC.swift in Sources */,
 				96EFE51F25B5716C0062D63B /* RoomModel.swift in Sources */,
 				C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */,
 				C701670A25ACD371002FF445 /* K.swift in Sources */,
 				C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */,
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
 				C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */,
+				C76C2B3525B9EDC000335D24 /* Message.swift in Sources */,
 				C7146F7825AE1ADE00E48762 /* ProfileVC.swift in Sources */,
 				96EFE52D25B5810C0062D63B /* RoomCell.swift in Sources */,
 				C749D43A25B6086900AAD5DD /* MockData.swift in Sources */,
 				C7146F6625ADEA9900E48762 /* SettingsItem.swift in Sources */,
+				C7D000AF25BA61E80079C82F /* StudyingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,12 +814,12 @@
 		};
 		96D96BC725A6D54500CA39B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 580817EEA75452CE38E8FDC8 /* Pods-TimeShare.debug.xcconfig */;
+			baseConfigurationReference = 7820F660275D899262E8AD48 /* Pods-TimeShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3FRT26578B;
+				DEVELOPMENT_TEAM = Z4DLPBM8Q9;
 				INFOPLIST_FILE = TimeShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,12 +834,12 @@
 		};
 		96D96BC825A6D54500CA39B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */;
+			baseConfigurationReference = 481924DE9254BE04119E6BE9 /* Pods-TimeShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3FRT26578B;
+				DEVELOPMENT_TEAM = Z4DLPBM8Q9;
 				INFOPLIST_FILE = TimeShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -834,7 +854,7 @@
 		};
 		96D96BCA25A6D54500CA39B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDD44ABDA7B4981F8B45BA1F /* Pods-TimeShareTests.debug.xcconfig */;
+			baseConfigurationReference = C999CF66967E541CE9E98F5C /* Pods-TimeShareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -857,7 +877,7 @@
 		};
 		96D96BCB25A6D54500CA39B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */;
+			baseConfigurationReference = 097A5A4E9C71B86682FED4B6 /* Pods-TimeShareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -880,7 +900,7 @@
 		};
 		96D96BCD25A6D54500CA39B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2131837054F002C0793BC08A /* Pods-TimeShare-TimeShareUITests.debug.xcconfig */;
+			baseConfigurationReference = 298DC8B145442EA5800C2A3E /* Pods-TimeShare-TimeShareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -901,7 +921,7 @@
 		};
 		96D96BCE25A6D54500CA39B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7AB6DDB8BBBE4103F68B26D /* Pods-TimeShare-TimeShareUITests.release.xcconfig */;
+			baseConfigurationReference = 56FD6F5DCF54B56C1F5E91A0 /* Pods-TimeShare-TimeShareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

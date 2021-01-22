@@ -4,31 +4,159 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Chat-->
         <scene sceneID="jkR-IA-gfl">
             <objects>
-                <viewController storyboardIdentifier="Chat" id="RMq-o7-4qk" customClass="ChatViewController" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chat" id="RMq-o7-4qk" customClass="ChatVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="htI-2n-ish">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f3p-Ke-POe">
+                                <rect key="frame" x="20" y="104" width="374" height="57"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uta-Q0-2jM">
+                                    <size key="itemSize" width="102" height="73"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StudyingCell" id="hUU-nj-5X3" customClass="StudyingCell" customModule="TimeShare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-8" width="102" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aJE-bt-L3X">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-u2-3fp">
+                                                    <rect key="frame" x="31" y="10" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="bYV-7J-qet"/>
+                                                        <constraint firstAttribute="height" constant="45" id="yS9-Mw-VcM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1E-cg-E8l">
+                                                    <rect key="frame" x="35.5" y="53" width="31" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5cd-u2-3fp" firstAttribute="top" secondItem="aJE-bt-L3X" secondAttribute="top" constant="2" id="SXs-oV-kfD"/>
+                                                <constraint firstItem="k1E-cg-E8l" firstAttribute="top" secondItem="5cd-u2-3fp" secondAttribute="bottom" constant="3" id="TaJ-RW-Phk"/>
+                                                <constraint firstItem="5cd-u2-3fp" firstAttribute="centerX" secondItem="aJE-bt-L3X" secondAttribute="centerX" id="bT4-tC-Ilv"/>
+                                                <constraint firstItem="k1E-cg-E8l" firstAttribute="centerX" secondItem="aJE-bt-L3X" secondAttribute="centerX" id="u0L-Be-iq9"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="102" height="73"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="5cd-u2-3fp" id="2Gj-5M-5cJ"/>
+                                            <outlet property="nameLabel" destination="k1E-cg-E8l" id="vpn-Qz-OR3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sE2-iP-yWg">
+                                <rect key="frame" x="0.0" y="169" width="414" height="594"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6Hf-Tk-Okp">
+                                <rect key="frame" x="20" y="773" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2C-iB-Lf6">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                        <color key="tintColor" name="Brand Color 5 Fiord"/>
+                                        <state key="normal" image="keyboard.chevron.compact.down" catalog="system"/>
+                                        <connections>
+                                            <action selector="hideKeyboardButtonTapped:" destination="RMq-o7-4qk" eventType="touchUpInside" id="erR-Xh-IZ6"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqw-IT-oMf">
+                                        <rect key="frame" x="37" y="0.0" width="289" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF4-Um-d6B">
+                                        <rect key="frame" x="338" y="0.0" width="36" height="30"/>
+                                        <color key="tintColor" name="Brand Color 5 Fiord"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="RMq-o7-4qk" eventType="touchUpInside" id="6yG-Hd-X49"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-OL-Net">
+                                <rect key="frame" x="142" y="56" width="130" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="MxD-me-uYZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="fxa-vY-5qh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" name="Brand Color 5 Fiord"/>
+                                <state key="normal" title="10 Studying" image="chevron.down" catalog="system">
+                                    <color key="titleColor" name="Brand Color 5 Fiord"/>
+                                </state>
+                                <connections>
+                                    <action selector="studyingButtonTapped:" destination="RMq-o7-4qk" eventType="touchUpInside" id="19y-wr-5mn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zCa-Yn-ybQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Brand Color 2 Mystic"/>
+                        <constraints>
+                            <constraint firstItem="sE2-iP-yWg" firstAttribute="top" secondItem="zCa-Yn-ybQ" secondAttribute="top" constant="125" id="3Y8-Zd-9Ow"/>
+                            <constraint firstItem="sE2-iP-yWg" firstAttribute="trailing" secondItem="zCa-Yn-ybQ" secondAttribute="trailing" id="5Dt-WN-d7x"/>
+                            <constraint firstItem="sE2-iP-yWg" firstAttribute="leading" secondItem="zCa-Yn-ybQ" secondAttribute="leading" id="9N4-gM-cEY"/>
+                            <constraint firstItem="eKl-OL-Net" firstAttribute="centerX" secondItem="htI-2n-ish" secondAttribute="centerX" id="BCe-Ix-SCZ"/>
+                            <constraint firstItem="zCa-Yn-ybQ" firstAttribute="trailing" secondItem="f3p-Ke-POe" secondAttribute="trailing" constant="20" id="I8t-yT-NFw"/>
+                            <constraint firstItem="6Hf-Tk-Okp" firstAttribute="top" secondItem="sE2-iP-yWg" secondAttribute="bottom" constant="10" id="JoH-Be-NHy"/>
+                            <constraint firstItem="eKl-OL-Net" firstAttribute="top" secondItem="zCa-Yn-ybQ" secondAttribute="top" constant="12" id="M0N-UQ-SZm"/>
+                            <constraint firstItem="f3p-Ke-POe" firstAttribute="top" secondItem="eKl-OL-Net" secondAttribute="bottom" constant="8" id="S4I-oM-c4u"/>
+                            <constraint firstItem="zCa-Yn-ybQ" firstAttribute="bottom" secondItem="sE2-iP-yWg" secondAttribute="bottom" constant="50" id="Yca-ki-9gu"/>
+                            <constraint firstItem="sE2-iP-yWg" firstAttribute="top" secondItem="f3p-Ke-POe" secondAttribute="bottom" constant="8" id="fJJ-tq-VxN"/>
+                            <constraint firstItem="6Hf-Tk-Okp" firstAttribute="leading" secondItem="zCa-Yn-ybQ" secondAttribute="leading" constant="20" id="jB1-KE-u1u"/>
+                            <constraint firstItem="zCa-Yn-ybQ" firstAttribute="bottom" secondItem="6Hf-Tk-Okp" secondAttribute="bottom" constant="10" id="roL-Ag-vyq"/>
+                            <constraint firstItem="zCa-Yn-ybQ" firstAttribute="trailing" secondItem="6Hf-Tk-Okp" secondAttribute="trailing" constant="20" id="tsV-qG-u3u"/>
+                            <constraint firstItem="f3p-Ke-POe" firstAttribute="leading" secondItem="zCa-Yn-ybQ" secondAttribute="leading" constant="20" id="ymj-zy-Hen"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" image="circle" catalog="system" id="O32-pw-NWx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="f3p-Ke-POe" id="sXB-66-DKH"/>
+                        <outlet property="hideKeyboardButton" destination="i2C-iB-Lf6" id="1Y9-lv-wRX"/>
+                        <outlet property="sendButton" destination="VF4-Um-d6B" id="9fu-O1-3QG"/>
+                        <outlet property="studyingButton" destination="eKl-OL-Net" id="6wx-vV-7zZ"/>
+                        <outlet property="tableView" destination="sE2-iP-yWg" id="hiW-5s-xog"/>
+                        <outlet property="tableViewTopAnchor" destination="3Y8-Zd-9Ow" id="nPd-uk-7dS"/>
+                        <outlet property="textField" destination="aqw-IT-oMf" id="bXa-Af-Ii1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vy-Nc-IDY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-109" y="-33"/>
+            <point key="canvasLocation" x="-110.14492753623189" y="-33.482142857142854"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="keyboard.chevron.compact.down" catalog="system" width="128" height="102"/>
+        <namedColor name="Brand Color 2 Mystic">
+            <color red="0.90200001001358032" green="0.92500001192092896" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Color 5 Fiord">
+            <color red="0.22400000691413879" green="0.28200000524520874" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
