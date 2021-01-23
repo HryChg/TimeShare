@@ -13,6 +13,11 @@ class RankingViewController: UITableViewController {
 
     let dataBase = Firestore.firestore()
     
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -37,6 +42,10 @@ class RankingViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    func loadStats() {
+//        todo: create a loading function from the firestore database
     }
     
     
