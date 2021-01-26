@@ -33,6 +33,8 @@
 		96EFE52E25B5810C0062D63B /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE52C25B5810C0062D63B /* RoomCell.xib */; };
 		96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */; };
 		96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55E25B5B3600062D63B /* TimerVC.swift */; };
+		C419C84925BE4326003DD0F0 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419C84825BE4326003DD0F0 /* RankingModel.swift */; };
+		C419C84E25BE56C6003DD0F0 /* RankingStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */; };
 		C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7825B6778800373760 /* RankingStatsVC.swift */; };
 		C4AC9A7F25B679BF00373760 /* RankingSpecificsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */; };
 		C4AC9A8025B679BF00373760 /* RankingSpecificsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */; };
@@ -103,6 +105,8 @@
 		96EFE55E25B5B3600062D63B /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
+		C419C84825BE4326003DD0F0 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
+		C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsModel.swift; sourceTree = "<group>"; };
 		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4AC9A7825B6778800373760 /* RankingStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsVC.swift; sourceTree = "<group>"; };
 		C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingSpecificsCell.swift; sourceTree = "<group>"; };
@@ -250,8 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
-				C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */,
 				C4AC9A7825B6778800373760 /* RankingStatsVC.swift */,
+				C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */,
 			);
 			path = RankingScreens;
 			sourceTree = "<group>";
@@ -290,6 +294,8 @@
 				C7146F6525ADEA9900E48762 /* SettingsItem.swift */,
 				96EFE51E25B5716C0062D63B /* RoomModel.swift */,
 				96EFE52325B5729E0062D63B /* MemberModel.swift */,
+				C419C84825BE4326003DD0F0 /* RankingModel.swift */,
+				C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -610,8 +616,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C419C84E25BE56C6003DD0F0 /* RankingStatsModel.swift in Sources */,
 				C7146F8725AE1B1100E48762 /* AboutVC.swift in Sources */,
 				C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */,
+				C419C84925BE4326003DD0F0 /* RankingModel.swift in Sources */,
 				C7146F8C25AE1F3E00E48762 /* FriendsCell.swift in Sources */,
 				96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */,
 				96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */,

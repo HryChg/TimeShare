@@ -16,7 +16,8 @@ struct K {
         static let memberIdentifier = "MemberCell"
         static let rankingCellNibName = "RankingNib"
         static let rankingSpecificsNibName = "RankingSpecifics"
-        static let rankingCellIdntifier = "RankingOrderedCell"
+        static let rankingCellIdentifier = "RankingOrderedCell"
+        static let rankingStatsCellIdentifier = "RankingStatsCell"
     }
     
     struct Images {

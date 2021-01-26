@@ -44,7 +44,7 @@
                     <tabBarItem key="tabBarItem" title="Ranking" image="xmark" catalog="system" id="uZF-9i-TYh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="MFK-GT-Kd5" id="1dD-bL-Dme"/>
+                        <outlet property="tableView" destination="MFK-GT-Kd5" id="uiq-SL-wRq"/>
                         <segue destination="ch3-H7-ohg" kind="show" identifier="goToPersonalStats" id="12q-Bq-1Wf"/>
                     </connections>
                 </viewController>
@@ -249,6 +249,7 @@
                         <outlet property="profileImage" destination="Kf3-bh-fc3" id="MBD-re-QRY"/>
                         <outlet property="rankLevelLabel" destination="kfN-rj-wOq" id="xhB-ao-eeL"/>
                         <outlet property="rankPromotionInLabel" destination="Gee-ks-1gn" id="l7S-y7-BmI"/>
+                        <outlet property="rankingStatsTableView" destination="O3i-Nj-Kpv" id="Vxd-wt-4Ci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyL-Wg-Rcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

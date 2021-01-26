@@ -9,6 +9,8 @@
 import UIKit
 
 class RankingSpecificsCell: UITableViewCell {
+    
+    static let identifier = ""
 
     override func awakeFromNib() {
         super.awakeFromNib()

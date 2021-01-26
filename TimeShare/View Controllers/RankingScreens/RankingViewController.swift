@@ -9,10 +9,11 @@
 import UIKit
 import FirebaseFirestore
 
-class RankingViewController: UITableViewController {
+class RankingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let dataBase = Firestore.firestore()
     
+    @IBOutlet weak var tableView: UITableView!
     
     
     
@@ -21,26 +22,27 @@ class RankingViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        
-        tableView.register(UINib(nibName: K.Cell.rankingCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.rankingCellIdntifier)
+        tableView.delegate = self
+        tableView.register(UINib(nibName: K.Cell.rankingCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.rankingCellIdentifier)
+        tableView.separatorStyle = .none
         
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: K.Segue.goToPersonalStats, sender: indexPath)
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingCellIdntifier, for: indexPath)
-        cell.textLabel?.text = "This is a place holder"
-        cell.textLabel?.numberOfLines = 0
-        cell.accessoryType = .none
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingCellIdentifier, for: indexPath) as! RankingCell
+//        cell.profileRankingPic.image = 
+        cell.rankingStatsLabel.text = "To be set Later"
+//        cell.trophyRankingPic.image = "to be set later"
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
