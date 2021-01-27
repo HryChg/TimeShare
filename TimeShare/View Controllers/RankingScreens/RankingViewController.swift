@@ -12,6 +12,7 @@ import FirebaseFirestore
 class RankingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let dataBase = Firestore.firestore()
+    let rankingCellNibName = String(describing: RankingCell.self)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,23 +24,24 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: K.Cell.rankingCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.rankingCellIdentifier)
+        tableView.register(UINib(nibName: rankingCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.rankingCellIdentifier)
         tableView.separatorStyle = .none
         
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingCellIdentifier, for: indexPath) as! RankingCell
+//        cell.profileRankingPic.image = 
+//        cell.rankingStatsLabel.text = "To be set Later"
+//        cell.trophyRankingPic.image = "to be set later"
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: K.Segue.goToPersonalStats, sender: indexPath)
         
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingCellIdentifier, for: indexPath) as! RankingCell
-//        cell.profileRankingPic.image = 
-        cell.rankingStatsLabel.text = "To be set Later"
-//        cell.trophyRankingPic.image = "to be set later"
-        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

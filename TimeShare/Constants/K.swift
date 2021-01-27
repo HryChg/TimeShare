@@ -15,8 +15,8 @@ struct K {
         static let roomIdentifier = "RoomCell"
         static let memberIdentifier = "MemberCell"
         static let rankingCellNibName = "RankingNib"
-        static let rankingSpecificsNibName = "RankingSpecifics"
         static let rankingCellIdentifier = "RankingOrderedCell"
+        static let rankingSpecificsNibName = "RankingSpecifics"
         static let rankingStatsCellIdentifier = "RankingStatsCell"
     }
     
