@@ -10,6 +10,8 @@ import UIKit
 import FirebaseFirestore
 
 class RankingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    static let identifier = "RankingViewController"
 
     let dataBase = Firestore.firestore()
     let rankingCellNibName = String(describing: RankingCell.self)
@@ -31,7 +33,7 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingCellIdentifier, for: indexPath) as! RankingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RankingCell.identifier, for: indexPath) as! RankingCell
 //        cell.profileRankingPic.image = 
 //        cell.rankingStatsLabel.text = "To be set Later"
 //        cell.trophyRankingPic.image = "to be set later"

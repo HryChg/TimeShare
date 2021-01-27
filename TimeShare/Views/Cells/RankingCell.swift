@@ -10,7 +10,7 @@ import UIKit
 
 class RankingCell: UITableViewCell {
     
-    static let identifier = ""
+    static let identifier = "RankingCell"
 
     @IBOutlet weak var rankingProfilePic: UIImageView!
     @IBOutlet weak var trophyRankingPic: UIImageView!
@@ -18,7 +18,7 @@ class RankingCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        rankingStatsLabel.text = "this is a test"
+//        rankingStatsLabel.text = "this is a test"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

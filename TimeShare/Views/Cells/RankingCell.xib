@@ -61,7 +61,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="rankingLabelStats" destination="MXa-yG-xUX" id="HY2-wh-5IG"/>
                 <outlet property="rankingProfilePic" destination="yeX-2D-FAK" id="eOp-qh-gjP"/>
                 <outlet property="rankingStatsLabel" destination="MXa-yG-xUX" id="MKM-O6-v4e"/>
                 <outlet property="trophyRankingPic" destination="KQk-Fc-yCH" id="iL7-bB-L7Y"/>
