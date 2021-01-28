@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RMq-o7-4qk">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="Chat" id="RMq-o7-4qk" customClass="ChatVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="htI-2n-ish">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f3p-Ke-POe">
-                                <rect key="frame" x="20" y="104" width="374" height="57"/>
+                                <rect key="frame" x="20" y="60" width="560" height="57"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uta-Q0-2jM">
                                     <size key="itemSize" width="102" height="73"/>
@@ -66,11 +64,11 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sE2-iP-yWg">
-                                <rect key="frame" x="0.0" y="169" width="414" height="594"/>
+                                <rect key="frame" x="0.0" y="125" width="600" height="376"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6Hf-Tk-Okp">
-                                <rect key="frame" x="20" y="773" width="374" height="30"/>
+                                <rect key="frame" x="20" y="511" width="560" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2C-iB-Lf6">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
@@ -81,12 +79,12 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqw-IT-oMf">
-                                        <rect key="frame" x="37" y="0.0" width="289" height="30"/>
+                                        <rect key="frame" x="37" y="0.0" width="475" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF4-Um-d6B">
-                                        <rect key="frame" x="338" y="0.0" width="36" height="30"/>
+                                        <rect key="frame" x="524" y="0.0" width="36" height="30"/>
                                         <color key="tintColor" name="Brand Color 5 Fiord"/>
                                         <state key="normal" title="Send"/>
                                         <connections>
@@ -96,7 +94,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-OL-Net">
-                                <rect key="frame" x="142" y="56" width="130" height="40"/>
+                                <rect key="frame" x="235" y="12" width="130" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="MxD-me-uYZ"/>
                                     <constraint firstAttribute="height" constant="40" id="fxa-vY-5qh"/>
@@ -133,13 +131,13 @@
                     <tabBarItem key="tabBarItem" title="Chat" image="circle" catalog="system" id="O32-pw-NWx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="chatTextField" destination="aqw-IT-oMf" id="bXa-Af-Ii1"/>
                         <outlet property="collectionView" destination="f3p-Ke-POe" id="sXB-66-DKH"/>
                         <outlet property="hideKeyboardButton" destination="i2C-iB-Lf6" id="1Y9-lv-wRX"/>
                         <outlet property="sendButton" destination="VF4-Um-d6B" id="9fu-O1-3QG"/>
                         <outlet property="studyingButton" destination="eKl-OL-Net" id="6wx-vV-7zZ"/>
                         <outlet property="tableView" destination="sE2-iP-yWg" id="hiW-5s-xog"/>
                         <outlet property="tableViewTopAnchor" destination="3Y8-Zd-9Ow" id="nPd-uk-7dS"/>
-                        <outlet property="textField" destination="aqw-IT-oMf" id="bXa-Af-Ii1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vy-Nc-IDY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

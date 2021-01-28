@@ -7,16 +7,26 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if (error == nil) {
+          // Perform any operations on signed in user here.
+          // ...
+        } else {
+          print("\(error.localizedDescription)")
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         let db = Firestore.firestore()
         print(db)
+        GIDSignIn.sharedInstance().clientID = "YOUR_CLIENT_ID"
+            GIDSignIn.sharedInstance().delegate = self
         return true
     }
 
