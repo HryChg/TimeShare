@@ -14,7 +14,7 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
     static let identifier = "RankingViewController"
 
     let dataBase = Firestore.firestore()
-    let rankingCellNibName = String(describing: RankingCell.self)
+//    let rankingCellNibName = String(describing: RankingCell.self)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,16 +26,16 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: rankingCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.rankingCellIdentifier)
+        tableView.register(UINib(nibName: K.Cell.rankingCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.rankingCellIdentifier)
         tableView.separatorStyle = .none
         
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RankingCell.identifier, for: indexPath) as! RankingCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingCellIdentifier, for: indexPath) as! RankingCell
 //        cell.profileRankingPic.image = 
-//        cell.rankingStatsLabel.text = "To be set Later"
+        cell.rankingStatsLabel.text = "This is a test"
 //        cell.trophyRankingPic.image = "to be set later"
         return cell
     }

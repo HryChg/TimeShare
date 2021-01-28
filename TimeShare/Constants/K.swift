@@ -14,10 +14,10 @@ struct K {
     struct Cell {
         static let roomIdentifier = "RoomCell"
         static let memberIdentifier = "MemberCell"
-        static let rankingCellNibName = "RankingNib"
-        static let rankingCellIdentifier = "RankingCell"
-        static let rankingSpecificsNibName = "RankingSpecifics"
-        static let rankingStatsCellIdentifier = "RankingStatsCell"
+        static let rankingCellNibName = "RankingCell"
+        static let rankingCellIdentifier = "ReusableRankingCell"
+        static let rankingSpecificsNibName = "RankingSpecificsCell"
+        static let rankingStatsCellIdentifier = "ReusableRankingSpecifics"
     }
     
     struct Images {
