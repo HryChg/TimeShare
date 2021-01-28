@@ -11,6 +11,8 @@ target 'TimeShare' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'GoogleSignIn'
+  pod 'GoogleAnalytics'
+  pod 'TransitionButton'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

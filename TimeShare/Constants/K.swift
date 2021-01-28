@@ -41,4 +41,13 @@ struct K {
         static let color6 = "Brand Color 6 Blue Zodiac"
         
     }
+    
+    struct Controller {
+        static let tabBarController = "TabBarController"
+        static let loginVC = "LoginVC"
+    }
+    
+    struct UserDefaults {
+        static let loggedIn = "LoggedIn"
+    }
 }
