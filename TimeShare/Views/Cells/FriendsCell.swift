@@ -17,12 +17,25 @@ class FriendsCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-                
+
+//        contentView.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        translatesAutoresizingMaskIntoConstraints = false
+
+    }
+    
+//    override func layoutIfNeeded() {
+//        super.layoutIfNeeded()
+//        imageView.makeRound()
+//    }
+    
     
 }
 
-extension UIImageView {
+extension UIView {
 
     func makeRound() {
         layer.cornerRadius = (frame.width / 2)

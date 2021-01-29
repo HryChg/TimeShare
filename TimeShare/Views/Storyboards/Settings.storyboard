@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bQ4-zN-vit">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bQ4-zN-vit">
+                                <rect key="frame" x="0.0" y="88" width="414" height="424"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P5d-2Z-Sij">
                                     <size key="itemSize" width="128" height="128"/>
@@ -42,17 +42,17 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QJZ-eL-cwg">
-                                                    <rect key="frame" x="39" y="32" width="50" height="50"/>
+                                                    <rect key="frame" x="44" y="15" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="9WN-lu-rGd"/>
-                                                        <constraint firstAttribute="width" constant="50" id="n8c-s5-zqO"/>
+                                                        <constraint firstAttribute="height" constant="40" id="9WN-lu-rGd"/>
+                                                        <constraint firstAttribute="width" constant="40" id="n8c-s5-zqO"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="pEJ-zg-oB3" firstAttribute="centerX" secondItem="BH6-Qr-16Z" secondAttribute="centerX" id="9PJ-9z-Udj"/>
-                                                <constraint firstItem="pEJ-zg-oB3" firstAttribute="top" secondItem="QJZ-eL-cwg" secondAttribute="bottom" constant="10" id="DB3-kK-Qxl"/>
                                                 <constraint firstItem="QJZ-eL-cwg" firstAttribute="centerX" secondItem="BH6-Qr-16Z" secondAttribute="centerX" id="HxM-EH-eVV"/>
+                                                <constraint firstItem="QJZ-eL-cwg" firstAttribute="top" secondItem="BH6-Qr-16Z" secondAttribute="top" constant="15" id="O15-R2-7af"/>
                                                 <constraint firstAttribute="bottom" secondItem="pEJ-zg-oB3" secondAttribute="bottom" constant="15" id="f3U-kE-IVk"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -70,7 +70,7 @@
                             <constraint firstItem="bQ4-zN-vit" firstAttribute="leading" secondItem="3j3-Cl-5pB" secondAttribute="leading" id="bXP-Yy-W4O"/>
                             <constraint firstItem="bQ4-zN-vit" firstAttribute="top" secondItem="3j3-Cl-5pB" secondAttribute="top" id="gLz-0m-qhF"/>
                             <constraint firstItem="3j3-Cl-5pB" firstAttribute="trailing" secondItem="bQ4-zN-vit" secondAttribute="trailing" id="lvP-jz-Yvj"/>
-                            <constraint firstItem="3j3-Cl-5pB" firstAttribute="bottom" secondItem="bQ4-zN-vit" secondAttribute="bottom" id="viJ-YD-2gZ"/>
+                            <constraint firstItem="3j3-Cl-5pB" firstAttribute="bottom" secondItem="bQ4-zN-vit" secondAttribute="bottom" constant="300" id="viJ-YD-2gZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rhb-UU-teL"/>
@@ -109,7 +109,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ySS-g8-v0F">
-                                                    <rect key="frame" x="24" y="4" width="80" height="80"/>
+                                                    <rect key="frame" x="24" y="5" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="Jk0-dY-Qhe"/>
                                                         <constraint firstAttribute="height" constant="80" id="baL-vM-h6R"/>
@@ -123,9 +123,9 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="voB-ld-bSP" firstAttribute="top" secondItem="ySS-g8-v0F" secondAttribute="bottom" constant="8" id="B6o-P3-WGE"/>
                                                 <constraint firstItem="ySS-g8-v0F" firstAttribute="centerX" secondItem="rHG-ds-HHS" secondAttribute="centerX" id="FwH-Gc-Nek"/>
                                                 <constraint firstItem="voB-ld-bSP" firstAttribute="centerX" secondItem="rHG-ds-HHS" secondAttribute="centerX" id="ZI2-TL-B1z"/>
+                                                <constraint firstItem="ySS-g8-v0F" firstAttribute="top" secondItem="rHG-ds-HHS" secondAttribute="top" constant="5" id="gj9-dH-GxC"/>
                                                 <constraint firstAttribute="bottom" secondItem="voB-ld-bSP" secondAttribute="bottom" constant="15" id="xni-9j-uaR"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -358,7 +358,6 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="triangle" catalog="system" id="e7C-5S-YaA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6uO-cx-trS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -372,7 +371,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="triangle" catalog="system" width="128" height="112"/>
+        <image name="triangle" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

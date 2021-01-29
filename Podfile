@@ -10,6 +10,9 @@ target 'TimeShare' do
   # https://firebase.google.com/docs/ios/setup#available-pods
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'GoogleSignIn'
+  pod 'GoogleAnalytics'
+  pod 'TransitionButton'
   pod 'Charts'
 
   post_install do |installer|
