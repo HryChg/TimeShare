@@ -13,6 +13,7 @@ target 'TimeShare' do
   pod 'GoogleSignIn'
   pod 'GoogleAnalytics'
   pod 'TransitionButton'
+  pod 'Charts'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

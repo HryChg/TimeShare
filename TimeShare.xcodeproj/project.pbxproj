@@ -31,6 +31,14 @@
 		96EFE52E25B5810C0062D63B /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EFE52C25B5810C0062D63B /* RoomCell.xib */; };
 		96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */; };
 		96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFE55E25B5B3600062D63B /* TimerVC.swift */; };
+		C419C84925BE4326003DD0F0 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419C84825BE4326003DD0F0 /* RankingModel.swift */; };
+		C419C84E25BE56C6003DD0F0 /* RankingStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */; };
+		C419C86B25C0E5CE003DD0F0 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419C86925C0E5CE003DD0F0 /* RankingCell.swift */; };
+		C419C86C25C0E5CE003DD0F0 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C419C86A25C0E5CE003DD0F0 /* RankingCell.xib */; };
+		C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7825B6778800373760 /* RankingStatsVC.swift */; };
+		C4AC9A7F25B679BF00373760 /* RankingSpecificsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */; };
+		C4AC9A8025B679BF00373760 /* RankingSpecificsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */; };
+		C4AC9A9C25B7B5FA00373760 /* RankingGraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */; };
 		C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */; };
 		C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166D925ACD0EB002FF445 /* Chat.storyboard */; };
 		C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70166DE25ACD0F3002FF445 /* Ranking.storyboard */; };
@@ -108,6 +116,17 @@
 		96EFE52C25B5810C0062D63B /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
 		96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomVC.swift; sourceTree = "<group>"; };
 		96EFE55E25B5B3600062D63B /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
+		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
+		C419C84825BE4326003DD0F0 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
+		C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsModel.swift; sourceTree = "<group>"; };
+		C419C86925C0E5CE003DD0F0 /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
+		C419C86A25C0E5CE003DD0F0 /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
+		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		C4AC9A7825B6778800373760 /* RankingStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsVC.swift; sourceTree = "<group>"; };
+		C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingSpecificsCell.swift; sourceTree = "<group>"; };
+		C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingSpecificsCell.xib; sourceTree = "<group>"; };
+		C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingGraphVC.swift; sourceTree = "<group>"; };
 		C70166BB25ACCF7E002FF445 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		C70166D925ACD0EB002FF445 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		C70166DE25ACD0F3002FF445 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
@@ -244,6 +263,16 @@
 			path = HomeScreens;
 			sourceTree = "<group>";
 		};
+		C4AC9A7425B6776100373760 /* RankingScreens */ = {
+			isa = PBXGroup;
+			children = (
+				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
+				C4AC9A7825B6778800373760 /* RankingStatsVC.swift */,
+				C4AC9A9B25B7B5FA00373760 /* RankingGraphVC.swift */,
+			);
+			path = RankingScreens;
+			sourceTree = "<group>";
+		};
 		C70166E825ACD181002FF445 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,8 +287,8 @@
 			children = (
 				C72B509725C3604400F7B04B /* Tab Bar */,
 				96EFE54C25B5A79C0062D63B /* HomeScreens */,
+				C4AC9A7425B6776100373760 /* RankingScreens */,
 				C749D44225B60FC900AAD5DD /* Chat */,
-				C749D43E25B60FBF00AAD5DD /* Ranking */,
 				C7146F6D25AE16E700E48762 /* Settings */,
 				C7031EEE25C25DBD00BCBEB9 /* Login */,
 			);
@@ -283,6 +312,8 @@
 				96EFE52325B5729E0062D63B /* MemberModel.swift */,
 				C749D43925B6086900AAD5DD /* MockData.swift */,
 				C76C2B3425B9EDC000335D24 /* Message.swift */,
+				C419C84825BE4326003DD0F0 /* RankingModel.swift */,
+				C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,6 +380,10 @@
 				C76C2B3925B9EE2800335D24 /* MessageCell.swift */,
 				C76C2B3A25B9EE2800335D24 /* MessageCell.xib */,
 				C7D000AE25BA61E80079C82F /* StudyingCell.swift */,
+				C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */,
+				C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */,
+				C419C86925C0E5CE003DD0F0 /* RankingCell.swift */,
+				C419C86A25C0E5CE003DD0F0 /* RankingCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -501,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70166DA25ACD0EB002FF445 /* Chat.storyboard in Resources */,
+				C4AC9A8025B679BF00373760 /* RankingSpecificsCell.xib in Resources */,
 				C76C2B3C25B9EE2800335D24 /* MessageCell.xib in Resources */,
 				C70166BC25ACCF7E002FF445 /* HomeScreen.storyboard in Resources */,
 				96EFE4EB25B55DCB0062D63B /* README.md in Resources */,
@@ -508,6 +544,7 @@
 				C70166E425ACD0FB002FF445 /* Settings.storyboard in Resources */,
 				96D96C0825A6DC3100CA39B1 /* GoogleService-Info.plist in Resources */,
 				96EFE52E25B5810C0062D63B /* RoomCell.xib in Resources */,
+				C419C86C25C0E5CE003DD0F0 /* RankingCell.xib in Resources */,
 				C70166DF25ACD0F3002FF445 /* Ranking.storyboard in Resources */,
 				96D96BA925A6D54400CA39B1 /* Assets.xcassets in Resources */,
 				96D96BA725A6D54200CA39B1 /* Main.storyboard in Resources */,
@@ -679,7 +716,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C419C84E25BE56C6003DD0F0 /* RankingStatsModel.swift in Sources */,
 				C7146F8725AE1B1100E48762 /* AboutVC.swift in Sources */,
+				C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */,
+				C419C84925BE4326003DD0F0 /* RankingModel.swift in Sources */,
 				C7146F8C25AE1F3E00E48762 /* FriendsCell.swift in Sources */,
 				96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */,
 				C72B509325C3603F00F7B04B /* TabBarController.swift in Sources */,
@@ -688,14 +728,17 @@
 				C701670325ACD28E002FF445 /* SettingsVC.swift in Sources */,
 				C76C2B3B25B9EE2800335D24 /* MessageCell.swift in Sources */,
 				96EFE55F25B5B3600062D63B /* TimerVC.swift in Sources */,
+				C4AC9A7F25B679BF00373760 /* RankingSpecificsCell.swift in Sources */,
 				96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */,
 				96EFE52425B5729E0062D63B /* MemberModel.swift in Sources */,
 				C76C2B4125B9F53B00335D24 /* ChatViewModel.swift in Sources */,
 				96EFE55725B5A7D80062D63B /* CreateRoomVC.swift in Sources */,
 				C70166F925ACD27D002FF445 /* ChatVC.swift in Sources */,
 				96EFE51F25B5716C0062D63B /* RoomModel.swift in Sources */,
+				C419C86B25C0E5CE003DD0F0 /* RankingCell.swift in Sources */,
 				C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */,
 				C701670A25ACD371002FF445 /* K.swift in Sources */,
+				C4AC9A9C25B7B5FA00373760 /* RankingGraphVC.swift in Sources */,
 				C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */,
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
 				C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */,
