@@ -230,6 +230,12 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="O3i-Nj-Kpv" secondAttribute="trailing" id="6zV-do-0go"/>
+                                    <constraint firstItem="O3i-Nj-Kpv" firstAttribute="top" secondItem="kdn-Uy-SuG" secondAttribute="bottom" id="cbC-Lc-DPD"/>
+                                    <constraint firstAttribute="bottom" secondItem="O3i-Nj-Kpv" secondAttribute="bottom" id="evm-Lf-gfi"/>
+                                    <constraint firstItem="O3i-Nj-Kpv" firstAttribute="leading" secondItem="Dq1-y7-fCI" secondAttribute="leading" id="tLk-wr-cmw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8eb-MW-sM8"/>
