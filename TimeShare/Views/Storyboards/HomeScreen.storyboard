@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M6j-Th-mzU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n6X-78-qKI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,6 +13,8 @@
         <array key="SF-Pro.ttf">
             <string>SFPro-Bold</string>
             <string>SFPro-Heavy</string>
+            <string>SFPro-Medium</string>
+            <string>SFPro-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -25,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HjQ-a4-Ibb">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mP-qc-N9l" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOIN A ROOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1O-OG-MXZ" userLabel="Title">
-                                                <rect key="frame" x="115.5" y="18.5" width="183.5" height="33"/>
+                                                <rect key="frame" x="113.5" y="18.5" width="187.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFPro-Heavy" family="SF Pro" pointSize="28"/>
                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                 <nil key="highlightedColor"/>
@@ -44,10 +46,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oU-1y-vmM" userLabel="MiddleView">
-                                        <rect key="frame" x="0.0" y="70" width="414" height="619"/>
+                                        <rect key="frame" x="0.0" y="70" width="414" height="575"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aRL-dF-Wzt" userLabel="RoomsTable">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="619"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="575"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
                                         </subviews>
@@ -60,7 +62,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-Op-5Cq" userLabel="BottomView">
-                                        <rect key="frame" x="0.0" y="689" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="645" width="414" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-po-z07" userLabel="Add Button">
                                                 <rect key="frame" x="169.5" y="2.5" width="75" height="75"/>
@@ -103,33 +105,35 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="square" catalog="system" id="vzk-F6-s7U"/>
+                    <navigationItem key="navigationItem" id="fyY-JK-cEm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="nXb-po-z07" id="FTb-bA-7r3"/>
                         <outlet property="tableView" destination="aRL-dF-Wzt" id="tKk-Ym-Dc2"/>
                         <segue destination="kYM-R4-Iea" kind="show" identifier="CreateRoomSegue" id="S2D-QW-ngS"/>
+                        <segue destination="ZVT-2Y-pao" kind="show" identifier="RoomDetailSegue" id="dvC-yJ-drd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSv-Jl-Ys0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1290" y="-900"/>
+            <point key="canvasLocation" x="-1380" y="-900"/>
         </scene>
         <!--Create RoomVC-->
         <scene sceneID="LTl-6Q-KXG">
             <objects>
                 <viewController id="kYM-R4-Iea" customClass="CreateRoomVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUB-8Q-iEq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JfX-Xs-VHI">
-                                <rect key="frame" x="0.0" y="20" width="414" height="802"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enF-ba-s4L" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW ROOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1m-pO-5pZ" userLabel="Title">
-                                                <rect key="frame" x="128.5" y="25" width="157.5" height="33"/>
+                                                <rect key="frame" x="127.5" y="25" width="159" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFPro-Heavy" family="SF Pro" pointSize="28"/>
                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                 <nil key="highlightedColor"/>
@@ -162,66 +166,66 @@
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-hR-Wbc">
-                                        <rect key="frame" x="0.0" y="83" width="414" height="719"/>
+                                        <rect key="frame" x="0.0" y="83" width="414" height="685"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARU-tl-puv" userLabel="Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="719"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="685"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZE-Xh-UhI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="699"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="665"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter room name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVm-9Y-Ghl">
-                                                                <rect key="frame" x="20" y="45.5" width="380" height="34"/>
+                                                                <rect key="frame" x="20" y="46" width="380" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="50 min" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q79-7O-8aF">
-                                                                <rect key="frame" x="116.5" y="87.5" width="283.5" height="34"/>
+                                                                <rect key="frame" x="119" y="88" width="281" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10 min" borderStyle="roundedRect" placeholder="Enter room name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ew-wz-Tof">
-                                                                <rect key="frame" x="116.5" y="129.5" width="283.5" height="34"/>
+                                                                <rect key="frame" x="119" y="130" width="281" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 ppl" borderStyle="roundedRect" placeholder="Enter room name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXf-hd-vRR">
-                                                                <rect key="frame" x="116.5" y="171.5" width="283.5" height="34"/>
+                                                                <rect key="frame" x="119" y="172" width="281" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREAK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifk-qM-iCK">
-                                                                <rect key="frame" x="20" y="138" width="88.5" height="17.5"/>
+                                                                <rect key="frame" x="20" y="138" width="91" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
                                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNT-9L-vpG">
-                                                                <rect key="frame" x="20" y="180" width="88.5" height="17.5"/>
+                                                                <rect key="frame" x="20" y="180" width="91" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
                                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loA-zp-BZ6">
-                                                                <rect key="frame" x="20" y="96" width="88.5" height="17.5"/>
+                                                                <rect key="frame" x="20" y="96" width="91" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
                                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOM NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUg-kI-dhY">
-                                                                <rect key="frame" x="20" y="20" width="93.5" height="17.5"/>
+                                                                <rect key="frame" x="20" y="20" width="95" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
                                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZG-Pa-gLx">
-                                                                <rect key="frame" x="20" y="236.5" width="68" height="17.5"/>
+                                                                <rect key="frame" x="20" y="237" width="69.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
                                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s04-rk-xRr">
-                                                                <rect key="frame" x="20" y="262" width="380" height="417"/>
+                                                                <rect key="frame" x="20" y="263" width="380" height="382"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                 <color key="textColor" systemColor="labelColor"/>
@@ -305,7 +309,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vUL-QD-4aL"/>
                     <connections>
-                        <segue destination="HDF-yh-yZd" kind="show" identifier="TimerSegue" id="n9t-ra-IgO"/>
+                        <segue destination="HDF-yh-yZd" kind="show" identifier="CreateRoomToTimerSegue" id="n9t-ra-IgO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moL-hs-4if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -317,11 +321,11 @@
             <objects>
                 <viewController id="HDF-yh-yZd" customClass="TimerVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YhT-XI-sjR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rcu-w2-Nv2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWU-VK-y2y" userLabel="Top View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
@@ -330,7 +334,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-Nw-YQx" userLabel="Title">
-                                                        <rect key="frame" x="128" y="18.5" width="158" height="33"/>
+                                                        <rect key="frame" x="126.5" y="18.5" width="161" height="33.5"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Heavy" family="SF Pro" pointSize="28"/>
                                                         <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                         <nil key="highlightedColor"/>
@@ -387,10 +391,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyL-eG-qsx" userLabel="Bottom View">
-                                        <rect key="frame" x="0.0" y="455" width="414" height="353"/>
+                                        <rect key="frame" x="0.0" y="455" width="414" height="270"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-dz-0nQ">
-                                                <rect key="frame" x="0.0" y="45.5" width="414" height="307.5"/>
+                                                <rect key="frame" x="0.0" y="46" width="414" height="224"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberCell" id="rWb-V6-exh">
@@ -404,7 +408,7 @@
                                                 </prototypes>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ3-v0-i6l">
-                                                <rect key="frame" x="20" y="20" width="60" height="17.5"/>
+                                                <rect key="frame" x="20" y="20" width="62" height="18"/>
                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
                                                 <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
                                                 <nil key="highlightedColor"/>
@@ -447,9 +451,205 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IgQ-rx-7ZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="-650.22321428571422"/>
+            <point key="canvasLocation" x="945" y="-987"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Lz-EK-9bh">
+            <objects>
+                <navigationController id="n6X-78-qKI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CXv-Nl-rKV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M6j-Th-mzU" kind="relationship" relationship="rootViewController" id="Ssp-VH-1dU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2q0-pv-yro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2380" y="-900"/>
+        </scene>
+        <!--Room DetailVC-->
+        <scene sceneID="ZS8-y2-09T">
+            <objects>
+                <viewController id="ZVT-2Y-pao" customClass="RoomDetailVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxi-QX-TmR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-5t-7PM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRL-4a-lkS" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP1-qh-jlj">
+                                                <rect key="frame" x="8" y="22.5" width="48" height="30"/>
+                                                <state key="normal" title="Cancel"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpw-w6-mLg">
+                                                <rect key="frame" x="346" y="22.5" width="60" height="30"/>
+                                                <color key="backgroundColor" name="Brand Color 5 Fiord"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="wBZ-Rd-M07"/>
+                                                </constraints>
+                                                <state key="normal" title="Join">
+                                                    <color key="titleColor" name="Brand Color 1 CatskillWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createButtonPressed:" destination="kYM-R4-Iea" eventType="touchUpInside" id="Gqk-9K-9St"/>
+                                                    <action selector="joinButtonPressed:" destination="ZVT-2Y-pao" eventType="touchUpInside" id="OUG-E4-gJc"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOM DETAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gK-Dt-2o9" userLabel="Title">
+                                                <rect key="frame" x="112" y="21" width="190.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Heavy" family="SF Pro" pointSize="28"/>
+                                                <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NP1-qh-jlj" firstAttribute="leading" secondItem="SRL-4a-lkS" secondAttribute="leading" constant="8" id="FwG-Hi-KXA"/>
+                                            <constraint firstItem="1gK-Dt-2o9" firstAttribute="centerX" secondItem="SRL-4a-lkS" secondAttribute="centerX" id="G3n-zh-o1a"/>
+                                            <constraint firstAttribute="trailing" secondItem="hpw-w6-mLg" secondAttribute="trailing" constant="8" id="K98-X0-5Hj"/>
+                                            <constraint firstItem="1gK-Dt-2o9" firstAttribute="centerY" secondItem="SRL-4a-lkS" secondAttribute="centerY" id="WE3-Kp-e3o"/>
+                                            <constraint firstItem="hpw-w6-mLg" firstAttribute="centerY" secondItem="1gK-Dt-2o9" secondAttribute="centerY" id="nh1-LK-3ly"/>
+                                            <constraint firstItem="NP1-qh-jlj" firstAttribute="centerY" secondItem="1gK-Dt-2o9" secondAttribute="centerY" id="tOd-lM-3TK"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-VY-UKB">
+                                        <rect key="frame" x="0.0" y="83" width="414" height="725"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSB-5F-pe0">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM CS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUW-eX-fBs">
+                                                        <rect key="frame" x="148.5" y="20" width="117.5" height="33.5"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="28"/>
+                                                        <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer: 50/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74L-dn-Ale">
+                                                        <rect key="frame" x="5" y="70.5" width="98.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="17"/>
+                                                        <color key="textColor" name="Brand Color 4 Gull Gray"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer Left: 49:55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agq-8F-b2Y">
+                                                        <rect key="frame" x="272.5" y="75" width="136.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="17"/>
+                                                        <color key="textColor" name="Brand Color 4 Gull Gray"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.89999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="UVe-Ze-9hc">
+                                                        <rect key="frame" x="0.0" y="99" width="414" height="4"/>
+                                                        <color key="progressTintColor" name="Brand Color 3 Capser"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="UVe-Ze-9hc" firstAttribute="leading" secondItem="DSB-5F-pe0" secondAttribute="leading" id="6Sb-75-tg7"/>
+                                                    <constraint firstItem="UVe-Ze-9hc" firstAttribute="top" secondItem="DUW-eX-fBs" secondAttribute="bottom" constant="45.5" id="6YE-Sl-igf"/>
+                                                    <constraint firstItem="UVe-Ze-9hc" firstAttribute="top" secondItem="Agq-8F-b2Y" secondAttribute="bottom" constant="3.5" id="7hU-mZ-DPB"/>
+                                                    <constraint firstAttribute="height" constant="125" id="AAF-aY-cXd"/>
+                                                    <constraint firstItem="74L-dn-Ale" firstAttribute="leading" secondItem="DSB-5F-pe0" secondAttribute="leading" constant="5" id="DCU-xJ-B3j"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UVe-Ze-9hc" secondAttribute="trailing" id="Dkn-sM-QJP"/>
+                                                    <constraint firstItem="DUW-eX-fBs" firstAttribute="top" secondItem="DSB-5F-pe0" secondAttribute="top" constant="20" symbolic="YES" id="KDa-DN-0SQ"/>
+                                                    <constraint firstItem="DUW-eX-fBs" firstAttribute="centerX" secondItem="DSB-5F-pe0" secondAttribute="centerX" id="cgm-OI-vqF"/>
+                                                    <constraint firstItem="UVe-Ze-9hc" firstAttribute="top" secondItem="74L-dn-Ale" secondAttribute="bottom" constant="8" symbolic="YES" id="ePa-a8-EJS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Agq-8F-b2Y" secondAttribute="trailing" constant="5" id="sU7-4N-yQv"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYK-M0-Noh">
+                                                <rect key="frame" x="0.0" y="125" width="414" height="215"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY GOAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFm-56-omT">
+                                                        <rect key="frame" x="20" y="20" width="69.5" height="18"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="15"/>
+                                                        <color key="textColor" name="Brand Color 6 Blue Zodiac"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-Ve-AZK">
+                                                        <rect key="frame" x="20" y="46" width="374" height="149"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna </string>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="LFm-56-omT" firstAttribute="top" secondItem="zYK-M0-Noh" secondAttribute="top" constant="20" symbolic="YES" id="DYR-8L-MfJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Y5h-Ve-AZK" secondAttribute="trailing" constant="20" symbolic="YES" id="Es0-Wg-1vj"/>
+                                                    <constraint firstItem="LFm-56-omT" firstAttribute="leading" secondItem="zYK-M0-Noh" secondAttribute="leading" constant="20" symbolic="YES" id="bDT-Q8-uiE"/>
+                                                    <constraint firstItem="Y5h-Ve-AZK" firstAttribute="leading" secondItem="zYK-M0-Noh" secondAttribute="leading" constant="20" symbolic="YES" id="fl0-SO-MYW"/>
+                                                    <constraint firstAttribute="height" constant="215" id="iTJ-Dt-faf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Y5h-Ve-AZK" secondAttribute="bottom" constant="20" symbolic="YES" id="pTy-38-DZm"/>
+                                                    <constraint firstItem="Y5h-Ve-AZK" firstAttribute="top" secondItem="LFm-56-omT" secondAttribute="bottom" constant="8" symbolic="YES" id="wOk-Xv-VuP"/>
+                                                </constraints>
+                                            </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMC-Ns-BVN">
+                                                <rect key="frame" x="0.0" y="340" width="414" height="385"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomDetailMemberCell" id="wzj-C8-hWX">
+                                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wzj-C8-hWX" id="MLP-8y-p9W">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Brand Color 2 Mystic"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="DSB-5F-pe0" secondAttribute="trailing" id="27z-0b-oTa"/>
+                                            <constraint firstItem="PMC-Ns-BVN" firstAttribute="leading" secondItem="rnP-VY-UKB" secondAttribute="leading" id="8wr-VE-Odm"/>
+                                            <constraint firstAttribute="trailing" secondItem="PMC-Ns-BVN" secondAttribute="trailing" id="Mcg-lf-8Wf"/>
+                                            <constraint firstItem="PMC-Ns-BVN" firstAttribute="top" secondItem="zYK-M0-Noh" secondAttribute="bottom" id="TlL-cf-zNF"/>
+                                            <constraint firstAttribute="trailing" secondItem="zYK-M0-Noh" secondAttribute="trailing" id="YLi-a1-FEq"/>
+                                            <constraint firstItem="zYK-M0-Noh" firstAttribute="top" secondItem="DSB-5F-pe0" secondAttribute="bottom" id="i59-dE-iEB"/>
+                                            <constraint firstItem="DSB-5F-pe0" firstAttribute="leading" secondItem="rnP-VY-UKB" secondAttribute="leading" id="mdt-RY-d9e"/>
+                                            <constraint firstItem="zYK-M0-Noh" firstAttribute="leading" secondItem="rnP-VY-UKB" secondAttribute="leading" id="tn7-Xi-Mx5"/>
+                                            <constraint firstAttribute="bottom" secondItem="PMC-Ns-BVN" secondAttribute="bottom" id="ubJ-z2-LdN"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rnP-VY-UKB" firstAttribute="leading" secondItem="ah9-5t-7PM" secondAttribute="leading" id="8aE-ce-bdO"/>
+                                    <constraint firstItem="rnP-VY-UKB" firstAttribute="top" secondItem="ah9-5t-7PM" secondAttribute="top" constant="83" id="SRQ-6o-vPj"/>
+                                    <constraint firstAttribute="bottom" secondItem="rnP-VY-UKB" secondAttribute="bottom" id="VgZ-be-Zzo"/>
+                                    <constraint firstAttribute="trailing" secondItem="rnP-VY-UKB" secondAttribute="trailing" id="YT4-Nj-s2T"/>
+                                    <constraint firstItem="SRL-4a-lkS" firstAttribute="leading" secondItem="ah9-5t-7PM" secondAttribute="leading" id="dbW-vI-63D"/>
+                                    <constraint firstItem="SRL-4a-lkS" firstAttribute="top" secondItem="ah9-5t-7PM" secondAttribute="top" id="hlK-lz-dB9"/>
+                                    <constraint firstAttribute="trailing" secondItem="SRL-4a-lkS" secondAttribute="trailing" id="z5J-V6-hUy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dqc-eg-LDt"/>
+                        <color key="backgroundColor" name="Brand Color 1 CatskillWhite"/>
+                        <constraints>
+                            <constraint firstItem="ah9-5t-7PM" firstAttribute="trailing" secondItem="dqc-eg-LDt" secondAttribute="trailing" id="8Fq-0j-l6q"/>
+                            <constraint firstItem="ah9-5t-7PM" firstAttribute="bottom" secondItem="mxi-QX-TmR" secondAttribute="bottom" id="Qpj-Sf-ISP"/>
+                            <constraint firstItem="ah9-5t-7PM" firstAttribute="leading" secondItem="mxi-QX-TmR" secondAttribute="leading" id="RVy-w3-ugf"/>
+                            <constraint firstItem="ah9-5t-7PM" firstAttribute="top" secondItem="dqc-eg-LDt" secondAttribute="top" id="RoD-85-4sg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hrl-z5-hgJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="PMC-Ns-BVN" id="0I6-ss-eRf"/>
+                        <segue destination="HDF-yh-yZd" kind="show" identifier="RoomDetailToTimerSegue" id="me9-zN-9kx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4P-1p-Mg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="-1331"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="me9-zN-9kx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Add Button" width="75" height="75"/>
         <image name="square" catalog="system" width="128" height="114"/>
@@ -458,6 +658,12 @@
         </namedColor>
         <namedColor name="Brand Color 2 Mystic">
             <color red="0.90200001001358032" green="0.92500001192092896" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Color 3 Capser">
+            <color red="0.72500002384185791" green="0.76899999380111694" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Brand Color 4 Gull Gray">
+            <color red="0.60799998044967651" green="0.64300000667572021" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Brand Color 5 Fiord">
             <color red="0.22400000691413879" green="0.28200000524520874" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
