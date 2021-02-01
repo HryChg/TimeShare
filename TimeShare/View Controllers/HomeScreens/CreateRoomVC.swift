@@ -15,7 +15,7 @@ class CreateRoomVC: UIViewController {
     }
     
     @IBAction func createButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: K.Segue.goToTimer, sender: self)
+        self.performSegue(withIdentifier: K.Segue.createRoomToTimer, sender: self)
     }
     
 }
