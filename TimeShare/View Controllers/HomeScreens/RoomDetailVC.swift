@@ -20,6 +20,7 @@ class RoomDetailVC: UIViewController {
     
     @IBAction func joinButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.Segue.roomDetailToTimer, sender: self)
+        ViewUtils.removeSelfFromNavigation(self)
     }
 }
 
