@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatVC: UIViewController {
     
@@ -14,15 +15,16 @@ class ChatVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var chatTextField: UITextField!
     @IBOutlet weak var hideKeyboardButton: UIButton!
     @IBOutlet weak var studyingButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableViewTopAnchor: NSLayoutConstraint!
     
     var studyingListIsShowing = false
+    let db = Firestore.firestore()
     
-    var messages: [Message] = [
+    let messages: [Message] = [
         
         Message(sender: "Harry", body: "Hey, what's up?"),
         Message(sender: "Sean", body: "Not much, how's it going?"),
@@ -48,7 +50,7 @@ class ChatVC: UIViewController {
         setupUI()
         scrollToLastMessage()
         
-        textField.addTarget(self, action: #selector(textFieldTapped), for: .touchDown)
+        chatTextField.addTarget(self, action: #selector(textFieldTapped), for: .touchDown)
         
     }
     
@@ -66,9 +68,9 @@ class ChatVC: UIViewController {
         
         view.backgroundColor = UIColor(named: "Brand Color 2 Mystic")
         
-        textField.placeholder = "Chat"
+        chatTextField.placeholder = "Chat"
         
-        textField.font = UIFont.systemFont(ofSize: 20)
+        chatTextField.font = UIFont.systemFont(ofSize: 20)
         
         hideKeyboardButton.isHidden = true
         
@@ -91,10 +93,13 @@ class ChatVC: UIViewController {
                 if studyingListIsShowing {
                     tableViewTopAnchor.constant = 40
                     collectionView.isHidden = true
+                    studyingButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
                     view.layoutIfNeeded()
                 } else {
                     tableViewTopAnchor.constant = 140
                     collectionView.isHidden = false
+                    studyingButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+
                     view.layoutIfNeeded()
                 }
             },
@@ -127,8 +132,10 @@ class ChatVC: UIViewController {
     
     private func showHideKeyboardButton() {
         
-        UIView.animate(withDuration: 1.0, delay: 0.4) {
-            self.hideKeyboardButton.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            UIView.animate(withDuration: 0.5) {
+                self.hideKeyboardButton.isHidden = false
+            }
         }
     }
     
@@ -157,7 +164,7 @@ class ChatVC: UIViewController {
     @objc func keyboardWillHide() {
         
         view.frame.origin.y = 0
-        textField.resignFirstResponder()
+        chatTextField.resignFirstResponder()
         hideHideKeyboardButton()
         
     }
@@ -167,7 +174,7 @@ class ChatVC: UIViewController {
         if let tabBarHeight = tabBarController?.tabBar.frame.size.height,
            let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             
-            if textField.isFirstResponder {
+            if chatTextField.isFirstResponder {
                 view.frame.origin.y = -(keyboardSize.height - tabBarHeight)
                 showHideKeyboardButton()
             }
@@ -176,7 +183,17 @@ class ChatVC: UIViewController {
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
         
-        //Save message to firebase
+        if let messageBody = chatTextField.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(K.FStore.collectionName).addDocument(data: [
+                K.FStore.senderField: messageSender,
+                                                                K.FStore.bodyField: messageBody]) { (error) in
+                if let e = error {
+                    print("Error saving data to firestore: \(e)")
+                } else {
+                    print("Successfully saved data")
+                }
+            }
+        }
         //tableView.reloadData()
         
     }
@@ -271,4 +288,12 @@ extension ChatVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+}
+
+extension ChatVC: UITextFieldDelegate {
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        if textField == chatTextField {
+//            chatTextField.becomeFirstResponder()
+//        }
+//    }
 }
