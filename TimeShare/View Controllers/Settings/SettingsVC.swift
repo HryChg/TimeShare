@@ -25,6 +25,12 @@ class SettingsVC: UIViewController {
         return button
     }()
     
+//    let profileButton: UIBarButtonItem = {
+//        let item = UIBarButtonItem()
+//        item.setBackgroundImage(<#T##backgroundImage: UIImage?##UIImage?#>, for: <#T##UIControl.State#>, barMetrics: <#T##UIBarMetrics#>)
+//        return item
+//    }()
+    
     static let identifier = "SettingsVC"
     
     let settingsItems = [
@@ -56,6 +62,8 @@ class SettingsVC: UIViewController {
         logoutButton.setTitleColor(.white, for: .normal)
         logoutButton.layer.cornerRadius = 15
         
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -67,6 +75,7 @@ class SettingsVC: UIViewController {
         logoutButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
         logoutButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
+    
     
     private func setupCollectionView() {
         

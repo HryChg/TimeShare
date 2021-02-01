@@ -52,7 +52,7 @@ extension FriendsVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.imageView.image = UIImage(named: "Headshot")
         cell.nameLabel.text = "Name"
         
-        cell.imageView.makeRound()
+        cell.imageView.makeRounded()
 
         return cell
         

@@ -256,7 +256,7 @@ extension ChatVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScroll
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StudyingCell.identifier, for: indexPath) as! StudyingCell
         
         cell.imageView.image = UIImage(named: "Headshot")
-        cell.imageView.makeRound()
+        cell.imageView.makeRounded()
         cell.nameLabel.text = "Name"
         
         return cell
