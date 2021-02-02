@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class ProfileVC: UIViewController {
     
@@ -15,66 +15,72 @@ class ProfileVC: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var displayNameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var firstNameTitleLabel: UILabel!
-    @IBOutlet weak var userNameTitleLabel: UILabel!
+    @IBOutlet weak var displayNameTitleLabel: UILabel!
     @IBOutlet weak var emailTitleLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     
     let name = Auth.auth().currentUser?.displayName
     let email = Auth.auth().currentUser?.email
+    let displayName = Auth.auth().currentUser?.displayName
     let profileImageURL = Auth.auth().currentUser?.photoURL
-    
-    var profileImage: UIImage?
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-
+        
     }
     
     private func setupUI() {
         
-        navigationController?.navigationBar.prefersLargeTitles = true
         title = "Profile"
         
-        profileImageView.setRounded()
+        view.backgroundColor = UIColor(named: K.BrandColors.color2)
         
-        nameLabel.text = name
-        userNameLabel.text = "janedoe"
+        profileImageView.downloaded(from: profileImageURL!)
+        profileImageView.makeRound()
+        
+        displayNameLabel.text = displayName
         emailLabel.text = email
         
-        firstNameTitleLabel.text = "Name"
-        userNameTitleLabel.text = "Display Name"
+        displayNameTitleLabel.text = "Display Name"
         emailTitleLabel.text = "Email"
         
         editButton.setTitle("Edit Display Name", for: .normal)
         editButton.setTitleColor(.white, for: .normal)
         editButton.backgroundColor = UIColor(named: K.BrandColors.color6)
         editButton.layer.cornerRadius = 15
-                    
-    
-    
+        
     }
     
     @IBAction func editDisplayNameButtonTapped(_ sender: UIButton) {
         
-        
-        
+        showAlertWithTextField(title: "Change Display Name",
+                               message: "This is what others will see",
+                               textFieldPlaceholder: "New Display Name") { (text) in
+            
+            if let text = text {
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = text
+                changeRequest?.commitChanges { (error) in
+                    if let e = error {
+                        print("Error changing display name \(e.localizedDescription)")
+                    } else {
+                        self.displayNameLabel.text = text
+                    }
+                }
+            }
+        }
     }
     
-
 }
 
 extension UIImageView {
-
-    func makeRounded() {
-
+    
+    func makeRound() {
+        
         layer.masksToBounds = true
         layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = frame.height / 2
@@ -83,53 +89,41 @@ extension UIImageView {
 }
 
 extension UIImageView {
-
-   func setRounded() {
-    let radius = frame.width / 2
-      self.layer.cornerRadius = radius
-      self.layer.masksToBounds = true
-   }
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+            else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
 }
 
-extension UIImage {
-    func resizeImage(_ dimension: CGFloat, opaque: Bool, contentMode:
-                        UIView.ContentMode = .scaleAspectFit) -> UIImage {
-        var width: CGFloat
-        var height: CGFloat
-        var newImage: UIImage
-
-        let size = self.size
-        let aspectRatio =  size.width/size.height
-
-        switch contentMode {
-        case .scaleAspectFit:
-            if aspectRatio > 1 {                            // Landscape image
-                width = dimension
-                height = dimension / aspectRatio
-            } else {                                        // Portrait image
-                height = dimension
-                width = dimension * aspectRatio
-            }
-
-        default:
-            fatalError("UIIMage.resizeToFit(): FATAL: Unimplemented ContentMode")
+extension UIViewController {
+    
+    func showAlertWithTextField(title: String, message: String, textFieldPlaceholder: String, completion: @escaping (String?)->()) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { _ -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            completion(textField.text)
         }
-
-        if #available(iOS 10.0, *) {
-            let renderFormat = UIGraphicsImageRendererFormat.default()
-            renderFormat.opaque = opaque
-            let renderer = UIGraphicsImageRenderer(size: CGSize(width: width, height: height), format: renderFormat)
-            newImage = renderer.image {
-                (context) in
-                self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-            }
-        } else {
-            UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: height), opaque, 0)
-            self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-            newImage = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        alertController.addTextField { (textField: UITextField!) -> Void in
+            textField.placeholder = textFieldPlaceholder
+            completion(nil)
         }
-
-        return newImage
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
+    
 }

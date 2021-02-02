@@ -11,7 +11,7 @@ import UIKit
 class FriendsVC: UIViewController {
     
     static let identifier = "FriendsVC"
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -19,13 +19,14 @@ class FriendsVC: UIViewController {
         
         setupUI()
         setupCollectionView()
-
+        
     }
     
     private func setupUI() {
         
-        navigationController?.navigationBar.prefersLargeTitles = true
         title = "Friends"
+        
+        view.backgroundColor = UIColor(named: K.BrandColors.color2)
         
     }
     
@@ -34,10 +35,12 @@ class FriendsVC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        collectionView.backgroundColor = UIColor(named: K.BrandColors.color2)
+        
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
     }
-
+    
 }
 
 extension FriendsVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -52,12 +55,12 @@ extension FriendsVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.imageView.image = UIImage(named: "Headshot")
         cell.nameLabel.text = "Name"
         
-        cell.imageView.makeRounded()
-
+        cell.imageView.makeRound()
+        
         return cell
         
     }
-
+    
 }
 
 extension FriendsVC: UICollectionViewDelegateFlowLayout {
