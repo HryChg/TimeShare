@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 
 struct RankingStatsModel {
+    let name: String
+    let avatarURL: String
+    var avatar: UIImage? {
+        return UIImage(named: avatarURL)
+    }
+//    let 
     let statCategories: [String]
     let statTalliedTotals: [String]
+    
 }

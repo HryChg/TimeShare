@@ -72,7 +72,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDu-Gt-t9n">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="174"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kf3-bh-fc3">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot" translatesAutoresizingMaskIntoConstraints="NO" id="Kf3-bh-fc3">
                                                                 <rect key="frame" x="129" y="17" width="140" height="140"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="140" id="2ke-6L-Wkt"/>
@@ -343,6 +343,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Headshot" width="112.5" height="112.5"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="chart.pie.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>

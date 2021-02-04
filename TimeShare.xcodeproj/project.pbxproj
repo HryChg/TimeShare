@@ -35,6 +35,7 @@
 		C419C84E25BE56C6003DD0F0 /* RankingStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */; };
 		C419C86B25C0E5CE003DD0F0 /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419C86925C0E5CE003DD0F0 /* RankingCell.swift */; };
 		C419C86C25C0E5CE003DD0F0 /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C419C86A25C0E5CE003DD0F0 /* RankingCell.xib */; };
+		C44A4CF525C7451F006FBEBA /* RankingLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44A4CF425C7451F006FBEBA /* RankingLevels.swift */; };
 		C4AC9A7925B6778800373760 /* RankingStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7825B6778800373760 /* RankingStatsVC.swift */; };
 		C4AC9A7F25B679BF00373760 /* RankingSpecificsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */; };
 		C4AC9A8025B679BF00373760 /* RankingSpecificsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */; };
@@ -116,13 +117,11 @@
 		96EFE52C25B5810C0062D63B /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
 		96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomVC.swift; sourceTree = "<group>"; };
 		96EFE55E25B5B3600062D63B /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
-		980E4613D24E899F28B5D80C /* Pods_TimeShare_TimeShareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare_TimeShareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2BCE4B43C4C9F1A0643C718 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
 		C419C84825BE4326003DD0F0 /* RankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingModel.swift; sourceTree = "<group>"; };
 		C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsModel.swift; sourceTree = "<group>"; };
 		C419C86925C0E5CE003DD0F0 /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		C419C86A25C0E5CE003DD0F0 /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
-		C4388367BAACDE5847270E67 /* Pods-TimeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShareTests.release.xcconfig"; path = "Target Support Files/Pods-TimeShareTests/Pods-TimeShareTests.release.xcconfig"; sourceTree = "<group>"; };
+		C44A4CF425C7451F006FBEBA /* RankingLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingLevels.swift; sourceTree = "<group>"; };
 		C4AC9A7825B6778800373760 /* RankingStatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStatsVC.swift; sourceTree = "<group>"; };
 		C4AC9A7D25B679BF00373760 /* RankingSpecificsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingSpecificsCell.swift; sourceTree = "<group>"; };
 		C4AC9A7E25B679BF00373760 /* RankingSpecificsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingSpecificsCell.xib; sourceTree = "<group>"; };
@@ -314,6 +313,7 @@
 				C76C2B3425B9EDC000335D24 /* Message.swift */,
 				C419C84825BE4326003DD0F0 /* RankingModel.swift */,
 				C419C84D25BE56C6003DD0F0 /* RankingStatsModel.swift */,
+				C44A4CF425C7451F006FBEBA /* RankingLevels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,14 +352,6 @@
 				C72B509225C3603F00F7B04B /* TabBarController.swift */,
 			);
 			path = "Tab Bar";
-			sourceTree = "<group>";
-		};
-		C749D43E25B60FBF00AAD5DD /* Ranking */ = {
-			isa = PBXGroup;
-			children = (
-				C70166FD25ACD285002FF445 /* RankingViewController.swift */,
-			);
-			path = Ranking;
 			sourceTree = "<group>";
 		};
 		C749D44225B60FC900AAD5DD /* Chat */ = {
@@ -741,6 +733,7 @@
 				C4AC9A9C25B7B5FA00373760 /* RankingGraphVC.swift in Sources */,
 				C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */,
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
+				C44A4CF525C7451F006FBEBA /* RankingLevels.swift in Sources */,
 				C7F5316025ADE690006FB302 /* SettingsViewModel.swift in Sources */,
 				C76C2B3525B9EDC000335D24 /* Message.swift in Sources */,
 				C7146F7825AE1ADE00E48762 /* ProfileVC.swift in Sources */,
