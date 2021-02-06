@@ -60,11 +60,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dq1-y7-fCI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Dq1-y7-fCI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdn-Uy-SuG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="372"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdn-Uy-SuG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-1s-y8h">
                                                 <rect key="frame" x="8" y="0.0" width="398" height="385"/>
@@ -210,14 +210,18 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="HeB-Pk-0bN"/>
                                             <constraint firstItem="mJd-1s-y8h" firstAttribute="top" secondItem="kdn-Uy-SuG" secondAttribute="top" id="QKl-LO-gkN"/>
                                             <constraint firstAttribute="trailing" secondItem="mJd-1s-y8h" secondAttribute="trailing" constant="8" id="iAx-nx-vn2"/>
                                             <constraint firstItem="mJd-1s-y8h" firstAttribute="leading" secondItem="kdn-Uy-SuG" secondAttribute="leading" constant="8" id="x7g-AT-r50"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-Nj-Kpv">
-                                        <rect key="frame" x="0.0" y="380" width="414" height="428"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-Nj-Kpv">
+                                        <rect key="frame" x="0.0" y="400" width="414" height="400"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="Gk5-lV-f2y"/>
+                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableRankingSpecifics" id="SRo-D9-4kA">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -231,10 +235,14 @@
                                     </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="O3i-Nj-Kpv" secondAttribute="trailing" id="6zV-do-0go"/>
-                                    <constraint firstItem="O3i-Nj-Kpv" firstAttribute="top" secondItem="kdn-Uy-SuG" secondAttribute="bottom" id="cbC-Lc-DPD"/>
-                                    <constraint firstAttribute="bottom" secondItem="O3i-Nj-Kpv" secondAttribute="bottom" id="evm-Lf-gfi"/>
-                                    <constraint firstItem="O3i-Nj-Kpv" firstAttribute="leading" secondItem="Dq1-y7-fCI" secondAttribute="leading" id="tLk-wr-cmw"/>
+                                    <constraint firstAttribute="bottom" secondItem="O3i-Nj-Kpv" secondAttribute="bottom" id="7vm-Zj-31a"/>
+                                    <constraint firstItem="O3i-Nj-Kpv" firstAttribute="leading" secondItem="Dq1-y7-fCI" secondAttribute="leading" id="93A-XK-ejD"/>
+                                    <constraint firstItem="O3i-Nj-Kpv" firstAttribute="top" secondItem="kdn-Uy-SuG" secondAttribute="bottom" id="9DQ-yt-nEZ"/>
+                                    <constraint firstItem="O3i-Nj-Kpv" firstAttribute="top" secondItem="kdn-Uy-SuG" secondAttribute="bottom" id="MS9-dw-0ne"/>
+                                    <constraint firstItem="kdn-Uy-SuG" firstAttribute="leading" secondItem="Dq1-y7-fCI" secondAttribute="leading" id="RxG-ZK-JEf"/>
+                                    <constraint firstAttribute="trailing" secondItem="kdn-Uy-SuG" secondAttribute="trailing" id="YeM-4M-Pdq"/>
+                                    <constraint firstAttribute="trailing" secondItem="O3i-Nj-Kpv" secondAttribute="trailing" id="Yen-Uz-jjR"/>
+                                    <constraint firstItem="kdn-Uy-SuG" firstAttribute="top" secondItem="Dq1-y7-fCI" secondAttribute="top" id="b6d-DK-D2Z"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -255,7 +263,7 @@
                         <outlet property="profileImage" destination="Kf3-bh-fc3" id="MBD-re-QRY"/>
                         <outlet property="rankLevelLabel" destination="kfN-rj-wOq" id="xhB-ao-eeL"/>
                         <outlet property="rankPromotionInLabel" destination="Gee-ks-1gn" id="l7S-y7-BmI"/>
-                        <outlet property="rankingStatsTableView" destination="O3i-Nj-Kpv" id="Vxd-wt-4Ci"/>
+                        <outlet property="rankingStatsTableView" destination="O3i-Nj-Kpv" id="pVe-Ah-8Gd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyL-Wg-Rcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
