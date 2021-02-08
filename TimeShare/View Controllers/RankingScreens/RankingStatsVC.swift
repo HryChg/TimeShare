@@ -17,6 +17,16 @@ class RankingStatsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    var hours: Array<String> = ["85", "50"]
 //    var categories: Array<String> = ["Hours this week", "Hours this month"]
 //    @objc property(nonatomic, strong) GADInterstitial *interstitial;
+    var adView: UIView?
+    var testArray: Array<String> = [
+        "Daily Hours",
+        "Weekly Hours",
+        "Mothly",
+        "Total Hours",
+        "Current Streak",
+        "Longest Streak",
+        "Average Per Day this Month"
+    ]
     
     
     @IBOutlet weak var profileImage: UIImageView!
@@ -71,20 +81,30 @@ class RankingStatsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return testArray.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingStatsCellIdentifier, for: indexPath) as! RankingSpecificsCell
-        let cells = tableView.dequeueReusableCell(withIdentifier: K.Cell.rankingStatsCellIdentifier, for: indexPath)
-        cell.hoursLabel.text = /*hours[indexPath.row] ?? */"40"
-        cell.statsLabel.text = /*categories[indexPath.row] ?? */"Testing TableView"
-//        tableView.reloadData()
-//        cells.textLabel?.text = "This is a test"
-        return cells
+        if indexPath.row < testArray.count {
+            cell.hoursLabel.text = /*hours[indexPath.row] ?? */"40"
+            cell.statsLabel.text = testArray[indexPath.row] /*categories[indexPath.row] ?? "Testing TableView" */
+        } else {
+            cell.statsLabel.text = "Show Ad"
+            cell.textLabel?.textColor = #colorLiteral(red: 0.07215600461, green: 0.4107835889, blue: 0.5584757328, alpha: 1)
+
+        }
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == testArray.count {
+//            adView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+            adView = .init(UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)))
+            adView?
+//            createAd()
+        }
 //        if interstitial.isReady {
 //            interstitial.present(fromRootViewController: self)
 //        }
