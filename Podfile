@@ -14,6 +14,7 @@ target 'TimeShare' do
   pod 'GoogleAnalytics'
   pod 'TransitionButton'
   pod 'Charts'
+  pod 'UICircularProgressRing'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

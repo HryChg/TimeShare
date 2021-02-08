@@ -447,6 +447,8 @@
 			dependencies = (
 			);
 			name = TimeShare;
+			packageProductDependencies = (
+			);
 			productName = TimeShare;
 			productReference = 96D96B9C25A6D54200CA39B1 /* TimeShare.app */;
 			productType = "com.apple.product-type.application";
@@ -523,6 +525,8 @@
 				Base,
 			);
 			mainGroup = 96D96B9325A6D54200CA39B1;
+			packageReferences = (
+			);
 			productRefGroup = 96D96B9D25A6D54200CA39B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

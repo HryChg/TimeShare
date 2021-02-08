@@ -358,7 +358,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pL-y8-p8K">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pL-y8-p8K" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                                                 <rect key="frame" x="107" y="78" width="200" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                 <constraints>
@@ -446,6 +446,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nbp-9m-Neq"/>
                     <connections>
+                        <outlet property="progressRing" destination="0pL-y8-p8K" id="IaE-T9-j6N"/>
                         <outlet property="tableView" destination="cM9-dz-0nQ" id="cGD-9I-8Mv"/>
                     </connections>
                 </viewController>
