@@ -16,13 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="BCK-5q-RTu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TimeShareLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Dna-m8-ANr">
+                                <rect key="frame" x="20" y="208" width="374" height="343"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="fgT-HQ-B4U"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEH-0F-Vna" customClass="GIDSignInButton">
+                                <rect key="frame" x="82" y="612" width="250" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="URg-CW-j73"/>
+                                    <constraint firstAttribute="width" constant="250" id="x40-AZ-7uM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xZm-jK-XoF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dna-m8-ANr" secondAttribute="trailing" constant="20" id="2M2-74-tGA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zEH-0F-Vna" secondAttribute="bottom" constant="200" id="NoZ-De-w0I"/>
+                            <constraint firstItem="Dna-m8-ANr" firstAttribute="top" secondItem="BCK-5q-RTu" secondAttribute="topMargin" constant="150" id="STZ-SB-Xtw"/>
+                            <constraint firstItem="zEH-0F-Vna" firstAttribute="centerX" secondItem="BCK-5q-RTu" secondAttribute="centerX" id="d82-c2-hdS"/>
+                            <constraint firstItem="Dna-m8-ANr" firstAttribute="leading" secondItem="BCK-5q-RTu" secondAttribute="leadingMargin" constant="20" id="lwl-Qs-f0K"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Dna-m8-ANr" id="YVn-Zv-55G"/>
+                        <outlet property="signInButton" destination="zEH-0F-Vna" id="MQe-c3-BuQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViG-bt-1Lm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-822" y="-93"/>
+            <point key="canvasLocation" x="-823.1884057971015" y="-93.080357142857139"/>
         </scene>
         <!--HomeScreen-->
         <scene sceneID="buU-AR-riR">
@@ -91,8 +119,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TimeShareLogo" width="300" height="268"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,13 +13,21 @@ import TransitionButton
 
 class LoginVC: CustomTransitionViewController {
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var appNameLabel: UILabel!
+    
     let userDefaults = UserDefaults()
-    
-    let button = GIDSignInButton()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [UIColor(named: K.BrandColors.color4)?.cgColor, UIColor(named: K.BrandColors.color6)?.cgColor,]
+        view.layer.insertSublayer(gradientLayer, at: 0)
+            
         //In the view controller, override the viewDidLoad method to set the presenting view controller of the GIDSignIn object, and (optionally) to sign in silently when possible.
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
@@ -28,16 +36,9 @@ class LoginVC: CustomTransitionViewController {
         }
         
         
-        
-        view.addSubview(button)
-        
+    
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        button.center = view.center
-        
-    }
     
     private func loginToTimeShare() {
         

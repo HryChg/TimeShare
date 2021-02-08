@@ -12,34 +12,24 @@ import TransitionButton
 
 class SettingsVC: UIViewController {
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     let logoutButton: TransitionButton = {
         let button = TransitionButton()
-        
         button.setTitle("Logout", for: .normal)
         button.addTarget(self, action: #selector(logoutButtonTapped), for: .touchUpInside)
-        
-        
         return button
     }()
-    
-//    let profileButton: UIBarButtonItem = {
-//        let item = UIBarButtonItem()
-//        item.setBackgroundImage(<#T##backgroundImage: UIImage?##UIImage?#>, for: <#T##UIControl.State#>, barMetrics: <#T##UIBarMetrics#>)
-//        return item
-//    }()
     
     static let identifier = "SettingsVC"
     
     let settingsItems = [
-    
+        
         SettingsItem(name: "Profile", image: UIImage(named: "Profile")),
         SettingsItem(name: "Friends", image: UIImage(named: "Friends")),
         SettingsItem(name: "Timezone", image: UIImage(named: "Timezone")),
         SettingsItem(name: "About", image: UIImage(named: "About")),
-    
+        
     ]
     
     override func viewDidLoad() {
@@ -47,40 +37,55 @@ class SettingsVC: UIViewController {
         
         setupCollectionView()
         setupUI()
-
-    }
-
-    private func setupUI() {
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Settings"
-        
-        view.addSubview(logoutButton)
-        
-
-        logoutButton.backgroundColor = UIColor(named: K.BrandColors.color6)
-        logoutButton.setTitleColor(.white, for: .normal)
-        logoutButton.layer.cornerRadius = 15
-        
-        
         
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-   
+        
+        setupLogoutButton()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.navigationBar.sizeToFit()
+        
+    }
+    
+    private func setupUI() {
+        
+        title = "Settings"
+        
+        view.backgroundColor = UIColor(named: K.BrandColors.color2)
+        navigationController?.navigationBar.barTintColor = UIColor(named: K.BrandColors.color2)
+        
+        view.addSubview(logoutButton)
+        
+        
+        logoutButton.backgroundColor = UIColor(named: K.BrandColors.color6)
+        logoutButton.setTitleColor(.white, for: .normal)
+        logoutButton.layer.cornerRadius = 15
+        
+    }
+    
+    private func setupLogoutButton() {
+        
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 200).isActive = true
         logoutButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
         logoutButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
     }
-    
     
     private func setupCollectionView() {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        collectionView.backgroundColor = UIColor(named: K.BrandColors.color2)
         
         let screenWidth = UIScreen.main.bounds.width
         
@@ -89,9 +94,9 @@ class SettingsVC: UIViewController {
         layout.minimumLineSpacing = 50
         layout.itemSize = CGSize(width: screenWidth / 3, height: screenWidth / 4)
         layout.sectionInset = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
-    
+        
         collectionView.collectionViewLayout = layout
-                
+        
     }
     
     private func goToLoginVC() {
@@ -108,7 +113,7 @@ class SettingsVC: UIViewController {
         
     }
     
-    @objc func logoutButtonTapped() {
+    @objc private func logoutButtonTapped() {
         
         logoutButton.startAnimation()
         
@@ -131,7 +136,7 @@ class SettingsVC: UIViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { [self] (cancel) in
             logoutButton.stopAnimation(animationStyle: .normal, revertAfterDelay: 0) {
                 logoutButton.layer.cornerRadius = 15
-
+                
             }
         }
         
@@ -141,7 +146,7 @@ class SettingsVC: UIViewController {
         present(alert, animated: true, completion: nil)
         
     }
-        
+    
 }
 
 extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -151,14 +156,14 @@ extension SettingsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCell.identifier, for: indexPath) as? SettingsCell else { return UICollectionViewCell() }
         
-
+        
         let items = settingsItems[indexPath.item]
         
         let viewModel = SettingsViewModel(name: items.name, image: items.image)
-
+        
         cell.nameLabel.text = viewModel.name
         cell.imageView.image = viewModel.image
         

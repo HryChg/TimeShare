@@ -23,8 +23,8 @@ class MessageCell: UITableViewCell {
         super.awakeFromNib()
         
         messageBubble.layer.cornerRadius = 12
-        rightImageView.makeRounded()
-        leftImageView.makeRounded()
+        rightImageView.makeRound()
+        leftImageView.makeRound()
         
     }
   

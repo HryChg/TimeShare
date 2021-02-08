@@ -27,17 +27,18 @@ class AboutVC: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-
+        
     }
     
     private func setupUI() {
         
-        navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = UIColor(named: K.BrandColors.color2)
+        
         title = "About"
         
         titleLabel.text = titleText
         bodyLabel.text = bodyText
         
     }
-
+    
 }
