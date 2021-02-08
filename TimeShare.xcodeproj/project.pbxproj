@@ -10,7 +10,6 @@
 		6E521ABC6D0C60217C712131 /* Pods_TimeShare_TimeShareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E12F4FB43EA9FB8FBF301A67 /* Pods_TimeShare_TimeShareUITests.framework */; };
 		9643A25C25C86869002989BD /* RoomDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9643A25B25C86869002989BD /* RoomDetailVC.swift */; };
 		9643A26225C8723A002989BD /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9643A26125C8723A002989BD /* ViewUtils.swift */; };
-		96B94EAE25BCD1BF00341D53 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */; };
 		96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */; };
 		96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA325A6D54200CA39B1 /* MainViewController.swift */; };
@@ -748,7 +747,6 @@
 				C419C86B25C0E5CE003DD0F0 /* RankingCell.swift in Sources */,
 				C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */,
 				C701670A25ACD371002FF445 /* K.swift in Sources */,
-				96B94EAE25BCD1BF00341D53 /* (null) in Sources */,
 				C4AC9A9C25B7B5FA00373760 /* RankingGraphVC.swift in Sources */,
 				C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */,
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,

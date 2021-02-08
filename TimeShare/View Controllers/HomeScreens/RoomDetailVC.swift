@@ -11,16 +11,30 @@ import UIKit
 class RoomDetailVC: UIViewController {
     
     var members = Array(repeating: MemberModel(name: "Fake Name", avatarURL: "TESTURKL", goal: "JUST A GOAL"), count: 30)
-
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
     @IBAction func joinButtonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.Segue.roomDetailToTimer, sender: self)
         ViewUtils.removeSelfFromNavigation(self)
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }
 

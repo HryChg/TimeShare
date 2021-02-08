@@ -30,7 +30,6 @@ class TimerVC: UIViewController {
         progressRing.startProgress(to: 100, duration: 2.0) {
             print("Done animating!")
         }
-
     }
 
     private func styleProgressRing() {
