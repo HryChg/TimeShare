@@ -102,7 +102,7 @@ class RankingStatsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         if indexPath.row == testArray.count {
 //            adView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
             adView = .init(UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)))
-            adView?
+//            adView?
 //            createAd()
         }
 //        if interstitial.isReady {
