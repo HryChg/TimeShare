@@ -12,6 +12,7 @@ import GoogleSignIn
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
+    
     let userDefaults = UserDefaults()
     
     private func loginToTimeShare() {
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
         if let e = error {
+            LoginVC().stopSpinner()
             print("Error signing in to Google \(e.localizedDescription)")
             return
         }
@@ -37,10 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         print("Successfully signed in to Google \(credential)")
         
+        
+        
         Auth.auth().signIn(with: credential) { [self] (authResult, error) in
-            
+                        
             if let e = error {
                 print("Error signing in with credentials to Firebase \(e.localizedDescription)")
+                LoginVC().stopSpinner()
                 return
             }
             
