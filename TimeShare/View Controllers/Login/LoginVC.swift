@@ -23,6 +23,8 @@ class LoginVC: CustomTransitionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        signInButton.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [UIColor(named: K.BrandColors.color4)?.cgColor, UIColor(named: K.BrandColors.color6)?.cgColor,]
@@ -39,8 +41,22 @@ class LoginVC: CustomTransitionViewController {
     
     }
     
+    @objc private func didTapSignInButton() {
+        startSpinner()
+    }
+    
+    func startSpinner() {
+        showSpinner(onView: view)
+    }
+    
+    func endSpinner() {
+        stopSpinner()
+    }
+    
     
     private func loginToTimeShare() {
+        
+        endSpinner()
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = mainStoryboard.instantiateViewController(withIdentifier: K.Controller.tabBarController) as? TabBarController {
