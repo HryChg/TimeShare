@@ -38,7 +38,7 @@ class ChatVC: UIViewController {
         setupUI()
         loadMessages()
         setupKeyboardObservers()
-                
+        
     }
     
     @objc private func handleKeyboardNotification(notification: NSNotification) {
@@ -97,8 +97,9 @@ class ChatVC: UIViewController {
                         for doc in snapShotDocs {
                             let data = doc.data()
                             if let messageSender = data[K.FStore.senderField] as? String,
-                               let messageBody = data[K.FStore.bodyField] as? String {
-                                let newMessage = Message(sender: messageSender, body: messageBody)
+                               let messageBody = data[K.FStore.bodyField] as? String,
+                               let photoURL = data[K.FStore.profileURL] as? String {
+                                let newMessage = Message(sender: messageSender, body: messageBody, photoURL: photoURL)
                                 messages.append(newMessage)
                                 
                                 DispatchQueue.main.async {
@@ -160,7 +161,7 @@ class ChatVC: UIViewController {
     
     private func setupTextField() {
         chatTextField.delegate = self
-                
+        
         chatTextField.placeholder = "Chat"
         chatTextField.font = UIFont.systemFont(ofSize: 20)
         chatTextField.autocapitalizationType = .sentences
@@ -177,14 +178,16 @@ class ChatVC: UIViewController {
     private func sendMessage() {
         guard chatTextField.text != "" else { return }
         if let messageBody = chatTextField.text,
-           let messageSender = Auth.auth().currentUser?.email {
+           let messageSender = Auth.auth().currentUser?.email,
+           let profileImageURL = profileImageURL {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField: messageSender,
                 K.FStore.bodyField: messageBody,
-                K.FStore.dateField: Date().timeIntervalSince1970
+                K.FStore.dateField: Date().timeIntervalSince1970,
+                K.FStore.profileURL: profileImageURL.absoluteString
             ]) { (error) in
                 if let e = error {
-                    print("Error saving data to firestore: \(e)")
+                    print("Error saving data to firestore: \(e.localizedDescription)")
                 } else {
                     print("Successfully saved data")
                 }
@@ -222,12 +225,8 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MessageCell.identifier) as! MessageCell
         
-        if let currentUser = Auth.auth().currentUser {
-            cell.leftImageView.downloaded(from: currentUser.photoURL!)
-            cell.rightImageView.downloaded(from: currentUser.photoURL!)
-        }
-        
-        
+        cell.leftImageView.downloaded(from: messages[indexPath.row].photoURL)
+        cell.rightImageView.downloaded(from: messages[indexPath.row].photoURL)
         
         cell.bodyLabel.text = messages[indexPath.row].body
         
@@ -318,7 +317,7 @@ extension UITableView {
             var section = max(numberOfSections - 1, 0)
             var row = max(numberOfRows(inSection: section) - 1, 0)
             var indexPath = IndexPath(row: row, section: section)
-
+            
             
             while !indexPathIsValid(indexPath) {
                 section = max(section - 1, 0)
@@ -330,7 +329,7 @@ extension UITableView {
                     break
                 }
             }
-
+            
             guard indexPathIsValid(indexPath) else { return }
             
             scrollToRow(at: indexPath, at: .bottom, animated: true)
