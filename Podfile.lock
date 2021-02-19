@@ -322,6 +322,7 @@ PODS:
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
   - TransitionButton (0.5.3)
+  - UICircularProgressRing (8.0.0)
 
 DEPENDENCIES:
   - Charts
@@ -330,6 +331,7 @@ DEPENDENCIES:
   - GoogleAnalytics
   - GoogleSignIn
   - TransitionButton
+  - UICircularProgressRing
 
 SPEC REPOS:
   trunk:
@@ -354,6 +356,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - TransitionButton
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -377,7 +380,8 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
+  UICircularProgressRing: 19927375b2b21b5fa5fd9582f15ccdef9659da16
 
-PODFILE CHECKSUM: f227185bb4c730ca53444ef4e6e26b2dfb3ac673
+PODFILE CHECKSUM: 9c2edb3bf37719984a51f6230d3a17b5915b2eca
 
 COCOAPODS: 1.10.1

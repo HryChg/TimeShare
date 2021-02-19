@@ -20,14 +20,24 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: roomCellNibName, bundle: nil), forCellReuseIdentifier: K.Cell.roomIdentifier)
         tableView.rowHeight = 118 // TODO Move this to K
         tableView.separatorStyle = .none
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+
     @IBAction func addButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: K.Segue.goToCreateRoom, sender: self)
     }

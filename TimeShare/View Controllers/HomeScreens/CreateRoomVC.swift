@@ -14,9 +14,22 @@ class CreateRoomVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
     @IBAction func createButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: K.Segue.createRoomToTimer, sender: self)
         ViewUtils.removeSelfFromNavigation(self)
     }
     
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

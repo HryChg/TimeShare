@@ -18,6 +18,9 @@ build/
 xcuserdata/
 *.moved-aside
 
+# AppCode Related
+.idea/
+
 #    NB: also, whitelist the default ones, some projects need to use these
 !default.pbxuser
 !default.mode1v3
