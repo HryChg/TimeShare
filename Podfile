@@ -17,6 +17,8 @@ target 'TimeShare' do
   pod 'GoogleAnalytics'
   pod 'TransitionButton'
   pod 'Charts'
+  pod 'Google-Mobile-Ads-SDK', '~> 8.0.0'
+#  '7.69.0'
   pod 'UICircularProgressRing'
 
   post_install do |installer|
