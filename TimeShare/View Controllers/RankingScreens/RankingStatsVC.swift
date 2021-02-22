@@ -13,7 +13,7 @@ import GoogleMobileAds
 class RankingStatsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, GADFullScreenContentDelegate {
     
 //    var interstitial = GADInterstitial
-    var interstitial: GADInterstitial!
+    var interstitial: GADInterstitialAd!
 //    var hours: Array<String> = ["85", "50"]
 //    var categories: Array<String> = ["Hours this week", "Hours this month"]
 //    @objc property(nonatomic, strong) GADInterstitial *interstitial;
@@ -36,14 +36,28 @@ class RankingStatsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var rankLevelLabel: UILabel!
     @IBOutlet weak var averageHoursLabel: UILabel!
     @IBOutlet weak var rankingStatsTableView: UITableView!
+    @IBOutlet weak var AdView: UIView!
     
     
     override func viewDidLoad() {
         rankingStatsTableView.delegate = self
         rankingStatsTableView.dataSource = self
         rankingStatsTableView.register(UINib(nibName: K.Cell.rankingSpecificsNibName, bundle: nil), forCellReuseIdentifier: K.Cell.rankingStatsCellIdentifier)
+        let request = GADRequest()
+        interstitial?.fullScreenContentDelegate = self
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910",
+                                        request: request,
+                              completionHandler: { [self] ad, error in
+                                if let error = error {
+                                  print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                                  return
+                                }
+                                interstitial = ad
+                              }
+            )
 //        view.addSubview(createAndLoadInterstitialAd())
 //        createAndLoadInterstitialAd()
+//        createAd()
                 
     }
     
@@ -100,14 +114,17 @@ class RankingStatsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == testArray.count {
+            if interstitial != nil {
+                interstitial.present(fromRootViewController: self)
+              } else {
+                print("Ad wasn't ready")
+              }
 //            adView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
-            adView = .init(UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)))
+//            adView = .init(UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)))
 //            adView?
 //            createAd()
         }
-//        if interstitial.isReady {
-//            interstitial.present(fromRootViewController: self)
-//        }
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -115,15 +132,15 @@ class RankingStatsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 //MARK: - GoogleAdMob
 
-extension RankingStatsVC: GADInterstitialDelegate {
-    func createAd() -> GADInterstitial {
-        let ad = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-        ad.delegate = self
-        ad.load(GADRequest())
-        return ad
-    }
-    
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        interstitial = createAd()
-    }
-}
+//extension RankingStatsVC: GADFullScreenContentDelegate {
+//    func createAd() -> GADInterstitialAd {
+//        let ad = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+//        ad.delegate = self
+//        ad.load(GADRequest())
+//        return ad
+//    }
+//
+//    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+//        interstitial = createAd()
+//    }
+//}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TMD-6n-a2Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cBC-pz-kD7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ranking-->
+        <!--Ranking View Controller-->
         <scene sceneID="hYX-2w-7bX">
             <objects>
                 <viewController storyboardIdentifier="Ranking" id="TMD-6n-a2Z" customClass="RankingViewController" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MFK-GT-Kd5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableRankingCell" id="dfJ-2j-ROt" customClass="RankingCell" customModule="TimeShare" customModuleProvider="target">
@@ -41,7 +41,7 @@
                             <constraint firstItem="MFK-GT-Kd5" firstAttribute="top" secondItem="Z0s-Pg-cKI" secondAttribute="top" id="gH9-Cf-CmM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ranking" image="xmark" catalog="system" id="uZF-9i-TYh"/>
+                    <navigationItem key="navigationItem" id="4QI-cy-tWZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="MFK-GT-Kd5" id="uiq-SL-wRq"/>
@@ -50,18 +50,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBe-lU-iOm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="88.392857142857139"/>
         </scene>
         <!--RankingStats-->
         <scene sceneID="yK7-nq-4bK">
             <objects>
                 <viewController id="ch3-H7-ohg" userLabel="RankingStats" customClass="RankingStatsVC" customModule="TimeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z7c-uJ-rtO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5a-ox-OJV" userLabel="AdView">
+                                <rect key="frame" x="8" y="82" width="398" height="732"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Dq1-y7-fCI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="892.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdn-Uy-SuG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
@@ -217,7 +222,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-Nj-Kpv">
-                                        <rect key="frame" x="0.0" y="400" width="414" height="400"/>
+                                        <rect key="frame" x="0.0" y="400" width="414" height="492.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="Gk5-lV-f2y"/>
@@ -257,6 +262,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="b4Z-4b-tb5"/>
                     <connections>
+                        <outlet property="AdView" destination="s5a-ox-OJV" id="4vp-o5-XuI"/>
+                        <outlet property="adView" destination="s5a-ox-OJV" id="it9-LC-CwA"/>
                         <outlet property="averageHoursLabel" destination="42T-G5-nam" id="gAs-sF-PVB"/>
                         <outlet property="currentRankLabel" destination="l7R-QC-nQP" id="M7S-kX-2aT"/>
                         <outlet property="nextRankLabel" destination="4VK-ss-7c6" id="bnn-Yu-7sx"/>
@@ -268,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyL-Wg-Rcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.59420289855075" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="87.723214285714278"/>
         </scene>
         <!--Ranking GraphVC-->
         <scene sceneID="l4H-TH-Szm">
@@ -347,7 +354,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nx6-cH-7X9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805.7971014492755" y="87.723214285714278"/>
+            <point key="canvasLocation" x="2715.9420289855075" y="87.723214285714278"/>
+        </scene>
+        <!--Ranking-->
+        <scene sceneID="vd5-f2-6dS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cBC-pz-kD7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ranking" image="xmark" catalog="system" id="uZF-9i-TYh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1i5-Ke-n4F">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TMD-6n-a2Z" kind="relationship" relationship="rootViewController" id="egN-5G-xxG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Eg-vJ-zqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>

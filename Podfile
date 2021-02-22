@@ -14,7 +14,8 @@ target 'TimeShare' do
   pod 'GoogleAnalytics'
   pod 'TransitionButton'
   pod 'Charts'
-  pod 'Google-Mobile-Ads-SDK', '7.69.0'
+  pod 'Google-Mobile-Ads-SDK', '~> 8.0.0'
+#  '7.69.0'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
