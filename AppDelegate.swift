@@ -13,9 +13,11 @@ import GoogleMobileAds
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
+    
     let userDefaults = UserDefaults()
     
     private func loginToTimeShare() {
+        
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = mainStoryboard.instantiateViewController(withIdentifier: K.Controller.tabBarController) as? TabBarController {
             
@@ -26,8 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
-        if let error = error {
-            print("Error signing in to Google \(error.localizedDescription)")
+        if let e = error {
+            LoginVC().stopSpinner()
+            print("Error signing in to Google \(e.localizedDescription)")
             return
         }
         
@@ -37,10 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         print("Successfully signed in to Google \(credential)")
         
+        
+        
         Auth.auth().signIn(with: credential) { [self] (authResult, error) in
-            
-            if let error = error {
-                print("Error signing in with credentials to Firebase \(error)")
+                        
+            if let e = error {
+                print("Error signing in with credentials to Firebase \(e.localizedDescription)")
+                LoginVC().stopSpinner()
                 return
             }
             
@@ -54,8 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        
         // Perform any operations when the user disconnects from app here.
-        // ...
+        
     }
     
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
@@ -64,9 +71,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
         FirebaseApp.configure()
+        
         let db = Firestore.firestore()
+        
         print(db)
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID

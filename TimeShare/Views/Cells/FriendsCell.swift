@@ -35,10 +35,10 @@ class FriendsCell: UICollectionViewCell {
     
 }
 
-extension UIView {
-
-    func makeRound() {
-        layer.cornerRadius = (frame.width / 2)
-        layer.masksToBounds = true
-    }
-}
+//extension UIView {
+//
+//    func makeRound() {
+//        layer.cornerRadius = (frame.width / 2)
+//        layer.masksToBounds = true
+//    }
+//}

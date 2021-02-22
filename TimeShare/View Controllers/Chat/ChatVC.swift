@@ -20,65 +20,97 @@ class ChatVC: UIViewController {
     @IBOutlet weak var studyingButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableViewTopAnchor: NSLayoutConstraint!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewBottomAnchor: NSLayoutConstraint!
+    @IBOutlet weak var chatTextFieldLeadingAnchor: NSLayoutConstraint!
     
     var studyingListIsShowing = false
     let db = Firestore.firestore()
-    
-    let messages: [Message] = [
-        
-        Message(sender: "Harry", body: "Hey, what's up?"),
-        Message(sender: "Sean", body: "Not much, how's it going?"),
-        Message(sender: "Harry", body: "Good, just going to school and coding"),
-        Message(sender: "Brian", body: "You got this."),
-        Message(sender: "Harry", body: "When are you going to be done?"),
-        Message(sender: "Sean", body: "The semester ends in June"),
-        Message(sender: "Harry", body: "What's the weather going to be in June?"),
-        Message(sender: "Brian", body: "In California, it will probably be in the 90's. Not sure what that is in Celcius. Harry, what is room temperature in Celcius?"),
-        Message(sender: "Harry", body: "According to Google, 20 degrees Celcius is room temperature"),
-        Message(sender: "Sean", body: "You learn something new every day!"),
-        Message(sender: "Harry", body: "I gotta go"),
-        Message(sender: "Brian", body: "Bye"),
-        
-    ]
+    let profileImageURL = Auth.auth().currentUser?.photoURL
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         setupCollectionView()
-        setupObservers()
+        setupTextField()
         setupUI()
-        scrollToLastMessage()
-        
-        chatTextField.addTarget(self, action: #selector(textFieldTapped), for: .touchDown)
+        loadMessages()
+        setupKeyboardObservers()
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        scrollToLastMessage()
-    }
-    
-    
-    @objc func textFieldTapped(textField: UITextField) {
-        scrollToLastMessage()
+    @objc private func handleKeyboardNotification(notification: NSNotification) {
+        
+        if let userInfo = notification.userInfo {
+            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+            if let tabBarHeight = tabBarController?.tabBar.frame.size.height {
+                let keyboardIsShowing = notification.name == UIResponder.keyboardWillShowNotification
+                containerViewBottomAnchor.constant = keyboardIsShowing ? -keyboardFrame.height + tabBarHeight : 0
+                
+                UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut) { [self] in
+                    view.layoutIfNeeded()
+                } completion: { (completed) in
+                    UIView.animate(withDuration: 0.5) { [self] in
+                        hideKeyboardButton.isHidden = keyboardIsShowing ? false : true
+                        chatTextFieldLeadingAnchor.constant = keyboardIsShowing ? 10 : -40
+                        UIView.animate(withDuration: 0) {
+                            view.layoutIfNeeded()
+                        }
+                    }
+                }
+                
+            }
+        }
     }
     
     private func setupUI() {
         
-        view.backgroundColor = UIColor(named: "Brand Color 2 Mystic")
-        
-        chatTextField.placeholder = "Chat"
-        
-        chatTextField.font = UIFont.systemFont(ofSize: 20)
+        view.backgroundColor = UIColor(named: K.BrandColors.color2)
         
         hideKeyboardButton.isHidden = true
         
+        chatTextFieldLeadingAnchor.constant = -40
+        
         tableViewTopAnchor.constant = 40
-        collectionView.isHidden = true
+        
+        containerView.backgroundColor = UIColor(named: K.BrandColors.color2)
         
         studyingButton.semanticContentAttribute = UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft ? .forceLeftToRight : .forceRightToLeft
         
+    }
+    
+    private func loadMessages() {
+        
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField, descending: false)
+            .addSnapshotListener { [self] (querySnapshot, error) in
+                
+                messages = []
+                
+                if let e = error {
+                    print("Error loading messages: \(e.localizedDescription)")
+                } else {
+                    
+                    if let snapShotDocs = querySnapshot?.documents {
+                        for doc in snapShotDocs {
+                            let data = doc.data()
+                            if let messageSender = data[K.FStore.senderField] as? String,
+                               let messageBody = data[K.FStore.bodyField] as? String,
+                               let photoURL = data[K.FStore.profileURL] as? String {
+                                let newMessage = Message(sender: messageSender, body: messageBody, photoURL: photoURL)
+                                messages.append(newMessage)
+                                
+                                DispatchQueue.main.async {
+                                    tableView.reloadData()
+                                    scrollToLastMessage()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
     }
     
     private func toggleStudyingList() {
@@ -92,21 +124,19 @@ class ChatVC: UIViewController {
             animations: { [self] in
                 if studyingListIsShowing {
                     tableViewTopAnchor.constant = 40
-                    collectionView.isHidden = true
                     studyingButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
                     view.layoutIfNeeded()
                 } else {
                     tableViewTopAnchor.constant = 140
-                    collectionView.isHidden = false
                     studyingButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
-
+                    
                     view.layoutIfNeeded()
                 }
             },
             completion: nil)
         
         studyingListIsShowing = !studyingListIsShowing
-
+        
     }
     
     private func setupTableView() {
@@ -125,89 +155,61 @@ class ChatVC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.backgroundColor = UIColor(named: "Brand Color 2 Mystic")
-        
-        
-    }
-    
-    private func showHideKeyboardButton() {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            UIView.animate(withDuration: 0.5) {
-                self.hideKeyboardButton.isHidden = false
-            }
-        }
-    }
-    
-    private func hideHideKeyboardButton() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            UIView.animate(withDuration: 0.5) {
-                self.hideKeyboardButton.isHidden = true
-            }
-        }
+        collectionView.backgroundColor = UIColor(named: K.BrandColors.color2)
         
     }
     
-    private func setupObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    private func setupTextField() {
+        chatTextField.delegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        chatTextField.placeholder = "Chat"
+        chatTextField.font = UIFont.systemFont(ofSize: 20)
+        chatTextField.autocapitalizationType = .sentences
+        chatTextField.returnKeyType = .send
     }
     
-    private func scrollToLastMessage() {
-        DispatchQueue.main.async { [self] in
-            let indexPath = IndexPath(row: messages.count - 1, section: 0)
-            tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-        }
-    }
-    
-    @objc func keyboardWillHide() {
+    private func setupKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        view.frame.origin.y = 0
-        chatTextField.resignFirstResponder()
-        hideHideKeyboardButton()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
     
-    @objc func keyboardWillChange(notification: NSNotification) {
-    
-        if let tabBarHeight = tabBarController?.tabBar.frame.size.height,
-           let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            
-            if chatTextField.isFirstResponder {
-                view.frame.origin.y = -(keyboardSize.height - tabBarHeight)
-                showHideKeyboardButton()
-            }
-        }
-    }
-    
-    @IBAction func sendButtonTapped(_ sender: UIButton) {
-        
-        if let messageBody = chatTextField.text, let messageSender = Auth.auth().currentUser?.email {
+    private func sendMessage() {
+        guard chatTextField.text != "" else { return }
+        if let messageBody = chatTextField.text,
+           let messageSender = Auth.auth().currentUser?.email,
+           let profileImageURL = profileImageURL {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField: messageSender,
-                                                                K.FStore.bodyField: messageBody]) { (error) in
+                K.FStore.bodyField: messageBody,
+                K.FStore.dateField: Date().timeIntervalSince1970,
+                K.FStore.profileURL: profileImageURL.absoluteString
+            ]) { (error) in
                 if let e = error {
-                    print("Error saving data to firestore: \(e)")
+                    print("Error saving data to firestore: \(e.localizedDescription)")
                 } else {
                     print("Successfully saved data")
                 }
             }
         }
-        //tableView.reloadData()
-        
+        chatTextField.text = ""
+    }
+    
+    private func scrollToLastMessage() {
+        tableView.scrollToBottomRow()
+    }
+    
+    @IBAction func sendButtonTapped(_ sender: UIButton) {
+        sendMessage()
     }
     
     @IBAction func hideKeyboardButtonTapped(_ sender: UIButton) {
-        
-        keyboardWillHide()
-        
+        dismissKeyboard()
     }
     
     @IBAction func studyingButtonTapped(_ sender: UIButton) {
-        
         toggleStudyingList()
-        
     }
     
 }
@@ -223,23 +225,24 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MessageCell.identifier) as! MessageCell
         
-        cell.leftImageView.image = UIImage(named: "Headshot2")
-        cell.rightImageView.image = UIImage(named: "Headshot")
+        cell.leftImageView.downloaded(from: messages[indexPath.row].photoURL)
+        cell.rightImageView.downloaded(from: messages[indexPath.row].photoURL)
         
         cell.bodyLabel.text = messages[indexPath.row].body
         
-        if sender == "Brian" {
-            cell.rightImageView.isHidden = true
-            cell.leftImageView.isHidden = false
-            cell.bodyLabel.textColor = .black
-            cell.messageBubble.backgroundColor = UIColor(named: "Brand Color 1 CatskillWhite")
-            
-            
-        } else {
+        if sender == Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
             cell.bodyLabel.textColor = .white
-            cell.messageBubble.backgroundColor = UIColor(named: "Brand Color 6 Blue Zodiac")
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.color6)
+            
+            
+        } else {
+            
+            cell.rightImageView.isHidden = true
+            cell.leftImageView.isHidden = false
+            cell.bodyLabel.textColor = .black
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.color1)
         }
         
         return cell
@@ -255,12 +258,12 @@ extension ChatVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScroll
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StudyingCell.identifier, for: indexPath) as! StudyingCell
         
-        cell.imageView.image = UIImage(named: "Headshot")
         cell.imageView.makeRound()
+        cell.imageView.image = UIImage(named: "Headshot")
         cell.nameLabel.text = "Name"
         
         return cell
-    
+        
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -291,9 +294,63 @@ extension ChatVC: UICollectionViewDelegateFlowLayout {
 }
 
 extension ChatVC: UITextFieldDelegate {
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        if textField == chatTextField {
-//            chatTextField.becomeFirstResponder()
-//        }
-//    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        scrollToLastMessage()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == chatTextField {
+            sendMessage()
+        }
+        return true
+    }
+    
+}
+
+extension UITableView {
+    func scrollToBottomRow() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
+            guard numberOfSections > 0 else { return }
+            
+            var section = max(numberOfSections - 1, 0)
+            var row = max(numberOfRows(inSection: section) - 1, 0)
+            var indexPath = IndexPath(row: row, section: section)
+            
+            
+            while !indexPathIsValid(indexPath) {
+                section = max(section - 1, 0)
+                row = max(numberOfRows(inSection: section) - 1, 0)
+                indexPath = IndexPath(row: row, section: section)
+                
+                if indexPath.section == 0 {
+                    indexPath = IndexPath(row: 0, section: 0)
+                    break
+                }
+            }
+            
+            guard indexPathIsValid(indexPath) else { return }
+            
+            scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
+    func indexPathIsValid(_ indexPath: IndexPath) -> Bool {
+        let section = indexPath.section
+        let row = indexPath.row
+        return section < numberOfSections && row < numberOfRows(inSection: section)
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

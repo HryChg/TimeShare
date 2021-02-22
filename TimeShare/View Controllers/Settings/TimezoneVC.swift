@@ -62,7 +62,8 @@ class TimezoneVC: UIViewController {
     
     private func setupUI() {
         
-        navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = UIColor(named: K.BrandColors.color2)
+        
         title = "Timezone"
         
         chooseButton.backgroundColor = UIColor(hexString: "14274E")

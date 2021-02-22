@@ -9,7 +9,6 @@ TimeShare is an app where friends can share a pomodoro timer to work and take br
 ![img](media/HomeScreenV1.png)![img](media/TimerScreenV1.png)
 
 
-
 # Set Up
 
 1. Go to the project root folder
@@ -45,7 +44,8 @@ end
 
 # References
 - Adding Font to Project: https://developer.apple.com/documentation/uikit/text_display_and_fonts/adding_a_custom_font_to_your_app
-
+- Remove a View Controller from Navigation Stack https://stackoverflow.com/a/65165282
+- Circular Progress Bar : https://github.com/luispadron/UICircularProgressRing/blob/master/LegacyREADME.md
 
 
 
