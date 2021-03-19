@@ -11,7 +11,8 @@
 		47C0C76B6EDE9E8759827835 /* Pods_TimeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93B5286BC5C3A2C484FF437 /* Pods_TimeShare.framework */; };
 		9643A25C25C86869002989BD /* RoomDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9643A25B25C86869002989BD /* RoomDetailVC.swift */; };
 		9643A26225C8723A002989BD /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9643A26125C8723A002989BD /* ViewUtils.swift */; };
-		96B94EAE25BCD1BF00341D53 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		9654167E260516B100409910 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9654167D260516B100409910 /* APIManager.swift */; };
+		96B94EAE25BCD1BF00341D53 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		96D96BA025A6D54200CA39B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */; };
 		96D96BA225A6D54200CA39B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */; };
 		96D96BA425A6D54200CA39B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D96BA325A6D54200CA39B1 /* MainViewController.swift */; };
@@ -101,6 +102,7 @@
 		8905ED482BBC70AACE7089EF /* Pods-TimeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.debug.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.debug.xcconfig"; sourceTree = "<group>"; };
 		9643A25B25C86869002989BD /* RoomDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDetailVC.swift; sourceTree = "<group>"; };
 		9643A26125C8723A002989BD /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		9654167D260516B100409910 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		96D96B9C25A6D54200CA39B1 /* TimeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D96B9F25A6D54200CA39B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96D96BA125A6D54200CA39B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +126,6 @@
 		96EFE52C25B5810C0062D63B /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
 		96EFE55625B5A7D80062D63B /* CreateRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomVC.swift; sourceTree = "<group>"; };
 		96EFE55E25B5B3600062D63B /* TimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
-
 		A034C33D8BEA67C233CD5BF0 /* Pods_TimeShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93B5286BC5C3A2C484FF437 /* Pods_TimeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE5886DD1E6E836AF2C95B4 /* Pods-TimeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeShare.release.xcconfig"; path = "Target Support Files/Pods-TimeShare/Pods-TimeShare.release.xcconfig"; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 		C701670825ACD351002FF445 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9654167D260516B100409910 /* APIManager.swift */,
 				C7146F6525ADEA9900E48762 /* SettingsItem.swift */,
 				96EFE51E25B5716C0062D63B /* RoomModel.swift */,
 				96EFE52325B5729E0062D63B /* MemberModel.swift */,
@@ -756,7 +758,7 @@
 				C419C86B25C0E5CE003DD0F0 /* RankingCell.swift in Sources */,
 				C7146F8225AE1B0700E48762 /* TimezoneVC.swift in Sources */,
 				C701670A25ACD371002FF445 /* K.swift in Sources */,
-				96B94EAE25BCD1BF00341D53 /* BuildFile in Sources */,
+				96B94EAE25BCD1BF00341D53 /* (null) in Sources */,
 				C4AC9A9C25B7B5FA00373760 /* RankingGraphVC.swift in Sources */,
 				C7F5315B25AD5C5F006FB302 /* SettingsCell.swift in Sources */,
 				C70166FE25ACD285002FF445 /* RankingViewController.swift in Sources */,
@@ -767,6 +769,7 @@
 				96EFE52D25B5810C0062D63B /* RoomCell.swift in Sources */,
 				C7031EEA25C25DB900BCBEB9 /* LoginVC.swift in Sources */,
 				C749D43A25B6086900AAD5DD /* MockData.swift in Sources */,
+				9654167E260516B100409910 /* APIManager.swift in Sources */,
 				C7146F6625ADEA9900E48762 /* SettingsItem.swift in Sources */,
 				C7D000AF25BA61E80079C82F /* StudyingCell.swift in Sources */,
 			);
