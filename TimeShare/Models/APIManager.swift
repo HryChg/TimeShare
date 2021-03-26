@@ -36,7 +36,7 @@ struct APIManager {
         task.resume()
     }
 
-    func postRequest2<T: Codable>(to path: String, with payload: T) {
+    static func postRequest2<T: Codable>(to path: String, with payload: T) {
         // https://gist.github.com/hubertcross/20e664155d09f8423cb2e555ad3b0ede
 
         let url = URL(string: K.FStore.serverURL + path)!

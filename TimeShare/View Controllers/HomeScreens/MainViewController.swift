@@ -41,6 +41,24 @@ class MainViewController: UIViewController {
     @IBAction func addButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: K.Segue.goToCreateRoom, sender: self)
         // TODO Preform Post Room
+//        let json = """
+//        {
+//          "workTimer": 50,
+//          "breakTimer": 10,
+//          "onBreak": false,
+//          "timeLeft": 50,
+//          "members": [
+//            "testMemberID"
+//          ],
+//          "title": "RoomTitle",
+//          "userIDs": [
+//            "vrjgik5"
+//          ]
+//        }
+//        """
+//        let data = Data(json.utf8)
+//        let room: Room = try! JSONDecoder().decode(Room.self, from: data)
+//        APIManager.postRequest2(to: K.Paths.rooms, with: room)
     }
 }
 
