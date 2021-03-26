@@ -29,11 +29,54 @@ struct APIManager {
             }
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
             if let responseJSON = responseJSON as? [String: Any] {
-                print(responseJSON) //Code after Successfull POST Request
+                print(responseJSON) // Code after Successfull POST Request
             }
         }
-        
+
         task.resume()
     }
-    
+
+    func postRequest2<T: Codable>(to path: String, with payload: T) {
+        // https://gist.github.com/hubertcross/20e664155d09f8423cb2e555ad3b0ede
+
+        let url = URL(string: K.FStore.serverURL + path)!
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+
+        // Headers must specify that the HTTP request body is JSON-encoded
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
+
+        // encode post struct into JSON format
+        let encoder = JSONEncoder()
+        do {
+            let jsonData = try encoder.encode(payload)
+            request.httpBody = jsonData
+        } catch {
+            print(String(describing: error))
+        }
+
+        // set up the session
+        URLSession.shared.dataTask(with: request) { _, response, error in
+            // check for any errors
+            guard error == nil else {
+                print("error calling POST on (url)")
+                print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200 ... 299).contains(httpResponse.statusCode)
+            else {
+                print("Fetch failed: Server error")
+                return
+            }
+            // Success response
+            print("HTTP Post successful. Return code: " + String(httpResponse.statusCode))
+            if let mimeType = httpResponse.mimeType /* , mimeType == "application/json" */ {
+                print("MimeType: " + mimeType)
+            }
+        }.resume()
+    }
 }
