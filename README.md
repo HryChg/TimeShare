@@ -46,9 +46,8 @@ end
 - Adding Font to Project: https://developer.apple.com/documentation/uikit/text_display_and_fonts/adding_a_custom_font_to_your_app
 - Remove a View Controller from Navigation Stack https://stackoverflow.com/a/65165282
 - Circular Progress Bar : https://github.com/luispadron/UICircularProgressRing/blob/master/LegacyREADME.md
-
-
-
-
-
-
+- Using Codable with Nested Objects
+    https://medium.com/@nictheawesome/using-codable-with-nested-objects-is-easier-and-more-fun-than-you-think-8c9edfa29ed7
+- Making API Calls with Codables
+    - https://gist.github.com/hubertcross/20e664155d09f8423cb2e555ad3b0ede
+    - https://www.hackingwithswift.com/books/ios-swiftui/sending-and-receiving-codable-data-with-urlsession-and-swiftui
