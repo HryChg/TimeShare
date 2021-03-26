@@ -47,9 +47,6 @@ class MainViewController: UIViewController {
 //          "breakTimer": 10,
 //          "onBreak": false,
 //          "timeLeft": 50,
-//          "members": [
-//            "testMemberID"
-//          ],
 //          "title": "RoomTitle",
 //          "userIDs": [
 //            "vrjgik5"

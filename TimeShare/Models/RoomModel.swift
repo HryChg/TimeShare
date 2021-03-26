@@ -15,7 +15,6 @@ struct RoomModel {
     let breakTimer: Int
     let onBreak = false
     let timeLeft: Double
-    let members = [MemberModel]()
     var progress: Double {
         return Double(onBreak ? self.breakTimer : self.workTimer) / timeLeft
     }
